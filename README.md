@@ -1,16 +1,20 @@
-BoDi Ontology
+⚠️ **Work in Progress** - This ontology is under active development
 
-⚠️ Work in Progress - This ontology is under active development
+**BoDi (Born-Digital Module)** is an extension to the Records in Contexts (RiC) ontology for describing born-digital resources in personal archives.
 
-BoDi (Born-Digital Module) is an extension to the Records in Contexts (RiC) ontology for describing born-digital resources in personal archives.
+**Namespace**
+```turtle
+@prefix bodi: <http://w3id.org/bodi#> .
+```
 
-Namespace
-turtle@prefix bodi: <http://w3id.org/bodi#> .
-Built on
-RiC-O, PREMIS, PROV-O
-Repository
+**Built on**
+
+RiC-O, PREMIS, PROV-O, LRMoo
+
+**Repository**
+
 https://github.com/LuciaGiagnolini12/bodi
-Contact
+
+**Contact**
+
 @LuciaGiagnolini12
-Repository
-https://github.com/LuciaGiagnolini12/bodi
