@@ -1,2 +1,2 @@
 # bodi
-Extension to Records in Context - Ontology dedicated to personal born-digital archives
+Extension to Records in Contexts - Ontology dedicated to personal born-digital archives
