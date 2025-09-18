@@ -1,0 +1,1126 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://w3id.org/bodi#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://w3id.org/bodi#">
+    <Prefix name="" IRI="http://w3id.org/bodi#"/>
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="bodi" IRI="http://w3id.org/bodi#"/>
+    <Prefix name="prov" IRI="http://www.w3.org/ns/prov#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="rico" IRI="https://www.ica.org/standards/RiC/ontology#"/>
+    <Prefix name="skos" IRI="http://www.w3.org/2004/02/skos/core#"/>
+    <Prefix name="terms" IRI="http://purl.org/dc/terms/"/>
+    <Prefix name="premis" IRI="http://www.loc.gov/premis/rdf/v3/"/>
+    <Declaration>
+        <Class IRI="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="AIGeneratedText"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Algorithm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Exception"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Software"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="SoftwareComponent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="SoftwareStack"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="TechnicalMetadata"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="TechnicalMetadataType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="TechnicalMetadataTypeSet"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="premis:Fixity"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="premis:Representation"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="premis:SoftwareAgent"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="premis:StorageLocation"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="premis:StorageMedium"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="prov:Entity"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="prov:Location"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="rico:Activity"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="rico:Agent"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="rico:Concept"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="rico:Date"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="rico:Extent"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="rico:ExtentType"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="rico:Group"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="rico:Instantiation"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="rico:Mechanism"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="rico:Person"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="rico:Position"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="rico:Record"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="rico:RecordPart"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="rico:RecordResource"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="rico:RecordSet"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="rico:Thing"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="rico:Type"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="generatedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasGenerated"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasHashCode"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasOrHadSupervisor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasOriginalCarrier"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasPreservationAssessment"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasRevisioned"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasSameHashCodeAs"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasSoftwareComponent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasStackElement"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasTechnicalDescription"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasTechnicalMetadata"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasTechnicalMetadataType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isHashCodeOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isOrWasSupervisorOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isOriginalCarrierOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isPreservationAssessmentOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isSoftwareComponentOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isStackElementOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isTechnicalDescriptionOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isTechnicalMetadataOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isTechnicalMetadataTypeOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="revisedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="premis:medium"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="premis:storedAt"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="rico:hasExtent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="rico:hasExtentType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="rico:hasOrHadInstantiation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="rico:hasOrHadPart"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="rico:hasOrHadType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="rico:isExtentTypeOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="rico:isInstantiationAssociatedWithInstantiation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="rico:isOrWasPartOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="rico:isOrWasPerformedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="rico:isOrWasTypeOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="rico:isRelatedTo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="LOCFormatCompliance"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="confidenceScore"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="exceptionMessage"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasDocumentation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasHumanValidation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hierarchyDepth"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="omittedInformation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="premis:version"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="rico:technicalCharacteristics"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="rico:type"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="sameContentCount"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="premis:Representation"/>
+        <Class abbreviatedIRI="rico:Instantiation"/>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="AIGeneratedText"/>
+        <Class abbreviatedIRI="rico:Concept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Algorithm"/>
+        <Class abbreviatedIRI="rico:Mechanism"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Exception"/>
+        <Class abbreviatedIRI="rico:Concept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Software"/>
+        <Class abbreviatedIRI="premis:SoftwareAgent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Software"/>
+        <Class abbreviatedIRI="rico:Mechanism"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="SoftwareComponent"/>
+        <Class abbreviatedIRI="rico:Mechanism"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="SoftwareStack"/>
+        <Class abbreviatedIRI="rico:Agent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="TechnicalMetadata"/>
+        <Class abbreviatedIRI="rico:Concept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="TechnicalMetadataType"/>
+        <Class abbreviatedIRI="rico:Type"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="TechnicalMetadataTypeSet"/>
+        <Class abbreviatedIRI="rico:Concept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="rico:Activity"/>
+        <Class abbreviatedIRI="rico:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="rico:Agent"/>
+        <Class abbreviatedIRI="rico:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="rico:Concept"/>
+        <Class abbreviatedIRI="rico:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="rico:Date"/>
+        <Class abbreviatedIRI="rico:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="rico:Extent"/>
+        <Class abbreviatedIRI="rico:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="rico:ExtentType"/>
+        <Class abbreviatedIRI="rico:Type"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="rico:Group"/>
+        <Class abbreviatedIRI="rico:Agent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="rico:Instantiation"/>
+        <Class abbreviatedIRI="prov:Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="rico:Instantiation"/>
+        <Class abbreviatedIRI="rico:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="rico:Mechanism"/>
+        <Class abbreviatedIRI="rico:Agent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="rico:Person"/>
+        <Class abbreviatedIRI="rico:Agent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="rico:Position"/>
+        <Class abbreviatedIRI="rico:Agent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="rico:Record"/>
+        <Class abbreviatedIRI="rico:RecordResource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="rico:RecordPart"/>
+        <Class abbreviatedIRI="rico:RecordResource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="rico:RecordResource"/>
+        <Class abbreviatedIRI="prov:Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="rico:RecordResource"/>
+        <Class abbreviatedIRI="rico:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="rico:RecordSet"/>
+        <Class abbreviatedIRI="rico:RecordResource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="rico:Type"/>
+        <Class abbreviatedIRI="rico:Thing"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="SoftwareStack"/>
+        <Class abbreviatedIRI="rico:Group"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="SoftwareStack"/>
+        <Class abbreviatedIRI="rico:Mechanism"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="SoftwareStack"/>
+        <Class abbreviatedIRI="rico:Person"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="SoftwareStack"/>
+        <Class abbreviatedIRI="rico:Position"/>
+    </DisjointClasses>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="generatedBy"/>
+        <ObjectProperty abbreviatedIRI="rico:isRelatedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasGenerated"/>
+        <ObjectProperty abbreviatedIRI="rico:isRelatedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasHashCode"/>
+        <ObjectProperty abbreviatedIRI="rico:isRelatedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasOrHadSupervisor"/>
+        <ObjectProperty abbreviatedIRI="rico:isRelatedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasOriginalCarrier"/>
+        <ObjectProperty abbreviatedIRI="rico:isRelatedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasPreservationAssessment"/>
+        <ObjectProperty abbreviatedIRI="rico:isRelatedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasRevisioned"/>
+        <ObjectProperty abbreviatedIRI="rico:isRelatedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasSameHashCodeAs"/>
+        <ObjectProperty abbreviatedIRI="rico:isInstantiationAssociatedWithInstantiation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasSoftwareComponent"/>
+        <ObjectProperty abbreviatedIRI="rico:hasOrHadPart"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasStackElement"/>
+        <ObjectProperty abbreviatedIRI="rico:hasOrHadPart"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasTechnicalDescription"/>
+        <ObjectProperty abbreviatedIRI="rico:isRelatedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasTechnicalMetadata"/>
+        <ObjectProperty abbreviatedIRI="rico:isRelatedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasTechnicalMetadataType"/>
+        <ObjectProperty abbreviatedIRI="rico:hasOrHadType"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="isHashCodeOf"/>
+        <ObjectProperty abbreviatedIRI="rico:isRelatedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="isOrWasSupervisorOf"/>
+        <ObjectProperty abbreviatedIRI="rico:isRelatedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="isOriginalCarrierOf"/>
+        <ObjectProperty abbreviatedIRI="rico:isRelatedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="isPreservationAssessmentOf"/>
+        <ObjectProperty abbreviatedIRI="rico:isRelatedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="isSoftwareComponentOf"/>
+        <ObjectProperty abbreviatedIRI="rico:isOrWasPartOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="isStackElementOf"/>
+        <ObjectProperty abbreviatedIRI="rico:isOrWasPartOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="isTechnicalDescriptionOf"/>
+        <ObjectProperty abbreviatedIRI="rico:isRelatedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="isTechnicalMetadataOf"/>
+        <ObjectProperty abbreviatedIRI="rico:isRelatedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="isTechnicalMetadataTypeOf"/>
+        <ObjectProperty abbreviatedIRI="rico:isOrWasTypeOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="revisedBy"/>
+        <ObjectProperty abbreviatedIRI="rico:isRelatedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="rico:hasExtent"/>
+        <ObjectProperty abbreviatedIRI="rico:isRelatedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="rico:hasExtentType"/>
+        <ObjectProperty abbreviatedIRI="rico:hasOrHadType"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="rico:hasOrHadInstantiation"/>
+        <ObjectProperty abbreviatedIRI="rico:isRelatedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="rico:hasOrHadPart"/>
+        <ObjectProperty abbreviatedIRI="rico:isRelatedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="rico:hasOrHadType"/>
+        <ObjectProperty abbreviatedIRI="rico:isRelatedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="rico:isExtentTypeOf"/>
+        <ObjectProperty abbreviatedIRI="rico:isOrWasTypeOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="rico:isInstantiationAssociatedWithInstantiation"/>
+        <ObjectProperty abbreviatedIRI="rico:isRelatedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="rico:isOrWasPartOf"/>
+        <ObjectProperty abbreviatedIRI="rico:isRelatedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="rico:isOrWasPerformedBy"/>
+        <ObjectProperty abbreviatedIRI="rico:isRelatedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="rico:isOrWasTypeOf"/>
+        <ObjectProperty abbreviatedIRI="rico:isRelatedTo"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="generatedBy"/>
+        <ObjectProperty IRI="hasGenerated"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="hasHashCode"/>
+        <ObjectProperty IRI="isHashCodeOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="hasOrHadSupervisor"/>
+        <ObjectProperty IRI="isOrWasSupervisorOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="hasOriginalCarrier"/>
+        <ObjectProperty IRI="isOriginalCarrierOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="hasPreservationAssessment"/>
+        <ObjectProperty IRI="isPreservationAssessmentOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="hasRevisioned"/>
+        <ObjectProperty IRI="revisedBy"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="hasSoftwareComponent"/>
+        <ObjectProperty IRI="isSoftwareComponentOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="hasStackElement"/>
+        <ObjectProperty IRI="isStackElementOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="hasTechnicalDescription"/>
+        <ObjectProperty IRI="isTechnicalDescriptionOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="hasTechnicalMetadata"/>
+        <ObjectProperty IRI="isTechnicalMetadataOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="hasTechnicalMetadataType"/>
+        <ObjectProperty IRI="isTechnicalMetadataTypeOf"/>
+    </InverseObjectProperties>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="hasSameHashCodeAs"/>
+    </SymmetricObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="generatedBy"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasGenerated"/>
+        <Class abbreviatedIRI="rico:Activity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasGenerated"/>
+        <Class abbreviatedIRI="rico:Agent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasHashCode"/>
+        <Class abbreviatedIRI="rico:Instantiation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasOrHadSupervisor"/>
+        <Class abbreviatedIRI="rico:Activity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasPreservationAssessment"/>
+        <Class abbreviatedIRI="rico:Instantiation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasRevisioned"/>
+        <Class abbreviatedIRI="rico:Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasSoftwareComponent"/>
+        <Class IRI="SoftwareStack"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasStackElement"/>
+        <Class IRI="SoftwareStack"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasTechnicalDescription"/>
+        <Class abbreviatedIRI="rico:Instantiation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasTechnicalMetadata"/>
+        <Class abbreviatedIRI="rico:Instantiation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasTechnicalMetadataType"/>
+        <Class IRI="TechnicalMetadata"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="isHashCodeOf"/>
+        <Class abbreviatedIRI="premis:Fixity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="isOrWasSupervisorOf"/>
+        <Class abbreviatedIRI="rico:Agent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="isPreservationAssessmentOf"/>
+        <Class IRI="AIGeneratedText"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="isPreservationAssessmentOf"/>
+        <Class abbreviatedIRI="rico:RecordResource"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="isSoftwareComponentOf"/>
+        <Class abbreviatedIRI="rico:Mechanism"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="isStackElementOf"/>
+        <Class abbreviatedIRI="rico:Mechanism"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="isTechnicalDescriptionOf"/>
+        <Class IRI="AIGeneratedText"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="isTechnicalDescriptionOf"/>
+        <Class abbreviatedIRI="rico:RecordResource"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="isTechnicalMetadataOf"/>
+        <Class IRI="TechnicalMetadata"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="isTechnicalMetadataTypeOf"/>
+        <Class IRI="TechnicalMetadataType"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="revisedBy"/>
+        <Class IRI="AIGeneratedText"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="generatedBy"/>
+        <Class abbreviatedIRI="rico:Activity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="generatedBy"/>
+        <Class abbreviatedIRI="rico:Agent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasGenerated"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasHashCode"/>
+        <Class abbreviatedIRI="premis:Fixity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasOrHadSupervisor"/>
+        <Class abbreviatedIRI="rico:Agent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasPreservationAssessment"/>
+        <Class IRI="AIGeneratedText"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasPreservationAssessment"/>
+        <Class abbreviatedIRI="rico:RecordResource"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasRevisioned"/>
+        <Class IRI="AIGeneratedText"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasSameHashCodeAs"/>
+        <Class abbreviatedIRI="rico:Instantiation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasSoftwareComponent"/>
+        <Class abbreviatedIRI="rico:Mechanism"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasStackElement"/>
+        <Class abbreviatedIRI="rico:Mechanism"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasTechnicalDescription"/>
+        <Class IRI="AIGeneratedText"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasTechnicalDescription"/>
+        <Class abbreviatedIRI="rico:RecordResource"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasTechnicalMetadata"/>
+        <Class IRI="TechnicalMetadata"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasTechnicalMetadataType"/>
+        <Class IRI="TechnicalMetadataType"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="isHashCodeOf"/>
+        <Class abbreviatedIRI="rico:Instantiation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="isOrWasSupervisorOf"/>
+        <Class abbreviatedIRI="rico:Activity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="isPreservationAssessmentOf"/>
+        <Class abbreviatedIRI="rico:Instantiation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="isSoftwareComponentOf"/>
+        <Class IRI="SoftwareStack"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="isStackElementOf"/>
+        <Class IRI="SoftwareStack"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="isTechnicalDescriptionOf"/>
+        <Class abbreviatedIRI="rico:Instantiation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="isTechnicalMetadataOf"/>
+        <Class abbreviatedIRI="rico:Instantiation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="isTechnicalMetadataTypeOf"/>
+        <Class IRI="TechnicalMetadata"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="revisedBy"/>
+        <Class abbreviatedIRI="rico:Person"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="confidenceScore"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="omittedInformation"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="confidenceScore"/>
+        <Class IRI="AIGeneratedText"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="exceptionMessage"/>
+        <Class IRI="Exception"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasDocumentation"/>
+        <Class abbreviatedIRI="rico:Thing"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hasHumanValidation"/>
+        <Class IRI="AIGeneratedText"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="hierarchyDepth"/>
+        <Class abbreviatedIRI="rico:Instantiation"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="omittedInformation"/>
+        <Class abbreviatedIRI="rico:RecordResource"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="confidenceScore"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="exceptionMessage"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasDocumentation"/>
+        <Datatype abbreviatedIRI="xsd:anyURI"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasHumanValidation"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hierarchyDepth"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>AIGeneratedText</IRI>
+        <Literal>Text generated through the use of artificial intelligence (AI).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>AIGeneratedText</IRI>
+        <Literal>AI generated text</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Algorithm</IRI>
+        <Literal>A computational procedure, formula, or set of rules designed to perform a specific task or solve a particular problem.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Algorithm</IRI>
+        <Literal>Algorithm</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Exception</IRI>
+        <Literal>An error condition, unexpected event, or abnormal situation that occurs during the execution of digital preservation processes. Exceptions are important for system monitoring, quality control, and troubleshooting automated workflows.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Exception</IRI>
+        <Literal>Exception</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>LOCFormatCompliance</IRI>
+        <Literal>Compliance of the file format to the Library of Congress Fle Formats Recommendations. May be &quot;preferred&quot;, &quot;acceptable&quot; or &quot;not recommended&quot;.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>LOCFormatCompliance</IRI>
+        <Literal>LOC Format Compliance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Software</IRI>
+        <Literal>A computer program, application, or digital tool that performs specific functions. Software entities are characterized by their functionality, version information, and technical specifications.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Software</IRI>
+        <Literal>Software</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>SoftwareComponent</IRI>
+        <Literal>A modular, reusable part of a software system that provides specific functionality and can be combined with other components to create larger applications.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>SoftwareComponent</IRI>
+        <Literal>Software component</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>SoftwareStack</IRI>
+        <Literal>A collection of mechanisms that performs an Activity together to provide a solution for a specific task.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>SoftwareStack</IRI>
+        <Literal>Software Stack</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>TechnicalMetadata</IRI>
+        <Literal>The actual value or content of technical metadata associated with a digital resource. For example, in &apos;cp:revision = 1&apos;, the value &apos;1&apos; represents the TechnicalMetadata instance, while &apos;cp:revision&apos; is the Technical Metadata Type. These values describe specific technical characteristics such as format parameters, creation settings, and other measurable attributes.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>TechnicalMetadata</IRI>
+        <Literal>Technical metadata</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>TechnicalMetadataType</IRI>
+        <Literal>The type, property, or category that defines what kind of technical metadata is being described. For example, in &apos;cp:revision = 1&apos;, &apos;cp:revision&apos; represents the TechnicalMetadataType that categorizes the metadata as revision information. This classification enables systematic organization of different kind of metadata like version identifiers, format specifications, encoding parameters, and preservation characteristics.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>TechnicalMetadataType</IRI>
+        <Literal>Technical Metadata Type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>TechnicalMetadataTypeSet</IRI>
+        <Literal>Group of Technical Metadata Types</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>TechnicalMetadataTypeSet</IRI>
+        <Literal>Technical Metadata Type Set</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>confidenceScore</IRI>
+        <Literal>A numerical value between 0 and 10 indicating the confidence level or reliability of AI-generated text. Higher values indicate greater confidence in the accuracy or quality of the generated content, supporting quality assessment and validation workflows.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>confidenceScore</IRI>
+        <Literal>Confindence score</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>exceptionMessage</IRI>
+        <Literal>Contains the error message or description associated with an exception that occurred during processing. This property is essential for logging, debugging, and understanding failures in automated workflows.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>exceptionMessage</IRI>
+        <Literal>Exception message</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>generatedBy</IRI>
+        <Literal>Indicates that a resource was created, produced, or brought into existence by a specific Agent or Activity. This property establishes a creation relationship between any resource and the agent pr activity responsible for its generation, whether through automated processes, human intervention, or hybrid approaches.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>generatedBy</IRI>
+        <Literal>Generated by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasDocumentation</IRI>
+        <Literal>Provides a URI reference to official documentation, specifications, manuals, or other authoritative sources that describe the resource.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasDocumentation</IRI>
+        <Literal>Has documentation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasGenerated</IRI>
+        <Literal>Indicates that an Agent or Activity has created, produced, or brought into existence a specific resource. This property represents the inverse relationship of &apos;generatedBy&apos;, allowing navigation from agents and activities to their generated outputs.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasGenerated</IRI>
+        <Literal>Has generated</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasHashCode</IRI>
+        <Literal>Associates an instantiation with its cryptographic hash code or checksum value. This property is crucial for digital preservation workflows, enabling integrity verification, duplicate detection, and authenticity validation of digital resources over time.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasHashCode</IRI>
+        <Literal>Has hash code</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasHumanValidation</IRI>
+        <Literal>Indicates whether AI-generated text has been reviewed, verified, or validated by human experts. This property is crucial for quality assurance in systems that combine automated processing with human oversight.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasHumanValidation</IRI>
+        <Literal>Has human validation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasOrHadSupervisor</IRI>
+        <Literal>Indicates that an activity is or was supervised, managed, or overseen by a specific Agent. This property captures both current and historical supervisory relationships, essential for tracking accountability and governance in digital preservation workflows.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasOrHadSupervisor</IRI>
+        <Literal>Has or had supervisor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasPreservationAssessment</IRI>
+        <Literal>Links an instantiation to its preservation assessment documentation, which may be either AI-generated text or traditional record resources.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasPreservationAssessment</IRI>
+        <Literal>Has preservation assessment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasRevisioned</IRI>
+        <Literal>Connects a Person to the AI Generated Text that she has revised.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasRevisioned</IRI>
+        <Literal>Has revisioned</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasSameHashCodeAs</IRI>
+        <Literal>Establishes that two digital instantiations have identical hash codes, indicating they are likely exact digital copies or duplicates.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasSameHashCodeAs</IRI>
+        <Literal>Has same hash code as</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasSoftwareComponent</IRI>
+        <Literal>Indicates that a Software contains or includes a specific Software Component as one of its constituent parts. This property helps model the hierarchical structure of complex software environments.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasSoftwareComponent</IRI>
+        <Literal>Has Software Component</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasStackElement</IRI>
+        <Literal>Indicates that a software stack includes a specific Mechanism as one of its constituent elements. This property allows for modeling the various components (Software, Algorithms, Software Components) that together form a complete technological stack responsible for some Activity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasStackElement</IRI>
+        <Literal>Has stack element</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasTechnicalDescription</IRI>
+        <Literal>Has technical description</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasTechnicalDescription</IRI>
+        <Literal>Links an instantiation to its technical description, which provides detailed information about the technical characteristics, structure, format, or implementation details of the resource.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasTechnicalMetadata</IRI>
+        <Literal>Associates an Instantiation with technical metadata that describes its technical properties, format specifications, creation parameters, or other characteristics.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasTechnicalMetadata</IRI>
+        <Literal>Has Technical Metadata</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasTechnicalMetadataType</IRI>
+        <Literal>Categorizes technical metadata according to the specific extracted field.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasTechnicalMetadataType</IRI>
+        <Literal>Has technical metadata type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hierarchyDepth</IRI>
+        <Literal>Specifies the numerical depth level of a resource within a directory or organizational hierarchy, with level 0 representing the root.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hierarchyDepth</IRI>
+        <Literal>Hierarchy depth</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>isOrWasSupervisorOf</IRI>
+        <Literal>Is or was supervisor of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>omittedInformation</IRI>
+        <Literal>Indication of whether or not the resource has been anonymized.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>omittedInformation</IRI>
+        <Literal>Omitted information</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>revisedBy</IRI>
+        <Literal>Connects an AI Generated Text to the Person that revisioned the information.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>revisedBy</IRI>
+        <Literal>Revised by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>sameContentCount</IRI>
+        <Literal>Count of Records with identical content - files sharing the same hash code indicate byte-for-byte identical content.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>sameContentCount</IRI>
+        <Literal>Same content count</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
