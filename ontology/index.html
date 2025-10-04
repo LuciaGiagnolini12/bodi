@@ -300,10 +300,14 @@ td {
         "@value": "Lucia Giagnolini"
       }
     ],
-    "https://schema.org/dateModified": [
+    "https://schema.org/description": [
       {
-        "@language": "en",
         "@value": "An extension of RiC-O (Records in Contexts Ontology) designed to represent the complexity of born-digital archival materials, addressing requirements for technical metadata, digital provenance, integrity verification, and contextual relationships."
+      }
+    ],
+    "https://schema.org/license": [
+      {
+        "@value": "This work is distributed under a Creative Commons Attribution License (https://creativecommons.org/licenses/by/4.0/legalcode)."
       }
     ],
     "https://schema.org/name": [
@@ -354,9 +358,9 @@ td {
           </div>
           <div>
             <dt>
-              <a class="hover_property" href="http://purl.org/dc/terms/modified" title="Date on which the resource was changed. Defined in DCMI Metadata Terms">Date Modified</a>
+              <a class="hover_property" href="http://purl.org/dc/terms/license" title="A legal document giving official permission to do something with the resource. Defined in DCMI Metadata Terms">License</a>
             </dt>
-            <dd><p>An extension of RiC-O (Records in Contexts Ontology) designed to represent the complexity of born-digital archival materials, addressing requirements for technical metadata, digital provenance, integrity verification, and contextual relationships.</p></dd>
+            <dd><p>This work is distributed under a Creative Commons Attribution License (https://creativecommons.org/licenses/by/4.0/legalcode).</p></dd>
           </div>
           <div>
             <dt>
@@ -364,106 +368,16 @@ td {
             </dt>
             <dd><p>1.0</p></dd>
           </div>
+          <div>
+            <dt>
+              <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+            </dt>
+            <dd><p>An extension of RiC-O (Records in Contexts Ontology) designed to represent the complexity of born-digital archival materials, addressing requirements for technical metadata, digital provenance, integrity verification, and contextual relationships.</p></dd>
+          </div>
         </dl>
       </div>
       <div class="section" id="classes">
         <h2>Classes</h2>
-        <div class="property entity" id="AIgeneratedtext">
-          <h3>AI generated text
-            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://w3id.org/bodi#AIGeneratedText</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
-              </th>
-              <td><p>Text generated through the use of artificial intelligence (AI).</p></td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="https://www.ica.org/standards/RiC/ontology#Concept">rico:Concept</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="Inverse of rdfs:domain. Defined in Ontology Documentation Profile">In Domain Of</a>
-              </th>
-              <td>
-                <ul>
-                  <li>
-                    <span>
-                      <a href="#isPreservationAssessmentOf">bodi:isPreservationAssessmentOf</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="#isTechnicalDescriptionOf">bodi:isTechnicalDescriptionOf</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="#revisedBy">Revised by</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="#confidenceScore">Confindence score</a>
-                      <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="#hasHumanValidation">Has human validation</a>
-                      <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
-                    </span>
-                  </li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inRangeOf" title="Inverse of rdfs:range. Defined in Ontology Documentation Profile">In Range Of</a>
-              </th>
-              <td>
-                <ul>
-                  <li>
-                    <span>
-                      <a href="#hasPreservationAssessment">Has preservation assessment</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="#hasRevisioned">Has revisioned</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="#hasTechnicalDescription">bodi:hasTechnicalDescription</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                </ul>
-              </td>
-            </tr>
-          </table>
-        </div>
         <div class="property entity" id="Algorithm">
           <h3>Algorithm
             <sup class="sup-c" title="OWL/RDFS Class">c</sup>
@@ -535,6 +449,58 @@ td {
             </tr>
           </table>
         </div>
+        <div class="property entity" id="Fileclusterposition">
+          <h3>File cluster position
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://w3id.org/bodi#FileClusterPosition</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>Represents the physical allocation of a digital file’s data on a storage medium. It captures the material trace of a digital document at the level of bit distribution across clusters or sectors of the device.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://www.ica.org/standards/RiC/ontology#Thing">rico:Thing</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="Inverse of rdfs:domain. Defined in Ontology Documentation Profile">In Domain Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#isFileClusterPositionOf">bodi:isFileClusterPositionOf</a>
+                  <sup class="sup-op" title="OWL Object Property">op</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inRangeOf" title="Inverse of rdfs:range. Defined in Ontology Documentation Profile">In Range Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#hasFileClusterPosition">Has file cluster position</a>
+                  <sup class="sup-op" title="OWL Object Property">op</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
         <div class="property entity" id="Software">
           <h3>Software
             <sup class="sup-c" title="OWL/RDFS Class">c</sup>
@@ -557,10 +523,20 @@ td {
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
               </th>
               <td>
-                <span>
-                  <a href="https://www.ica.org/standards/RiC/ontology#Mechanism">rico:Mechanism</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
+                <ul>
+                  <li>
+                    <span>
+                      <a href="http://www.loc.gov/premis/rdf/v3/SoftwareAgent">premis:SoftwareAgent</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="https://www.ica.org/standards/RiC/ontology#Mechanism">rico:Mechanism</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
+                </ul>
               </td>
             </tr>
           </table>
@@ -652,17 +628,165 @@ td {
                 <ul>
                   <li>
                     <span>
-                      <a href="#isSoftwareComponentOf">bodi:isSoftwareComponentOf</a>
+                      <a href="#isSoftwareComponentOf">Is software component of</a>
                       <sup class="sup-op" title="OWL Object Property">op</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="#isStackElementOf">bodi:isStackElementOf</a>
+                      <a href="#isStackElementOf">Is stack element of</a>
                       <sup class="sup-op" title="OWL Object Property">op</sup>
                     </span>
                   </li>
                 </ul>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="AIgeneratedtext">
+          <h3>AI generated text
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://w3id.org/bodi#TechnicalDescription</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>Technical Description of the Instantiation generated by humans, by artificial intelligence (AI), or through a hybrid approach (AI-generated and human-revised).</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://www.ica.org/standards/RiC/ontology#Concept">rico:Concept</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="Inverse of rdfs:domain. Defined in Ontology Documentation Profile">In Domain Of</a>
+              </th>
+              <td>
+                <ul>
+                  <li>
+                    <span>
+                      <a href="#hasTechnicalDescriptionType">Has Technical Description Type</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="#isTechnicalDescriptionOf">Is Technical Description Of</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="#revisedBy">Revised by</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="#confidenceScore">Confindence score</a>
+                      <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="#hasHumanValidation">Has human validation</a>
+                      <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
+                    </span>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inRangeOf" title="Inverse of rdfs:range. Defined in Ontology Documentation Profile">In Range Of</a>
+              </th>
+              <td>
+                <ul>
+                  <li>
+                    <span>
+                      <a href="#hasRevisioned">Has revisioned</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="#hasTechnicalDescription">Has technical description</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="#isTechnicalDescriptionTypeOf">Is Technical Description Type Of</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="TechnicalDescriptionType">
+          <h3>Technical Description Type
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://w3id.org/bodi#TechnicalDescriptionType</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>The type of Technical Description, e.g. a description note on the file format.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://www.ica.org/standards/RiC/ontology#Type">rico:Type</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="Inverse of rdfs:domain. Defined in Ontology Documentation Profile">In Domain Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#isTechnicalDescriptionTypeOf">Is Technical Description Type Of</a>
+                  <sup class="sup-op" title="OWL Object Property">op</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inRangeOf" title="Inverse of rdfs:range. Defined in Ontology Documentation Profile">In Range Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#hasTechnicalDescriptionType">Has Technical Description Type</a>
+                  <sup class="sup-op" title="OWL Object Property">op</sup>
+                </span>
               </td>
             </tr>
           </table>
@@ -709,7 +833,7 @@ td {
                   </li>
                   <li>
                     <span>
-                      <a href="#isTechnicalMetadataOf">bodi:isTechnicalMetadataOf</a>
+                      <a href="#isTechnicalMetadataOf">is Technical Metadata Of</a>
                       <sup class="sup-op" title="OWL Object Property">op</sup>
                     </span>
                   </li>
@@ -730,7 +854,7 @@ td {
                   </li>
                   <li>
                     <span>
-                      <a href="#isTechnicalMetadataTypeOf">bodi:isTechnicalMetadataTypeOf</a>
+                      <a href="#isTechnicalMetadataTypeOf">Is Technical Metadata Type Of</a>
                       <sup class="sup-op" title="OWL Object Property">op</sup>
                     </span>
                   </li>
@@ -773,7 +897,7 @@ td {
               </th>
               <td>
                 <span>
-                  <a href="#isTechnicalMetadataTypeOf">bodi:isTechnicalMetadataTypeOf</a>
+                  <a href="#isTechnicalMetadataTypeOf">Is Technical Metadata Type Of</a>
                   <sup class="sup-op" title="OWL Object Property">op</sup>
                 </span>
               </td>
@@ -821,6 +945,180 @@ td {
             </tr>
           </table>
         </div>
+        <div class="property entity" id="Fixity">
+          <h3>Fixity
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://www.loc.gov/premis/rdf/v3/Fixity</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="Inverse of rdfs:domain. Defined in Ontology Documentation Profile">In Domain Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#isHashCodeOf">Is Hash Code Of</a>
+                  <sup class="sup-op" title="OWL Object Property">op</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inRangeOf" title="Inverse of rdfs:range. Defined in Ontology Documentation Profile">In Range Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#hasHashCode">Has hash code</a>
+                  <sup class="sup-op" title="OWL Object Property">op</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="SoftwareAgent">
+          <h3>Software Agent
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://www.loc.gov/premis/rdf/v3/SoftwareAgent</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superClassOf" title="Inverse of RDFS' subClassOf. Defined in Ontology Documentation Profile">Super Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#Software">Software</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="StorageLocation">
+          <h3>Storage Location
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://www.loc.gov/premis/rdf/v3/StorageLocation</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="Inverse of rdfs:domain. Defined in Ontology Documentation Profile">In Domain Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#isStorageLocationOf">is Storage Location Of</a>
+                  <sup class="sup-op" title="OWL Object Property">op</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inRangeOf" title="Inverse of rdfs:range. Defined in Ontology Documentation Profile">In Range Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#hasStorageLocation">Has Storage Location</a>
+                  <sup class="sup-op" title="OWL Object Property">op</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="Entity">
+          <h3>Entity
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://www.w3.org/ns/prov#Entity</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superClassOf" title="Inverse of RDFS' subClassOf. Defined in Ontology Documentation Profile">Super Class Of</a>
+              </th>
+              <td>
+                <ul>
+                  <li>
+                    <span>
+                      <a href="https://www.ica.org/standards/RiC/ontology#Instantiation">rico:Instantiation</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="https://www.ica.org/standards/RiC/ontology#RecordResource">rico:RecordResource</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="Activity">
+          <h3>Activity
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://www.ica.org/standards/RiC/ontology#Activity</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://www.ica.org/standards/RiC/ontology#Thing">rico:Thing</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="Inverse of rdfs:domain. Defined in Ontology Documentation Profile">In Domain Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#hasOrHadSupervisor">Has or had supervisor</a>
+                  <sup class="sup-op" title="OWL Object Property">op</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inRangeOf" title="Inverse of rdfs:range. Defined in Ontology Documentation Profile">In Range Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#isOrWasSupervisorOf">Is or was supervisor of</a>
+                  <sup class="sup-op" title="OWL Object Property">op</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
         <div class="property entity" id="Agent">
           <h3>Agent
             <sup class="sup-c" title="OWL/RDFS Class">c</sup>
@@ -857,6 +1155,12 @@ td {
                   </li>
                   <li>
                     <span>
+                      <a href="#hasRevisioned">Has revisioned</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
                       <a href="#isOrWasSupervisorOf">Is or was supervisor of</a>
                       <sup class="sup-op" title="OWL Object Property">op</sup>
                     </span>
@@ -879,6 +1183,12 @@ td {
                   <li>
                     <span>
                       <a href="#hasOrHadSupervisor">Has or had supervisor</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="#revisedBy">Revised by</a>
                       <sup class="sup-op" title="OWL Object Property">op</sup>
                     </span>
                   </li>
@@ -938,13 +1248,13 @@ td {
                 <ul>
                   <li>
                     <span>
-                      <a href="#AIgeneratedtext">AI generated text</a>
+                      <a href="#Exception">Exception</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="#Exception">Exception</a>
+                      <a href="#AIgeneratedtext">AI generated text</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
@@ -961,6 +1271,30 @@ td {
                     </span>
                   </li>
                 </ul>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="Extent">
+          <h3>Extent
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://www.ica.org/standards/RiC/ontology#Extent</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://www.ica.org/standards/RiC/ontology#Thing">rico:Thing</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
               </td>
             </tr>
           </table>
@@ -984,13 +1318,13 @@ td {
                 <ul>
                   <li>
                     <span>
-                      <a href="https://www.ica.org/standards/RiC/ontology#Thing">rico:Thing</a>
+                      <a href="http://www.w3.org/ns/prov#Entity">Entity</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="https://www.w3.org/ns/prov#Entity">https://www.w3.org/ns/prov#Entity</a>
+                      <a href="https://www.ica.org/standards/RiC/ontology#Thing">rico:Thing</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
@@ -1005,19 +1339,19 @@ td {
                 <ul>
                   <li>
                     <span>
+                      <a href="#hasFileClusterPosition">Has file cluster position</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
                       <a href="#hasHashCode">Has hash code</a>
                       <sup class="sup-op" title="OWL Object Property">op</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="#hasPreservationAssessment">Has preservation assessment</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="#hasTechnicalDescription">bodi:hasTechnicalDescription</a>
+                      <a href="#hasSameHashCodeAs">Has same hash code as</a>
                       <sup class="sup-op" title="OWL Object Property">op</sup>
                     </span>
                   </li>
@@ -1025,6 +1359,12 @@ td {
                     <span>
                       <a href="#hasTechnicalMetadata">Has Technical Metadata</a>
                       <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="#LOCFormatCompliance">LOC Format Compliance</a>
+                      <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
                     </span>
                   </li>
                   <li>
@@ -1050,25 +1390,19 @@ td {
                   </li>
                   <li>
                     <span>
-                      <a href="#isHashCodeOf">bodi:isHashCodeOf</a>
+                      <a href="#isFileClusterPositionOf">bodi:isFileClusterPositionOf</a>
                       <sup class="sup-op" title="OWL Object Property">op</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="#isPreservationAssessmentOf">bodi:isPreservationAssessmentOf</a>
+                      <a href="#isHashCodeOf">Is Hash Code Of</a>
                       <sup class="sup-op" title="OWL Object Property">op</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="#isTechnicalDescriptionOf">bodi:isTechnicalDescriptionOf</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="#isTechnicalMetadataOf">bodi:isTechnicalMetadataOf</a>
+                      <a href="#isTechnicalMetadataOf">is Technical Metadata Of</a>
                       <sup class="sup-op" title="OWL Object Property">op</sup>
                     </span>
                   </li>
@@ -1107,13 +1441,13 @@ td {
                 <ul>
                   <li>
                     <span>
-                      <a href="#isSoftwareComponentOf">bodi:isSoftwareComponentOf</a>
+                      <a href="#isSoftwareComponentOf">Is software component of</a>
                       <sup class="sup-op" title="OWL Object Property">op</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="#isStackElementOf">bodi:isStackElementOf</a>
+                      <a href="#isStackElementOf">Is stack element of</a>
                       <sup class="sup-op" title="OWL Object Property">op</sup>
                     </span>
                   </li>
@@ -1189,13 +1523,13 @@ td {
                 <ul>
                   <li>
                     <span>
-                      <a href="https://www.ica.org/standards/RiC/ontology#Thing">rico:Thing</a>
+                      <a href="http://www.w3.org/ns/prov#Entity">Entity</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="https://www.w3.org/ns/prov#Entity">https://www.w3.org/ns/prov#Entity</a>
+                      <a href="https://www.ica.org/standards/RiC/ontology#Thing">rico:Thing</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
@@ -1207,47 +1541,10 @@ td {
                 <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="Inverse of rdfs:domain. Defined in Ontology Documentation Profile">In Domain Of</a>
               </th>
               <td>
-                <ul>
-                  <li>
-                    <span>
-                      <a href="#isPreservationAssessmentOf">bodi:isPreservationAssessmentOf</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="#isTechnicalDescriptionOf">bodi:isTechnicalDescriptionOf</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="#omittedInformation">Omitted information</a>
-                      <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
-                    </span>
-                  </li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inRangeOf" title="Inverse of rdfs:range. Defined in Ontology Documentation Profile">In Range Of</a>
-              </th>
-              <td>
-                <ul>
-                  <li>
-                    <span>
-                      <a href="#hasPreservationAssessment">Has preservation assessment</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="#hasTechnicalDescription">bodi:hasTechnicalDescription</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                </ul>
+                <span>
+                  <a href="#omittedInformation">Omitted information</a>
+                  <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
+                </span>
               </td>
             </tr>
           </table>
@@ -1282,6 +1579,18 @@ td {
                 <ul>
                   <li>
                     <span>
+                      <a href="#Fileclusterposition">File cluster position</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="https://www.ica.org/standards/RiC/ontology#Activity">rico:Activity</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
                       <a href="https://www.ica.org/standards/RiC/ontology#Agent">rico:Agent</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
@@ -1289,6 +1598,12 @@ td {
                   <li>
                     <span>
                       <a href="https://www.ica.org/standards/RiC/ontology#Concept">rico:Concept</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="https://www.ica.org/standards/RiC/ontology#Extent">rico:Extent</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
@@ -1342,40 +1657,16 @@ td {
                 <a class="hover_property" href="https://w3id.org/profile/ontdoc/superClassOf" title="Inverse of RDFS' subClassOf. Defined in Ontology Documentation Profile">Super Class Of</a>
               </th>
               <td>
-                <span>
-                  <a href="#TechnicalMetadataType">Technical Metadata Type</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="Entity">
-          <h3>Entity
-            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>https://www.w3.org/ns/prov#Entity</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superClassOf" title="Inverse of RDFS' subClassOf. Defined in Ontology Documentation Profile">Super Class Of</a>
-              </th>
-              <td>
                 <ul>
                   <li>
                     <span>
-                      <a href="https://www.ica.org/standards/RiC/ontology#Instantiation">rico:Instantiation</a>
+                      <a href="#TechnicalDescriptionType">Technical Description Type</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="https://www.ica.org/standards/RiC/ontology#RecordResource">rico:RecordResource</a>
+                      <a href="#TechnicalMetadataType">Technical Metadata Type</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
@@ -1433,6 +1724,58 @@ td {
               <td>
                 <span>
                   <a href="https://www.ica.org/standards/RiC/ontology#Agent">rico:Agent</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="hasFileClusterPosition">
+          <h3>Has file cluster position
+            <sup class="sup-op" title="OWL Object Property">op</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://w3id.org/bodi#hasFileClusterPosition</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>Links a logical instantiation of a digital resource to its corresponding physical allocation on the storage medium.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" title="The subject is a subproperty of a property. Defined in The RDF Schema vocabulary (RDFS)">Sub Property Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://www.ica.org/standards/RiC/ontology#isRelatedTo">rico:isRelatedTo</a>
+                  <sup class="sup-op" title="OWL Object Property">op</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://www.ica.org/standards/RiC/ontology#Instantiation">rico:Instantiation</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#Fileclusterposition">File cluster position</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -1530,6 +1873,17 @@ td {
                 </span>
               </td>
             </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
+              </th>
+              <td>
+                <span>
+                  <a href="http://www.loc.gov/premis/rdf/v3/Fixity">premis:Fixity</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
           </table>
         </div>
         <div class="property entity" id="hasOrHadSupervisor">
@@ -1554,9 +1908,17 @@ td {
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" title="The subject is a subproperty of a property. Defined in The RDF Schema vocabulary (RDFS)">Sub Property Of</a>
               </th>
               <td>
+                <a href="https://www.ica.org/standards/RiC/ontology#isOrWasUnderAuthorityOf">rico:isOrWasUnderAuthorityOf</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
+              </th>
+              <td>
                 <span>
-                  <a href="https://www.ica.org/standards/RiC/ontology#isRelatedTo">rico:isRelatedTo</a>
-                  <sup class="sup-op" title="OWL Object Property">op</sup>
+                  <a href="https://www.ica.org/standards/RiC/ontology#Activity">rico:Activity</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
             </tr>
@@ -1569,68 +1931,6 @@ td {
                   <a href="https://www.ica.org/standards/RiC/ontology#Agent">rico:Agent</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="hasPreservationAssessment">
-          <h3>Has preservation assessment
-            <sup class="sup-op" title="OWL Object Property">op</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://w3id.org/bodi#hasPreservationAssessment</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
-              </th>
-              <td><p>Links an instantiation to its preservation assessment documentation, which may be either AI-generated text or traditional record resources.</p></td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" title="The subject is a subproperty of a property. Defined in The RDF Schema vocabulary (RDFS)">Sub Property Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="https://www.ica.org/standards/RiC/ontology#isRelatedTo">rico:isRelatedTo</a>
-                  <sup class="sup-op" title="OWL Object Property">op</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
-              </th>
-              <td>
-                <span>
-                  <a href="https://www.ica.org/standards/RiC/ontology#Instantiation">rico:Instantiation</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
-              </th>
-              <td>
-                <ul>
-                  <li>
-                    <span>
-                      <a href="#AIgeneratedtext">AI generated text</a>
-                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="https://www.ica.org/standards/RiC/ontology#RecordResource">rico:RecordResource</a>
-                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                    </span>
-                  </li>
-                </ul>
               </td>
             </tr>
           </table>
@@ -1660,6 +1960,17 @@ td {
                 <span>
                   <a href="https://www.ica.org/standards/RiC/ontology#isRelatedTo">rico:isRelatedTo</a>
                   <sup class="sup-op" title="OWL Object Property">op</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://www.ica.org/standards/RiC/ontology#Agent">rico:Agent</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
             </tr>
@@ -1701,6 +2012,17 @@ td {
                 <span>
                   <a href="https://www.ica.org/standards/RiC/ontology#isInstantiationAssociatedWithInstantiation">rico:isInstantiationAssociatedWithInstantiation</a>
                   <sup class="sup-op" title="OWL Object Property">op</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://www.ica.org/standards/RiC/ontology#Instantiation">rico:Instantiation</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
             </tr>
@@ -1821,27 +2143,22 @@ td {
             </tr>
           </table>
         </div>
-        <div class="property entity" id="hasTechnicalDescription">
-          <h3>has technical description
+        <div class="property entity" id="hasStorageLocation">
+          <h3>Has Storage Location
             <sup class="sup-op" title="OWL Object Property">op</sup>
           </h3>
           <table>
             <tr>
               <th>IRI</th>
               <td>
-                <code>http://w3id.org/bodi#hasTechnicalDescription</code>
+                <code>http://w3id.org/bodi#hasStorageLocation</code>
               </td>
             </tr>
             <tr>
               <th>
                 <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
               </th>
-              <td>
-                <ul>
-                  <li><p>Has technical description</p></li>
-                  <li><p>Links an instantiation to its technical description, which provides detailed information about the technical characteristics, structure, format, or implementation details of the resource.</p></li>
-                </ul>
-              </td>
+              <td><p>Connects an Entity to the Storage Location in which is located.</p></td>
             </tr>
             <tr>
               <th>
@@ -1860,7 +2177,7 @@ td {
               </th>
               <td>
                 <span>
-                  <a href="https://www.ica.org/standards/RiC/ontology#Instantiation">rico:Instantiation</a>
+                  <a href="http://www.w3.org/2002/07/owl#Thing">Thing</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -1870,20 +2187,114 @@ td {
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
               </th>
               <td>
-                <ul>
-                  <li>
-                    <span>
-                      <a href="#AIgeneratedtext">AI generated text</a>
-                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="https://www.ica.org/standards/RiC/ontology#RecordResource">rico:RecordResource</a>
-                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                    </span>
-                  </li>
-                </ul>
+                <span>
+                  <a href="http://www.loc.gov/premis/rdf/v3/StorageLocation">premis:StorageLocation</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="hasTechnicalDescription">
+          <h3>Has technical description
+            <sup class="sup-op" title="OWL Object Property">op</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://w3id.org/bodi#hasTechnicalDescription</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>Links an instantiation to its technical description, which provides detailed information about the technical characteristics, structure, format, or implementation details of the resource.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" title="The subject is a subproperty of a property. Defined in The RDF Schema vocabulary (RDFS)">Sub Property Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://www.ica.org/standards/RiC/ontology#isRelatedTo">rico:isRelatedTo</a>
+                  <sup class="sup-op" title="OWL Object Property">op</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
+              </th>
+              <td>
+                <span>
+                  <a href="http://www.w3.org/2002/07/owl#Thing">Thing</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#AIgeneratedtext">AI generated text</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="hasTechnicalDescriptionType">
+          <h3>Has Technical Description Type
+            <sup class="sup-op" title="OWL Object Property">op</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://w3id.org/bodi#hasTechnicalDescriptionType</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>Connects a Technical Description to a Technical Description Type that defines it.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" title="The subject is a subproperty of a property. Defined in The RDF Schema vocabulary (RDFS)">Sub Property Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://www.ica.org/standards/RiC/ontology#hasOrHadType">rico:hasOrHadType</a>
+                  <sup class="sup-op" title="OWL Object Property">op</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#AIgeneratedtext">AI generated text</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#TechnicalDescriptionType">Technical Description Type</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
               </td>
             </tr>
           </table>
@@ -1955,7 +2366,7 @@ td {
               <th>
                 <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
               </th>
-              <td><p>Categorizes technical metadata according to the specific extracted field.</p></td>
+              <td><p>Connects a Technical Metadata to its Type</p></td>
             </tr>
             <tr>
               <th>
@@ -1992,8 +2403,60 @@ td {
             </tr>
           </table>
         </div>
+        <div class="property entity" id="isFileClusterPositionOf">
+          <h3>is file cluster position of
+            <sup class="sup-op" title="OWL Object Property">op</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://w3id.org/bodi#isFileClusterPositionOf</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>Associates a physical file cluster position with the logical instantiation  whose data it stores on the medium.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" title="The subject is a subproperty of a property. Defined in The RDF Schema vocabulary (RDFS)">Sub Property Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://www.ica.org/standards/RiC/ontology#isRelatedTo">rico:isRelatedTo</a>
+                  <sup class="sup-op" title="OWL Object Property">op</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#Fileclusterposition">File cluster position</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://www.ica.org/standards/RiC/ontology#Instantiation">rico:Instantiation</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
         <div class="property entity" id="isHashCodeOf">
-          <h3>is hash code of
+          <h3>Is Hash Code Of
             <sup class="sup-op" title="OWL Object Property">op</sup>
           </h3>
           <table>
@@ -2005,12 +2468,29 @@ td {
             </tr>
             <tr>
               <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>Associates a cryptographic hash code or checksum value with the instantiation it identifies. This property supports digital preservation workflows by linking the integrity marker back to the corresponding digital resource, ensuring traceability, verification, and authenticity validation.</p></td>
+            </tr>
+            <tr>
+              <th>
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" title="The subject is a subproperty of a property. Defined in The RDF Schema vocabulary (RDFS)">Sub Property Of</a>
               </th>
               <td>
                 <span>
                   <a href="https://www.ica.org/standards/RiC/ontology#isRelatedTo">rico:isRelatedTo</a>
                   <sup class="sup-op" title="OWL Object Property">op</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
+              </th>
+              <td>
+                <span>
+                  <a href="http://www.loc.gov/premis/rdf/v3/Fixity">premis:Fixity</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
             </tr>
@@ -2040,13 +2520,16 @@ td {
             </tr>
             <tr>
               <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>Indicates that an Agent supervises, manages, or oversees a specific Activity. This property reflects the Agent’s role in providing oversight and guidance, and it is essential for documenting responsibility, authority, and governance within digital preservation workflows.</p></td>
+            </tr>
+            <tr>
+              <th>
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" title="The subject is a subproperty of a property. Defined in The RDF Schema vocabulary (RDFS)">Sub Property Of</a>
               </th>
               <td>
-                <span>
-                  <a href="https://www.ica.org/standards/RiC/ontology#isRelatedTo">rico:isRelatedTo</a>
-                  <sup class="sup-op" title="OWL Object Property">op</sup>
-                </span>
+                <a href="https://www.ica.org/standards/RiC/ontology#hasOrHadAuthorityOver">rico:hasOrHadAuthorityOver</a>
               </td>
             </tr>
             <tr>
@@ -2060,58 +2543,13 @@ td {
                 </span>
               </td>
             </tr>
-          </table>
-        </div>
-        <div class="property entity" id="isPreservationAssessmentOf">
-          <h3>is preservation assessment of
-            <sup class="sup-op" title="OWL Object Property">op</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://w3id.org/bodi#isPreservationAssessmentOf</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" title="The subject is a subproperty of a property. Defined in The RDF Schema vocabulary (RDFS)">Sub Property Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="https://www.ica.org/standards/RiC/ontology#isRelatedTo">rico:isRelatedTo</a>
-                  <sup class="sup-op" title="OWL Object Property">op</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
-              </th>
-              <td>
-                <ul>
-                  <li>
-                    <span>
-                      <a href="#AIgeneratedtext">AI generated text</a>
-                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="https://www.ica.org/standards/RiC/ontology#RecordResource">rico:RecordResource</a>
-                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                    </span>
-                  </li>
-                </ul>
-              </td>
-            </tr>
             <tr>
               <th>
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
               </th>
               <td>
                 <span>
-                  <a href="https://www.ica.org/standards/RiC/ontology#Instantiation">rico:Instantiation</a>
+                  <a href="https://www.ica.org/standards/RiC/ontology#Activity">rico:Activity</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -2119,7 +2557,7 @@ td {
           </table>
         </div>
         <div class="property entity" id="isSoftwareComponentOf">
-          <h3>is software component of
+          <h3>Is software component of
             <sup class="sup-op" title="OWL Object Property">op</sup>
           </h3>
           <table>
@@ -2128,6 +2566,12 @@ td {
               <td>
                 <code>http://w3id.org/bodi#isSoftwareComponentOf</code>
               </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>Indicates that a Software Component is part of a Software Stack as one of its constituent elements. This property supports the representation of hierarchical structures within complex software environments, linking individual components to the encompassing Software.</p></td>
             </tr>
             <tr>
               <th>
@@ -2165,7 +2609,7 @@ td {
           </table>
         </div>
         <div class="property entity" id="isStackElementOf">
-          <h3>is stack element of
+          <h3>Is stack element of
             <sup class="sup-op" title="OWL Object Property">op</sup>
           </h3>
           <table>
@@ -2174,6 +2618,12 @@ td {
               <td>
                 <code>http://w3id.org/bodi#isStackElementOf</code>
               </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>Indicates that a Mechanism is part of a software stack as one of its constituent elements. This property links individual components (Software, Algorithms, Software Components) to the broader technological stack of which they form a part, supporting the modeling of composite systems responsible for carrying out an Activity.</p></td>
             </tr>
             <tr>
               <th>
@@ -2210,16 +2660,22 @@ td {
             </tr>
           </table>
         </div>
-        <div class="property entity" id="isTechnicalDescriptionOf">
-          <h3>is technical description of
+        <div class="property entity" id="isStorageLocationOf">
+          <h3>is Storage Location Of
             <sup class="sup-op" title="OWL Object Property">op</sup>
           </h3>
           <table>
             <tr>
               <th>IRI</th>
               <td>
-                <code>http://w3id.org/bodi#isTechnicalDescriptionOf</code>
+                <code>http://w3id.org/bodi#isStorageLocationOf</code>
               </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>Connects a Storage Location to the Entity in which is located.</p></td>
             </tr>
             <tr>
               <th>
@@ -2237,20 +2693,10 @@ td {
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
               </th>
               <td>
-                <ul>
-                  <li>
-                    <span>
-                      <a href="#AIgeneratedtext">AI generated text</a>
-                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="https://www.ica.org/standards/RiC/ontology#RecordResource">rico:RecordResource</a>
-                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                    </span>
-                  </li>
-                </ul>
+                <span>
+                  <a href="http://www.loc.gov/premis/rdf/v3/StorageLocation">premis:StorageLocation</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
               </td>
             </tr>
             <tr>
@@ -2259,7 +2705,111 @@ td {
               </th>
               <td>
                 <span>
-                  <a href="https://www.ica.org/standards/RiC/ontology#Instantiation">rico:Instantiation</a>
+                  <a href="http://www.w3.org/2002/07/owl#Thing">Thing</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="isTechnicalDescriptionOf">
+          <h3>Is Technical Description Of
+            <sup class="sup-op" title="OWL Object Property">op</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://w3id.org/bodi#isTechnicalDescriptionOf</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>Links a technical description to the Instantiation is referred to.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" title="The subject is a subproperty of a property. Defined in The RDF Schema vocabulary (RDFS)">Sub Property Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://www.ica.org/standards/RiC/ontology#isRelatedTo">rico:isRelatedTo</a>
+                  <sup class="sup-op" title="OWL Object Property">op</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#AIgeneratedtext">AI generated text</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
+              </th>
+              <td>
+                <span>
+                  <a href="http://www.w3.org/2002/07/owl#Thing">Thing</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="isTechnicalDescriptionTypeOf">
+          <h3>Is Technical Description Type Of
+            <sup class="sup-op" title="OWL Object Property">op</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://w3id.org/bodi#isTechnicalDescriptionTypeOf</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>Connects a Technical Descption Type to a Technical Description it defines.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" title="The subject is a subproperty of a property. Defined in The RDF Schema vocabulary (RDFS)">Sub Property Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://www.ica.org/standards/RiC/ontology#isOrWasTypeOf">rico:isOrWasTypeOf</a>
+                  <sup class="sup-op" title="OWL Object Property">op</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#TechnicalDescriptionType">Technical Description Type</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#AIgeneratedtext">AI generated text</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -2267,7 +2817,7 @@ td {
           </table>
         </div>
         <div class="property entity" id="isTechnicalMetadataOf">
-          <h3>is technical metadata of
+          <h3>is Technical Metadata Of
             <sup class="sup-op" title="OWL Object Property">op</sup>
           </h3>
           <table>
@@ -2276,6 +2826,12 @@ td {
               <td>
                 <code>http://w3id.org/bodi#isTechnicalMetadataOf</code>
               </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>Associates a Technical Metadata to the Instatiation is referred to.</p></td>
             </tr>
             <tr>
               <th>
@@ -2313,7 +2869,7 @@ td {
           </table>
         </div>
         <div class="property entity" id="isTechnicalMetadataTypeOf">
-          <h3>is technical metadata type of
+          <h3>Is Technical Metadata Type Of
             <sup class="sup-op" title="OWL Object Property">op</sup>
           </h3>
           <table>
@@ -2322,6 +2878,12 @@ td {
               <td>
                 <code>http://w3id.org/bodi#isTechnicalMetadataTypeOf</code>
               </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>Connects a Technical Metadata Type to its related Technical Metadata</p></td>
             </tr>
             <tr>
               <th>
@@ -2393,6 +2955,17 @@ td {
               <td>
                 <span>
                   <a href="#AIgeneratedtext">AI generated text</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://www.ica.org/standards/RiC/ontology#Agent">rico:Agent</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -2471,10 +3044,20 @@ td {
                 <a class="hover_property" href="https://w3id.org/profile/ontdoc/superPropertyOf" title="Inverse of RDFS' subPropertyOf. Defined in Ontology Documentation Profile">Super Property Of</a>
               </th>
               <td>
-                <span>
-                  <a href="#hasTechnicalMetadataType">Has technical metadata type</a>
-                  <sup class="sup-op" title="OWL Object Property">op</sup>
-                </span>
+                <ul>
+                  <li>
+                    <span>
+                      <a href="#hasTechnicalDescriptionType">Has Technical Description Type</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="#hasTechnicalMetadataType">Has technical metadata type</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                  </li>
+                </ul>
               </td>
             </tr>
           </table>
@@ -2544,13 +3127,13 @@ td {
                 <ul>
                   <li>
                     <span>
-                      <a href="#isSoftwareComponentOf">bodi:isSoftwareComponentOf</a>
+                      <a href="#isSoftwareComponentOf">Is software component of</a>
                       <sup class="sup-op" title="OWL Object Property">op</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="#isStackElementOf">bodi:isStackElementOf</a>
+                      <a href="#isStackElementOf">Is stack element of</a>
                       <sup class="sup-op" title="OWL Object Property">op</sup>
                     </span>
                   </li>
@@ -2586,10 +3169,20 @@ td {
                 <a class="hover_property" href="https://w3id.org/profile/ontdoc/superPropertyOf" title="Inverse of RDFS' subPropertyOf. Defined in Ontology Documentation Profile">Super Property Of</a>
               </th>
               <td>
-                <span>
-                  <a href="#isTechnicalMetadataTypeOf">bodi:isTechnicalMetadataTypeOf</a>
-                  <sup class="sup-op" title="OWL Object Property">op</sup>
-                </span>
+                <ul>
+                  <li>
+                    <span>
+                      <a href="#isTechnicalDescriptionTypeOf">Is Technical Description Type Of</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="#isTechnicalMetadataTypeOf">Is Technical Metadata Type Of</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                  </li>
+                </ul>
               </td>
             </tr>
           </table>
@@ -2619,6 +3212,12 @@ td {
                   </li>
                   <li>
                     <span>
+                      <a href="#hasFileClusterPosition">Has file cluster position</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
                       <a href="#hasGenerated">Has generated</a>
                       <sup class="sup-op" title="OWL Object Property">op</sup>
                     </span>
@@ -2631,25 +3230,19 @@ td {
                   </li>
                   <li>
                     <span>
-                      <a href="#hasOrHadSupervisor">Has or had supervisor</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="#hasPreservationAssessment">Has preservation assessment</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
                       <a href="#hasRevisioned">Has revisioned</a>
                       <sup class="sup-op" title="OWL Object Property">op</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="#hasTechnicalDescription">bodi:hasTechnicalDescription</a>
+                      <a href="#hasStorageLocation">Has Storage Location</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="#hasTechnicalDescription">Has technical description</a>
                       <sup class="sup-op" title="OWL Object Property">op</sup>
                     </span>
                   </li>
@@ -2661,31 +3254,31 @@ td {
                   </li>
                   <li>
                     <span>
-                      <a href="#isHashCodeOf">bodi:isHashCodeOf</a>
+                      <a href="#isFileClusterPositionOf">bodi:isFileClusterPositionOf</a>
                       <sup class="sup-op" title="OWL Object Property">op</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="#isOrWasSupervisorOf">Is or was supervisor of</a>
+                      <a href="#isHashCodeOf">Is Hash Code Of</a>
                       <sup class="sup-op" title="OWL Object Property">op</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="#isPreservationAssessmentOf">bodi:isPreservationAssessmentOf</a>
+                      <a href="#isStorageLocationOf">is Storage Location Of</a>
                       <sup class="sup-op" title="OWL Object Property">op</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="#isTechnicalDescriptionOf">bodi:isTechnicalDescriptionOf</a>
+                      <a href="#isTechnicalDescriptionOf">Is Technical Description Of</a>
                       <sup class="sup-op" title="OWL Object Property">op</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="#isTechnicalMetadataOf">bodi:isTechnicalMetadataOf</a>
+                      <a href="#isTechnicalMetadataOf">is Technical Metadata Of</a>
                       <sup class="sup-op" title="OWL Object Property">op</sup>
                     </span>
                   </li>
@@ -2750,6 +3343,25 @@ td {
               </th>
               <td><p>Compliance of the file format to the Library of Congress Fle Formats Recommendations. May be "preferred", "acceptable" or "not recommended".</p></td>
             </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
+              </th>
+              <td>
+                <span>
+                  <a href="https://www.ica.org/standards/RiC/ontology#Instantiation">rico:Instantiation</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
+              </th>
+              <td>
+                <a href="http://www.w3.org/2000/01/rdf-schema#Literal">Literal</a>
+              </td>
+            </tr>
           </table>
         </div>
         <div class="property entity" id="confidenceScore">
@@ -2768,17 +3380,6 @@ td {
                 <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
               </th>
               <td><p>A numerical value between 0 and 10 indicating the confidence level or reliability of AI-generated text. Higher values indicate greater confidence in the accuracy or quality of the generated content, supporting quality assessment and validation workflows.</p></td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" title="The subject is a subproperty of a property. Defined in The RDF Schema vocabulary (RDFS)">Sub Property Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://www.w3.org/2002/07/owl#topDataProperty">topDataProperty</a>
-                  <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
-                </span>
-              </td>
             </tr>
             <tr>
               <th>
@@ -2992,86 +3593,48 @@ td {
                 </span>
               </td>
             </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
+              </th>
+              <td>
+                <a href="http://www.w3.org/2000/01/rdf-schema#Literal">Literal</a>
+              </td>
+            </tr>
           </table>
         </div>
       </div>
       <div class="section" id="annotationproperties">
         <h2>Annotation Properties</h2>
-        <div class="property entity" id="contributor">
-          <h3>contributor
+        <div class="property entity" id="license">
+          <h3>license
             <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
           </h3>
           <table>
             <tr>
               <th>IRI</th>
               <td>
-                <code>http://purl.org/dc/terms/contributor</code>
+                <code>http://purl.org/dc/terms/license</code>
               </td>
             </tr>
           </table>
         </div>
-        <div class="property entity" id="creator">
-          <h3>creator
+        <div class="property entity" id="Samecontentcount">
+          <h3>Same content count
             <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
           </h3>
           <table>
             <tr>
               <th>IRI</th>
               <td>
-                <code>http://purl.org/dc/terms/creator</code>
+                <code>http://w3id.org/bodi#sameContentCount</code>
               </td>
             </tr>
-          </table>
-        </div>
-        <div class="property entity" id="description">
-          <h3>description
-            <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
-          </h3>
-          <table>
             <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://purl.org/dc/terms/description</code>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="modified">
-          <h3>modified
-            <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://purl.org/dc/terms/modified</code>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="cterms:created">
-          <h3>cterms:created
-            <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://w3id.org/bodi#cterms:created</code>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="imports">
-          <h3>imports
-            <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://www.w3.org/2002/07/owl#imports</code>
-              </td>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>Count of Records with identical content - files sharing the same hash code indicate byte-for-byte identical content.</p></td>
             </tr>
           </table>
         </div>
@@ -3083,9 +3646,17 @@ td {
           <dd>
             <code>http://w3id.org/bodi#</code>
           </dd>
+          <dt id="dc">dc</dt>
+          <dd>
+            <code>http://purl.org/dc/elements/1.1/</code>
+          </dd>
           <dt id="owl">owl</dt>
           <dd>
             <code>http://www.w3.org/2002/07/owl#</code>
+          </dd>
+          <dt id="premis">premis</dt>
+          <dd>
+            <code>http://www.loc.gov/premis/rdf/v3/</code>
           </dd>
           <dt id="prov">prov</dt>
           <dd>
@@ -3170,13 +3741,13 @@ td {
           </h4>
           <ul class="second">
             <li>
-              <a href="#AIgeneratedtext">AI generated text</a>
-            </li>
-            <li>
               <a href="#Algorithm">Algorithm</a>
             </li>
             <li>
               <a href="#Exception">Exception</a>
+            </li>
+            <li>
+              <a href="#Fileclusterposition">File cluster position</a>
             </li>
             <li>
               <a href="#Software">Software</a>
@@ -3188,6 +3759,12 @@ td {
               <a href="#SoftwareStack">Software Stack</a>
             </li>
             <li>
+              <a href="#AIgeneratedtext">AI generated text</a>
+            </li>
+            <li>
+              <a href="#TechnicalDescriptionType">Technical Description Type</a>
+            </li>
+            <li>
               <a href="#Technicalmetadata">Technical metadata</a>
             </li>
             <li>
@@ -3197,10 +3774,28 @@ td {
               <a href="#TechnicalMetadataTypeSet">Technical Metadata Type Set</a>
             </li>
             <li>
+              <a href="#Fixity">Fixity</a>
+            </li>
+            <li>
+              <a href="#SoftwareAgent">Software Agent</a>
+            </li>
+            <li>
+              <a href="#StorageLocation">Storage Location</a>
+            </li>
+            <li>
+              <a href="#Entity">Entity</a>
+            </li>
+            <li>
+              <a href="#Activity">Activity</a>
+            </li>
+            <li>
               <a href="#Agent">Agent</a>
             </li>
             <li>
               <a href="#Concept">Concept</a>
+            </li>
+            <li>
+              <a href="#Extent">Extent</a>
             </li>
             <li>
               <a href="#Instantiation">Instantiation</a>
@@ -3217,9 +3812,6 @@ td {
             <li>
               <a href="#Type">Type</a>
             </li>
-            <li>
-              <a href="#Entity">Entity</a>
-            </li>
           </ul>
         </li>
         <li>
@@ -3231,6 +3823,9 @@ td {
               <a href="#generatedBy">Generated by</a>
             </li>
             <li>
+              <a href="#hasFileClusterPosition">Has file cluster position</a>
+            </li>
+            <li>
               <a href="#hasGenerated">Has generated</a>
             </li>
             <li>
@@ -3238,9 +3833,6 @@ td {
             </li>
             <li>
               <a href="#hasOrHadSupervisor">Has or had supervisor</a>
-            </li>
-            <li>
-              <a href="#hasPreservationAssessment">Has preservation assessment</a>
             </li>
             <li>
               <a href="#hasRevisioned">Has revisioned</a>
@@ -3255,7 +3847,13 @@ td {
               <a href="#hasStackElement">Has stack element</a>
             </li>
             <li>
-              <a href="#hasTechnicalDescription">has technical description</a>
+              <a href="#hasStorageLocation">Has Storage Location</a>
+            </li>
+            <li>
+              <a href="#hasTechnicalDescription">Has technical description</a>
+            </li>
+            <li>
+              <a href="#hasTechnicalDescriptionType">Has Technical Description Type</a>
             </li>
             <li>
               <a href="#hasTechnicalMetadata">Has Technical Metadata</a>
@@ -3264,28 +3862,34 @@ td {
               <a href="#hasTechnicalMetadataType">Has technical metadata type</a>
             </li>
             <li>
-              <a href="#isHashCodeOf">is hash code of</a>
+              <a href="#isFileClusterPositionOf">is file cluster position of</a>
+            </li>
+            <li>
+              <a href="#isHashCodeOf">Is Hash Code Of</a>
             </li>
             <li>
               <a href="#isOrWasSupervisorOf">Is or was supervisor of</a>
             </li>
             <li>
-              <a href="#isPreservationAssessmentOf">is preservation assessment of</a>
+              <a href="#isSoftwareComponentOf">Is software component of</a>
             </li>
             <li>
-              <a href="#isSoftwareComponentOf">is software component of</a>
+              <a href="#isStackElementOf">Is stack element of</a>
             </li>
             <li>
-              <a href="#isStackElementOf">is stack element of</a>
+              <a href="#isStorageLocationOf">is Storage Location Of</a>
             </li>
             <li>
-              <a href="#isTechnicalDescriptionOf">is technical description of</a>
+              <a href="#isTechnicalDescriptionOf">Is Technical Description Of</a>
             </li>
             <li>
-              <a href="#isTechnicalMetadataOf">is technical metadata of</a>
+              <a href="#isTechnicalDescriptionTypeOf">Is Technical Description Type Of</a>
             </li>
             <li>
-              <a href="#isTechnicalMetadataTypeOf">is technical metadata type of</a>
+              <a href="#isTechnicalMetadataOf">is Technical Metadata Of</a>
+            </li>
+            <li>
+              <a href="#isTechnicalMetadataTypeOf">Is Technical Metadata Type Of</a>
             </li>
             <li>
               <a href="#revisedBy">Revised by</a>
@@ -3344,22 +3948,10 @@ td {
           </h4>
           <ul class="second">
             <li>
-              <a href="#contributor">contributor</a>
+              <a href="#license">license</a>
             </li>
             <li>
-              <a href="#creator">creator</a>
-            </li>
-            <li>
-              <a href="#description">description</a>
-            </li>
-            <li>
-              <a href="#modified">modified</a>
-            </li>
-            <li>
-              <a href="#cterms:created">cterms:created</a>
-            </li>
-            <li>
-              <a href="#imports">imports</a>
+              <a href="#Samecontentcount">Same content count</a>
             </li>
           </ul>
         </li>
@@ -3372,7 +3964,13 @@ td {
               <a href="#bodi">bodi</a>
             </li>
             <li>
+              <a href="#dc">dc</a>
+            </li>
+            <li>
               <a href="#owl">owl</a>
+            </li>
+            <li>
+              <a href="#premis">premis</a>
             </li>
             <li>
               <a href="#prov">prov</a>
