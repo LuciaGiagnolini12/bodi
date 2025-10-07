@@ -2,7 +2,7 @@
 # BoDi (Born-Digital Module)  
 
 ![Status](https://img.shields.io/badge/status-WIP-yellow)  
-⚠️ **Work in Progress** – This ontology is under active development  
+This ontology is under active development  
 
 **BoDi (Born-Digital Ontology)** is an extension of the Records in Contexts (RiC) ontology, designed to represent born-digital resources in personal archives. It integrates elements from PREMIS, PROV-O, and LRMoo, and introduces new classes and properties specifically tailored for born-digital archival materials. BoDi supports semantic interoperability and formalized reasoning over archival data.  
 
