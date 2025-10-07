@@ -1,6 +1,4 @@
-Certo! Ecco il **README completo** pronto da copiare e incollare, incluso tutto ciò che mancava dopo la sezione Namespace:
 
-````markdown
 # BoDi (Born-Digital Module)  
 
 ![Status](https://img.shields.io/badge/status-WIP-yellow)  
