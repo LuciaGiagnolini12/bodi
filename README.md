@@ -24,7 +24,7 @@ This ontology is under active development
 
 ## Contents
 
-* **Ontology folder** – contains the ontology in multiple formats: [OWL](ontology/BoDi.owl), [TTL](ontology/BoDi.ttl), and [RDF/XML](ontology/BoDi.rdf).
+* **Ontology folder** – contains the ontology in multiple formats: [OWL](ontology/bodi.owl), [TTL](ontology/bodi.ttl), and [RDF/XML](ontology/bodi.rdf).
 * **Examples folder** – contains named individuals created to validate the ontology using reasoning in Protégé. Graphical representations of the individuals are also included, illustrating practical applications of BoDi to born-digital archival resources.
 
 ## How to cite
