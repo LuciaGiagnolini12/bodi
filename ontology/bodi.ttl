@@ -1,5 +1,6 @@
 @prefix : <http://w3id.org/bodi#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix ns: <http://creativecommons.org/ns#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -9,48 +10,47 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix rico: <https://www.ica.org/standards/RiC/ontology#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
 @prefix terms: <http://purl.org/dc/terms/> .
 @prefix premis: <http://www.loc.gov/premis/rdf/v3/> .
 @base <http://w3id.org/bodi#> .
 
 <http://w3id.org/bodi#> rdf:type owl:Ontology ;
-                         terms:contributor "Francesca Tomasi" ,
-                                           "Paolo Bonora" ;
-                         terms:creator "Lucia Giagnolini" ;
-                         terms:modified "An extension of RiC-O (Records in Contexts Ontology) designed to represent the complexity of born-digital archival materials, addressing requirements for technical metadata, digital provenance, integrity verification, and contextual relationships."@en ;
-                         rdfs:label "BoDi (Born-Digital) Ontology" ;
-                         owl:imports "<http://iflastandards.info/ns/lrm/lrmoo/>"^^xsd:anyURI ,
-                                     "<http://www.loc.gov/premis/rdf/v3/>"^^xsd:anyURI ,
-                                     "<http://www.w3.org/ns/prov#>"^^xsd:anyURI ,
-                                     "<https://www.ica.org/standards/RiC/ontology>"^^xsd:anyURI ;
+                         owl:imports <http://iflastandards.info/ns/lrm/lrmoo/> ,
+                                     <https://id.loc.gov/ontologies/premis-3-0-0> ,
+                                     <https://www.ica.org/standards/RiC/ontology/1.1> ;
+                         dc:contributor "Francesca Tomasi" ,
+                                        "Paolo Bonora" ;
+                         dc:creator "Lucia Giagnolini" ;
+                         dc:title "BoDi (Born-Digital) Ontology" ;
+                         terms:created "2025-10-01" ;
+                         terms:description "An extension of RiC-O (Records in Contexts Ontology) designed to represent the complexity of born-digital archival materials, addressing requirements for technical metadata, digital provenance, integrity verification, and contextual relationships." ;
+                         terms:license "This work is distributed under a Creative Commons Attribution License (https://creativecommons.org/licenses/by/4.0/)." ;
+                         vann:preferredNamespacePrefix "bodi" ;
+                         vann:preferredNamespaceUri "http://w3id.org/bodi#" ;
+                         owl:versionIRI "http://w3id.org/bodi/1.0" ;
                          owl:versionInfo 1.0 .
 
 #################################################################
 #    Annotation properties
 #################################################################
 
-###  http://purl.org/dc/terms/contributor
-terms:contributor rdf:type owl:AnnotationProperty .
+###  http://purl.org/dc/terms/created
+terms:created rdf:type owl:AnnotationProperty .
 
 
-###  http://purl.org/dc/terms/creator
-terms:creator rdf:type owl:AnnotationProperty .
+###  http://purl.org/dc/terms/license
+terms:license rdf:type owl:AnnotationProperty .
 
 
-###  http://purl.org/dc/terms/description
-terms:description rdf:type owl:AnnotationProperty .
+###  http://w3id.org/bodi#sameContentCount
+bodi:sameContentCount rdf:type owl:AnnotationProperty ;
+                      rdfs:comment "Count of Records with identical content - files sharing the same hash code indicate byte-for-byte identical content." ;
+                      rdfs:label "Same content count" .
 
 
-###  http://purl.org/dc/terms/modified
-terms:modified rdf:type owl:AnnotationProperty .
-
-
-###  http://w3id.org/bodi#cterms:created
-bodi:cterms:created rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/2002/07/owl#imports
-owl:imports rdf:type owl:AnnotationProperty .
+###  http://www.w3.org/2002/07/owl#versionIRI
+owl:versionIRI rdf:type owl:AnnotationProperty .
 
 
 #################################################################
@@ -62,15 +62,33 @@ bodi:generatedBy rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf rico:isRelatedTo ;
                  owl:inverseOf bodi:hasGenerated ;
                  rdfs:domain owl:Thing ;
-                 rdfs:range rico:Agent ;
+                 rdfs:range [ rdf:type owl:Class ;
+                              owl:unionOf ( rico:Activity
+                                            rico:Agent
+                                          )
+                            ] ;
                  rdfs:comment "Indicates that a resource was created, produced, or brought into existence by a specific Agent or Activity. This property establishes a creation relationship between any resource and the agent pr activity responsible for its generation, whether through automated processes, human intervention, or hybrid approaches." ;
                  rdfs:label "Generated by" .
+
+
+###  http://w3id.org/bodi#hasFileClusterPosition
+bodi:hasFileClusterPosition rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf rico:isRelatedTo ;
+                            owl:inverseOf bodi:isFileClusterPositionOf ;
+                            rdfs:domain rico:Instantiation ;
+                            rdfs:range bodi:FileClusterPosition ;
+                            rdfs:comment "Links a logical instantiation of a digital resource to its corresponding physical allocation on the storage medium." ;
+                            rdfs:label "Has file cluster position" .
 
 
 ###  http://w3id.org/bodi#hasGenerated
 bodi:hasGenerated rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf rico:isRelatedTo ;
-                  rdfs:domain rico:Agent ;
+                  rdfs:domain [ rdf:type owl:Class ;
+                                owl:unionOf ( rico:Activity
+                                              rico:Agent
+                                            )
+                              ] ;
                   rdfs:range owl:Thing ;
                   rdfs:comment "Indicates that an Agent or Activity has created, produced, or brought into existence a specific resource. This property represents the inverse relationship of 'generatedBy', allowing navigation from agents and activities to their generated outputs." ;
                   rdfs:label "Has generated" .
@@ -81,35 +99,27 @@ bodi:hasHashCode rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf rico:isRelatedTo ;
                  owl:inverseOf bodi:isHashCodeOf ;
                  rdfs:domain rico:Instantiation ;
+                 rdfs:range premis:Fixity ;
                  rdfs:comment "Associates an instantiation with its cryptographic hash code or checksum value. This property is crucial for digital preservation workflows, enabling integrity verification, duplicate detection, and authenticity validation of digital resources over time." ;
                  rdfs:label "Has hash code" .
 
 
 ###  http://w3id.org/bodi#hasOrHadSupervisor
 bodi:hasOrHadSupervisor rdf:type owl:ObjectProperty ;
-                        rdfs:subPropertyOf rico:isRelatedTo ;
+                        rdfs:subPropertyOf rico:isOrWasUnderAuthorityOf ;
                         owl:inverseOf bodi:isOrWasSupervisorOf ;
+                        rdfs:domain rico:Activity ;
                         rdfs:range rico:Agent ;
                         rdfs:comment "Indicates that an activity is or was supervised, managed, or overseen by a specific Agent. This property captures both current and historical supervisory relationships, essential for tracking accountability and governance in digital preservation workflows." ;
                         rdfs:label "Has or had supervisor" .
-
-
-###  http://w3id.org/bodi#hasPreservationAssessment
-bodi:hasPreservationAssessment rdf:type owl:ObjectProperty ;
-                               rdfs:subPropertyOf rico:isRelatedTo ;
-                               owl:inverseOf bodi:isPreservationAssessmentOf ;
-                               rdfs:domain rico:Instantiation ;
-                               rdfs:range bodi:AIGeneratedText ,
-                                          rico:RecordResource ;
-                               rdfs:comment "Links an instantiation to its preservation assessment documentation, which may be either AI-generated text or traditional record resources." ;
-                               rdfs:label "Has preservation assessment" .
 
 
 ###  http://w3id.org/bodi#hasRevisioned
 bodi:hasRevisioned rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf rico:isRelatedTo ;
                    owl:inverseOf bodi:revisedBy ;
-                   rdfs:range bodi:AIGeneratedText ;
+                   rdfs:domain rico:Agent ;
+                   rdfs:range bodi:TechnicalDescription ;
                    rdfs:comment "Connects a Person to the AI Generated Text that she has revised." ;
                    rdfs:label "Has revisioned" .
 
@@ -118,6 +128,7 @@ bodi:hasRevisioned rdf:type owl:ObjectProperty ;
 bodi:hasSameHashCodeAs rdf:type owl:ObjectProperty ;
                        rdfs:subPropertyOf rico:isInstantiationAssociatedWithInstantiation ;
                        rdf:type owl:SymmetricProperty ;
+                       rdfs:domain rico:Instantiation ;
                        rdfs:range rico:Instantiation ;
                        rdfs:comment "Establishes that two digital instantiations have identical hash codes, indicating they are likely exact digital copies or duplicates." ;
                        rdfs:label "Has same hash code as" .
@@ -127,8 +138,8 @@ bodi:hasSameHashCodeAs rdf:type owl:ObjectProperty ;
 bodi:hasSoftwareComponent rdf:type owl:ObjectProperty ;
                           rdfs:subPropertyOf rico:hasOrHadPart ;
                           owl:inverseOf bodi:isSoftwareComponentOf ;
-                          rdfs:domain bodi:SoftwareStack ;
-                          rdfs:range rico:Mechanism ;
+                          rdfs:domain bodi:Software ;
+                          rdfs:range bodi:SoftwareComponent ;
                           rdfs:comment "Indicates that a Software contains or includes a specific Software Component as one of its constituent parts. This property helps model the hierarchical structure of complex software environments." ;
                           rdfs:label "Has Software Component" .
 
@@ -143,15 +154,34 @@ bodi:hasStackElement rdf:type owl:ObjectProperty ;
                      rdfs:label "Has stack element" .
 
 
+###  http://w3id.org/bodi#hasStorageLocation
+bodi:hasStorageLocation rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf rico:isRelatedTo ;
+                        owl:inverseOf bodi:isStorageLocationOf ;
+                        rdfs:domain owl:Thing ;
+                        rdfs:range premis:StorageLocation ;
+                        rdfs:comment "Connects an Entity to the Storage Location in which is located." ;
+                        rdfs:label "Has Storage Location" .
+
+
 ###  http://w3id.org/bodi#hasTechnicalDescription
 bodi:hasTechnicalDescription rdf:type owl:ObjectProperty ;
                              rdfs:subPropertyOf rico:isRelatedTo ;
                              owl:inverseOf bodi:isTechnicalDescriptionOf ;
-                             rdfs:domain rico:Instantiation ;
-                             rdfs:range bodi:AIGeneratedText ,
-                                        rico:RecordResource ;
-                             rdfs:comment "Has technical description" ,
-                                          "Links an instantiation to its technical description, which provides detailed information about the technical characteristics, structure, format, or implementation details of the resource." .
+                             rdfs:domain owl:Thing ;
+                             rdfs:range bodi:TechnicalDescription ;
+                             rdfs:comment "Links an instantiation to its technical description, which provides detailed information about the technical characteristics, structure, format, or implementation details of the resource." ;
+                             rdfs:label "Has technical description" .
+
+
+###  http://w3id.org/bodi#hasTechnicalDescriptionType
+bodi:hasTechnicalDescriptionType rdf:type owl:ObjectProperty ;
+                                 rdfs:subPropertyOf rico:hasOrHadType ;
+                                 owl:inverseOf bodi:isTechnicalDescriptionTypeOf ;
+                                 rdfs:domain bodi:TechnicalDescription ;
+                                 rdfs:range bodi:TechnicalDescriptionType ;
+                                 rdfs:comment "Connects a Technical Description to a Technical Description Type that defines it." ;
+                                 rdfs:label "Has Technical Description Type" .
 
 
 ###  http://w3id.org/bodi#hasTechnicalMetadata
@@ -170,71 +200,104 @@ bodi:hasTechnicalMetadataType rdf:type owl:ObjectProperty ;
                               owl:inverseOf bodi:isTechnicalMetadataTypeOf ;
                               rdfs:domain bodi:TechnicalMetadata ;
                               rdfs:range bodi:TechnicalMetadataType ;
-                              rdfs:comment "Categorizes technical metadata according to the specific extracted field." ;
+                              rdfs:comment "Connects a Technical Metadata to its Type" ;
                               rdfs:label "Has technical metadata type" .
+
+
+###  http://w3id.org/bodi#isFileClusterPositionOf
+bodi:isFileClusterPositionOf rdf:type owl:ObjectProperty ;
+                             rdfs:subPropertyOf rico:isRelatedTo ;
+                             rdfs:domain bodi:FileClusterPosition ;
+                             rdfs:range rico:Instantiation ;
+                             rdfs:comment "Associates a physical file cluster position with the logical instantiation  whose data it stores on the medium." .
 
 
 ###  http://w3id.org/bodi#isHashCodeOf
 bodi:isHashCodeOf rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf rico:isRelatedTo ;
-                  rdfs:range rico:Instantiation .
+                  rdfs:domain premis:Fixity ;
+                  rdfs:range rico:Instantiation ;
+                  rdfs:comment "Associates a cryptographic hash code or checksum value with the instantiation it identifies. This property supports digital preservation workflows by linking the integrity marker back to the corresponding digital resource, ensuring traceability, verification, and authenticity validation." ;
+                  rdfs:label "Is Hash Code Of" .
 
 
 ###  http://w3id.org/bodi#isOrWasSupervisorOf
 bodi:isOrWasSupervisorOf rdf:type owl:ObjectProperty ;
-                         rdfs:subPropertyOf rico:isRelatedTo ;
+                         rdfs:subPropertyOf rico:hasOrHadAuthorityOver ;
                          rdfs:domain rico:Agent ;
+                         rdfs:range rico:Activity ;
+                         rdfs:comment "Indicates that an Agent supervises, manages, or oversees a specific Activity. This property reflects the Agent’s role in providing oversight and guidance, and it is essential for documenting responsibility, authority, and governance within digital preservation workflows." ;
                          rdfs:label "Is or was supervisor of" .
-
-
-###  http://w3id.org/bodi#isPreservationAssessmentOf
-bodi:isPreservationAssessmentOf rdf:type owl:ObjectProperty ;
-                                rdfs:subPropertyOf rico:isRelatedTo ;
-                                rdfs:domain bodi:AIGeneratedText ,
-                                            rico:RecordResource ;
-                                rdfs:range rico:Instantiation .
 
 
 ###  http://w3id.org/bodi#isSoftwareComponentOf
 bodi:isSoftwareComponentOf rdf:type owl:ObjectProperty ;
                            rdfs:subPropertyOf rico:isOrWasPartOf ;
-                           rdfs:domain rico:Mechanism ;
-                           rdfs:range bodi:SoftwareStack .
+                           rdfs:domain bodi:SoftwareComponent ;
+                           rdfs:range bodi:Software ;
+                           rdfs:comment "Indicates that a Software Component is part of a Software Stack as one of its constituent elements. This property supports the representation of hierarchical structures within complex software environments, linking individual components to the encompassing Software." ;
+                           rdfs:label "Is software component of" .
 
 
 ###  http://w3id.org/bodi#isStackElementOf
 bodi:isStackElementOf rdf:type owl:ObjectProperty ;
                       rdfs:subPropertyOf rico:isOrWasPartOf ;
                       rdfs:domain rico:Mechanism ;
-                      rdfs:range bodi:SoftwareStack .
+                      rdfs:range bodi:SoftwareStack ;
+                      rdfs:comment "Indicates that a Mechanism is part of a software stack as one of its constituent elements. This property links individual components (Software, Algorithms, Software Components) to the broader technological stack of which they form a part, supporting the modeling of composite systems responsible for carrying out an Activity." ;
+                      rdfs:label "Is stack element of" .
+
+
+###  http://w3id.org/bodi#isStorageLocationOf
+bodi:isStorageLocationOf rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf rico:isRelatedTo ;
+                         rdfs:domain premis:StorageLocation ;
+                         rdfs:range owl:Thing ;
+                         rdfs:comment "Connects a Storage Location to the Entity in which is located." ;
+                         rdfs:label "is Storage Location Of" .
 
 
 ###  http://w3id.org/bodi#isTechnicalDescriptionOf
 bodi:isTechnicalDescriptionOf rdf:type owl:ObjectProperty ;
                               rdfs:subPropertyOf rico:isRelatedTo ;
-                              rdfs:domain bodi:AIGeneratedText ,
-                                          rico:RecordResource ;
-                              rdfs:range rico:Instantiation .
+                              rdfs:domain bodi:TechnicalDescription ;
+                              rdfs:range owl:Thing ;
+                              rdfs:comment "Links a technical description to the Instantiation is referred to." ;
+                              rdfs:label "Is Technical Description Of" .
+
+
+###  http://w3id.org/bodi#isTechnicalDescriptionTypeOf
+bodi:isTechnicalDescriptionTypeOf rdf:type owl:ObjectProperty ;
+                                  rdfs:subPropertyOf rico:isOrWasTypeOf ;
+                                  rdfs:domain bodi:TechnicalDescriptionType ;
+                                  rdfs:range bodi:TechnicalDescription ;
+                                  rdfs:comment "Connects a Technical Descption Type to a Technical Description it defines." ;
+                                  rdfs:label "Is Technical Description Type Of" .
 
 
 ###  http://w3id.org/bodi#isTechnicalMetadataOf
 bodi:isTechnicalMetadataOf rdf:type owl:ObjectProperty ;
                            rdfs:subPropertyOf rico:isRelatedTo ;
                            rdfs:domain bodi:TechnicalMetadata ;
-                           rdfs:range rico:Instantiation .
+                           rdfs:range rico:Instantiation ;
+                           rdfs:comment "Associates a Technical Metadata to the Instatiation is referred to." ;
+                           rdfs:label "is Technical Metadata Of" .
 
 
 ###  http://w3id.org/bodi#isTechnicalMetadataTypeOf
 bodi:isTechnicalMetadataTypeOf rdf:type owl:ObjectProperty ;
                                rdfs:subPropertyOf rico:isOrWasTypeOf ;
                                rdfs:domain bodi:TechnicalMetadataType ;
-                               rdfs:range bodi:TechnicalMetadata .
+                               rdfs:range bodi:TechnicalMetadata ;
+                               rdfs:comment "Connects a Technical Metadata Type to its related Technical Metadata" ;
+                               rdfs:label "Is Technical Metadata Type Of" .
 
 
 ###  http://w3id.org/bodi#revisedBy
 bodi:revisedBy rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf rico:isRelatedTo ;
-               rdfs:domain bodi:AIGeneratedText ;
+               rdfs:domain bodi:TechnicalDescription ;
+               rdfs:range rico:Agent ;
                rdfs:comment "Connects an AI Generated Text to the Person that revisioned the information." ;
                rdfs:label "Revised by" .
 
@@ -272,16 +335,9 @@ rico:isRelatedTo rdf:type owl:ObjectProperty .
 #    Data properties
 #################################################################
 
-###  http://w3id.org/bodi#LOCFormatCompliance
-bodi:LOCFormatCompliance rdf:type owl:DatatypeProperty ;
-                         rdfs:comment "Compliance of the file format to the Library of Congress Fle Formats Recommendations. May be \"preferred\", \"acceptable\" or \"not recommended\"." ;
-                         rdfs:label "LOC Format Compliance" .
-
-
 ###  http://w3id.org/bodi#confidenceScore
 bodi:confidenceScore rdf:type owl:DatatypeProperty ;
-                     rdfs:subPropertyOf owl:topDataProperty ;
-                     rdfs:domain bodi:AIGeneratedText ;
+                     rdfs:domain bodi:TechnicalDescription ;
                      rdfs:range xsd:decimal ;
                      rdfs:comment "A numerical value between 0 and 10 indicating the confidence level or reliability of AI-generated text. Higher values indicate greater confidence in the accuracy or quality of the generated content, supporting quality assessment and validation workflows." ;
                      rdfs:label "Confindence score" .
@@ -305,7 +361,7 @@ bodi:hasDocumentation rdf:type owl:DatatypeProperty ;
 
 ###  http://w3id.org/bodi#hasHumanValidation
 bodi:hasHumanValidation rdf:type owl:DatatypeProperty ;
-                        rdfs:domain bodi:AIGeneratedText ;
+                        rdfs:domain bodi:TechnicalDescription ;
                         rdfs:range rdfs:Literal ;
                         rdfs:comment "Indicates whether AI-generated text has been reviewed, verified, or validated by human experts. This property is crucial for quality assurance in systems that combine automated processing with human oversight." ;
                         rdfs:label "Has human validation" .
@@ -319,24 +375,18 @@ bodi:hierarchyDepth rdf:type owl:DatatypeProperty ;
                     rdfs:label "Hierarchy depth" .
 
 
-###  http://w3id.org/bodi#omittedInformation
-bodi:omittedInformation rdf:type owl:DatatypeProperty ;
-                        rdfs:subPropertyOf owl:topDataProperty ;
-                        rdfs:domain rico:RecordResource ;
-                        rdfs:comment "Indication of whether or not the resource has been anonymized." ;
-                        rdfs:label "Omitted information" .
+###  http://w3id.org/bodi#redactedInformation
+bodi:redactedInformation rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf owl:topDataProperty ;
+                         rdfs:domain rico:RecordResource ;
+                         rdfs:range rdfs:Literal ;
+                         rdfs:comment "Indication of whether or not the resource has been anonymized." ;
+                         rdfs:label "Omitted information" .
 
 
 #################################################################
 #    Classes
 #################################################################
-
-###  http://w3id.org/bodi#AIGeneratedText
-bodi:AIGeneratedText rdf:type owl:Class ;
-                     rdfs:subClassOf rico:Concept ;
-                     rdfs:comment "Text generated through the use of artificial intelligence (AI)." ;
-                     rdfs:label "AI generated text" .
-
 
 ###  http://w3id.org/bodi#Algorithm
 bodi:Algorithm rdf:type owl:Class ;
@@ -352,9 +402,17 @@ bodi:Exception rdf:type owl:Class ;
                rdfs:label "Exception" .
 
 
+###  http://w3id.org/bodi#FileClusterPosition
+bodi:FileClusterPosition rdf:type owl:Class ;
+                         rdfs:subClassOf rico:Thing ;
+                         rdfs:comment "Represents the physical allocation of a digital file’s data on a storage medium. It captures the material trace of a digital document at the level of bit distribution across clusters or sectors of the device." ;
+                         rdfs:label "File cluster position" .
+
+
 ###  http://w3id.org/bodi#Software
 bodi:Software rdf:type owl:Class ;
-              rdfs:subClassOf rico:Mechanism ;
+              rdfs:subClassOf premis:SoftwareAgent ,
+                              rico:Mechanism ;
               rdfs:comment "A computer program, application, or digital tool that performs specific functions. Software entities are characterized by their functionality, version information, and technical specifications." ;
               rdfs:label "Software" .
 
@@ -372,6 +430,20 @@ bodi:SoftwareStack rdf:type owl:Class ;
                    owl:disjointWith rico:Mechanism ;
                    rdfs:comment "A collection of mechanisms that performs an Activity together to provide a solution for a specific task." ;
                    rdfs:label "Software Stack" .
+
+
+###  http://w3id.org/bodi#TechnicalDescription
+bodi:TechnicalDescription rdf:type owl:Class ;
+                          rdfs:subClassOf rico:Concept ;
+                          rdfs:comment "Technical Description of the Instantiation generated by humans, by artificial intelligence (AI), or through a hybrid approach (AI-generated and human-revised)." ;
+                          rdfs:label "AI generated text" .
+
+
+###  http://w3id.org/bodi#TechnicalDescriptionType
+bodi:TechnicalDescriptionType rdf:type owl:Class ;
+                              rdfs:subClassOf rico:Type ;
+                              rdfs:comment "The type of Technical Description, e.g. a description note on the file format." ;
+                              rdfs:label "Technical Description Type" .
 
 
 ###  http://w3id.org/bodi#TechnicalMetadata
@@ -395,6 +467,27 @@ bodi:TechnicalMetadataTypeSet rdf:type owl:Class ;
                               rdfs:label "Technical Metadata Type Set" .
 
 
+###  http://www.loc.gov/premis/rdf/v3/Fixity
+premis:Fixity rdf:type owl:Class .
+
+
+###  http://www.loc.gov/premis/rdf/v3/SoftwareAgent
+premis:SoftwareAgent rdf:type owl:Class .
+
+
+###  http://www.loc.gov/premis/rdf/v3/StorageLocation
+premis:StorageLocation rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/prov#Entity
+prov:Entity rdf:type owl:Class .
+
+
+###  https://www.ica.org/standards/RiC/ontology#Activity
+rico:Activity rdf:type owl:Class ;
+              rdfs:subClassOf rico:Thing .
+
+
 ###  https://www.ica.org/standards/RiC/ontology#Agent
 rico:Agent rdf:type owl:Class ;
            rdfs:subClassOf rico:Thing .
@@ -405,10 +498,15 @@ rico:Concept rdf:type owl:Class ;
              rdfs:subClassOf rico:Thing .
 
 
+###  https://www.ica.org/standards/RiC/ontology#Extent
+rico:Extent rdf:type owl:Class ;
+            rdfs:subClassOf rico:Thing .
+
+
 ###  https://www.ica.org/standards/RiC/ontology#Instantiation
 rico:Instantiation rdf:type owl:Class ;
-                   rdfs:subClassOf rico:Thing ,
-                                   <https://www.w3.org/ns/prov#Entity> .
+                   rdfs:subClassOf prov:Entity ,
+                                   rico:Thing .
 
 
 ###  https://www.ica.org/standards/RiC/ontology#Mechanism
@@ -418,8 +516,8 @@ rico:Mechanism rdf:type owl:Class ;
 
 ###  https://www.ica.org/standards/RiC/ontology#RecordResource
 rico:RecordResource rdf:type owl:Class ;
-                    rdfs:subClassOf rico:Thing ,
-                                    <https://www.w3.org/ns/prov#Entity> .
+                    rdfs:subClassOf prov:Entity ,
+                                    rico:Thing .
 
 
 ###  https://www.ica.org/standards/RiC/ontology#Thing
@@ -429,10 +527,6 @@ rico:Thing rdf:type owl:Class .
 ###  https://www.ica.org/standards/RiC/ontology#Type
 rico:Type rdf:type owl:Class ;
           rdfs:subClassOf rico:Thing .
-
-
-###  https://www.w3.org/ns/prov#Entity
-<https://www.w3.org/ns/prov#Entity> rdf:type owl:Class .
 
 
 ###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
