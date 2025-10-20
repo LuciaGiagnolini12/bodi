@@ -300,6 +300,11 @@ td {
         "@value": "Lucia Giagnolini"
       }
     ],
+    "https://schema.org/dateCreated": [
+      {
+        "@value": "2025-10-01"
+      }
+    ],
     "https://schema.org/description": [
       {
         "@value": "An extension of RiC-O (Records in Contexts Ontology) designed to represent the complexity of born-digital archival materials, addressing requirements for technical metadata, digital provenance, integrity verification, and contextual relationships."
@@ -307,7 +312,7 @@ td {
     ],
     "https://schema.org/license": [
       {
-        "@value": "This work is distributed under a Creative Commons Attribution License (https://creativecommons.org/licenses/by/4.0/legalcode)."
+        "@value": "This work is distributed under a Creative Commons Attribution License (https://creativecommons.org/licenses/by/4.0/)."
       }
     ],
     "https://schema.org/name": [
@@ -358,15 +363,43 @@ td {
           </div>
           <div>
             <dt>
+              <a class="hover_property" href="http://purl.org/dc/terms/created" title="Date of creation of the resource. Defined in DCMI Metadata Terms">Date Created</a>
+            </dt>
+            <dd><p>2025-10-01</p></dd>
+          </div>
+          <div>
+            <dt>
               <a class="hover_property" href="http://purl.org/dc/terms/license" title="A legal document giving official permission to do something with the resource. Defined in DCMI Metadata Terms">License</a>
             </dt>
-            <dd><p>This work is distributed under a Creative Commons Attribution License (https://creativecommons.org/licenses/by/4.0/legalcode).</p></dd>
+            <dd><p>This work is distributed under a Creative Commons Attribution License (https://creativecommons.org/licenses/by/4.0/).</p></dd>
+          </div>
+          <div>
+            <dt>
+              <a class="hover_property" href="http://www.w3.org/2002/07/owl#versionIRI" title="The property that identifies the version IRI of an ontology. Defined in The OWL 2 Schema vocabulary (OWL 2)">Version Iri</a>
+            </dt>
+            <dd>
+              <a href="http://w3id.org/bodi/1.0">http://w3id.org/bodi/1.0</a>
+            </dd>
           </div>
           <div>
             <dt>
               <a class="hover_property" href="http://www.w3.org/2002/07/owl#versionInfo" title="The annotation property that provides version information for an ontology or another OWL construct. Defined in The OWL 2 Schema vocabulary (OWL 2)">Version Info</a>
             </dt>
             <dd><p>1.0</p></dd>
+          </div>
+          <div>
+            <dt>
+              <a class="hover_property" href="http://purl.org/vocab/vann/preferredNamespacePrefix" title="None. Defined in None">Preferred Namespace Prefix</a>
+            </dt>
+            <dd><p>bodi</p></dd>
+          </div>
+          <div>
+            <dt>
+              <a class="hover_property" href="http://purl.org/vocab/vann/preferredNamespaceUri" title="None. Defined in None">Preferred Namespace Uri</a>
+            </dt>
+            <dd>
+              <a href="http://w3id.org/bodi#">bodi:</a>
+            </dd>
           </div>
           <div>
             <dt>
@@ -539,6 +572,28 @@ td {
                 </ul>
               </td>
             </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="Inverse of rdfs:domain. Defined in Ontology Documentation Profile">In Domain Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#hasSoftwareComponent">Has Software Component</a>
+                  <sup class="sup-op" title="OWL Object Property">op</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inRangeOf" title="Inverse of rdfs:range. Defined in Ontology Documentation Profile">In Range Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#isSoftwareComponentOf">Is software component of</a>
+                  <sup class="sup-op" title="OWL Object Property">op</sup>
+                </span>
+              </td>
+            </tr>
           </table>
         </div>
         <div class="property entity" id="Softwarecomponent">
@@ -566,6 +621,28 @@ td {
                 <span>
                   <a href="https://www.ica.org/standards/RiC/ontology#Mechanism">rico:Mechanism</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="Inverse of rdfs:domain. Defined in Ontology Documentation Profile">In Domain Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#isSoftwareComponentOf">Is software component of</a>
+                  <sup class="sup-op" title="OWL Object Property">op</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inRangeOf" title="Inverse of rdfs:range. Defined in Ontology Documentation Profile">In Range Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#hasSoftwareComponent">Has Software Component</a>
+                  <sup class="sup-op" title="OWL Object Property">op</sup>
                 </span>
               </td>
             </tr>
@@ -604,20 +681,10 @@ td {
                 <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="Inverse of rdfs:domain. Defined in Ontology Documentation Profile">In Domain Of</a>
               </th>
               <td>
-                <ul>
-                  <li>
-                    <span>
-                      <a href="#hasSoftwareComponent">Has Software Component</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="#hasStackElement">Has stack element</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                </ul>
+                <span>
+                  <a href="#hasStackElement">Has stack element</a>
+                  <sup class="sup-op" title="OWL Object Property">op</sup>
+                </span>
               </td>
             </tr>
             <tr>
@@ -625,20 +692,10 @@ td {
                 <a class="hover_property" href="https://w3id.org/profile/ontdoc/inRangeOf" title="Inverse of rdfs:range. Defined in Ontology Documentation Profile">In Range Of</a>
               </th>
               <td>
-                <ul>
-                  <li>
-                    <span>
-                      <a href="#isSoftwareComponentOf">Is software component of</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="#isStackElementOf">Is stack element of</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                </ul>
+                <span>
+                  <a href="#isStackElementOf">Is stack element of</a>
+                  <sup class="sup-op" title="OWL Object Property">op</sup>
+                </span>
               </td>
             </tr>
           </table>
@@ -1149,12 +1206,6 @@ td {
                 <ul>
                   <li>
                     <span>
-                      <a href="#hasGenerated">Has generated</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
                       <a href="#hasRevisioned">Has revisioned</a>
                       <sup class="sup-op" title="OWL Object Property">op</sup>
                     </span>
@@ -1174,12 +1225,6 @@ td {
               </th>
               <td>
                 <ul>
-                  <li>
-                    <span>
-                      <a href="#generatedBy">Generated by</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
                   <li>
                     <span>
                       <a href="#hasOrHadSupervisor">Has or had supervisor</a>
@@ -1363,12 +1408,6 @@ td {
                   </li>
                   <li>
                     <span>
-                      <a href="#LOCFormatCompliance">LOC Format Compliance</a>
-                      <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
                       <a href="#hierarchyDepth">Hierarchy depth</a>
                       <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
                     </span>
@@ -1438,20 +1477,10 @@ td {
                 <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="Inverse of rdfs:domain. Defined in Ontology Documentation Profile">In Domain Of</a>
               </th>
               <td>
-                <ul>
-                  <li>
-                    <span>
-                      <a href="#isSoftwareComponentOf">Is software component of</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="#isStackElementOf">Is stack element of</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                </ul>
+                <span>
+                  <a href="#isStackElementOf">Is stack element of</a>
+                  <sup class="sup-op" title="OWL Object Property">op</sup>
+                </span>
               </td>
             </tr>
             <tr>
@@ -1459,20 +1488,10 @@ td {
                 <a class="hover_property" href="https://w3id.org/profile/ontdoc/inRangeOf" title="Inverse of rdfs:range. Defined in Ontology Documentation Profile">In Range Of</a>
               </th>
               <td>
-                <ul>
-                  <li>
-                    <span>
-                      <a href="#hasSoftwareComponent">Has Software Component</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="#hasStackElement">Has stack element</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                </ul>
+                <span>
+                  <a href="#hasStackElement">Has stack element</a>
+                  <sup class="sup-op" title="OWL Object Property">op</sup>
+                </span>
               </td>
             </tr>
             <tr>
@@ -1542,7 +1561,7 @@ td {
               </th>
               <td>
                 <span>
-                  <a href="#omittedInformation">Omitted information</a>
+                  <a href="#redactedInformation">Redacted information</a>
                   <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
                 </span>
               </td>
@@ -1678,7 +1697,7 @@ td {
       </div>
       <div class="section" id="objectproperties">
         <h2>Object Properties</h2>
-        <div class="property entity" id="generatedBy">
+        <div class="property entity" id="Generatedby">
           <h3>Generated by
             <sup class="sup-op" title="OWL Object Property">op</sup>
           </h3>
@@ -1722,6 +1741,11 @@ td {
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
               </th>
               <td>
+                <span>
+                  <a href="https://www.ica.org/standards/RiC/ontology#Activity">rico:Activity</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+                <span class="cardinality">or</span>
                 <span>
                   <a href="https://www.ica.org/standards/RiC/ontology#Agent">rico:Agent</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
@@ -1782,7 +1806,7 @@ td {
             </tr>
           </table>
         </div>
-        <div class="property entity" id="hasGenerated">
+        <div class="property entity" id="Hasgenerated">
           <h3>Has generated
             <sup class="sup-op" title="OWL Object Property">op</sup>
           </h3>
@@ -1817,6 +1841,11 @@ td {
               <td>
                 <span>
                   <a href="https://www.ica.org/standards/RiC/ontology#Agent">rico:Agent</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+                <span class="cardinality">or</span>
+                <span>
+                  <a href="https://www.ica.org/standards/RiC/ontology#Activity">rico:Activity</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -2073,7 +2102,7 @@ td {
               </th>
               <td>
                 <span>
-                  <a href="#SoftwareStack">Software Stack</a>
+                  <a href="#Software">Software</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -2084,7 +2113,7 @@ td {
               </th>
               <td>
                 <span>
-                  <a href="https://www.ica.org/standards/RiC/ontology#Mechanism">rico:Mechanism</a>
+                  <a href="#Softwarecomponent">Software component</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -2344,7 +2373,7 @@ td {
               </th>
               <td>
                 <span>
-                  <a href="#Technicalmetadata">Technical metadata</a>
+                  <a href="#Technicalmetadata">Technical Metadata</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -2590,7 +2619,7 @@ td {
               </th>
               <td>
                 <span>
-                  <a href="https://www.ica.org/standards/RiC/ontology#Mechanism">rico:Mechanism</a>
+                  <a href="#Softwarecomponent">Software component</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -2601,7 +2630,7 @@ td {
               </th>
               <td>
                 <span>
-                  <a href="#SoftwareStack">Software Stack</a>
+                  <a href="#Software">Software</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -3206,7 +3235,7 @@ td {
                 <ul>
                   <li>
                     <span>
-                      <a href="#generatedBy">Generated by</a>
+                      <a href="#Generatedby">Generated by</a>
                       <sup class="sup-op" title="OWL Object Property">op</sup>
                     </span>
                   </li>
@@ -3218,7 +3247,7 @@ td {
                   </li>
                   <li>
                     <span>
-                      <a href="#hasGenerated">Has generated</a>
+                      <a href="#Hasgenerated">Has generated</a>
                       <sup class="sup-op" title="OWL Object Property">op</sup>
                     </span>
                   </li>
@@ -3326,44 +3355,6 @@ td {
       </div>
       <div class="section" id="datatypeproperties">
         <h2>Datatype Properties</h2>
-        <div class="property entity" id="LOCFormatCompliance">
-          <h3>LOC Format Compliance
-            <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://w3id.org/bodi#LOCFormatCompliance</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
-              </th>
-              <td><p>Compliance of the file format to the Library of Congress Fle Formats Recommendations. May be "preferred", "acceptable" or "not recommended".</p></td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
-              </th>
-              <td>
-                <span>
-                  <a href="https://www.ica.org/standards/RiC/ontology#Instantiation">rico:Instantiation</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
-              </th>
-              <td>
-                <a href="http://www.w3.org/2000/01/rdf-schema#Literal">Literal</a>
-              </td>
-            </tr>
-          </table>
-        </div>
         <div class="property entity" id="confidenceScore">
           <h3>Confindence score
             <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
@@ -3554,15 +3545,15 @@ td {
             </tr>
           </table>
         </div>
-        <div class="property entity" id="omittedInformation">
-          <h3>Omitted information
+        <div class="property entity" id="redactedInformation">
+          <h3>Redacted information
             <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
           </h3>
           <table>
             <tr>
               <th>IRI</th>
               <td>
-                <code>http://w3id.org/bodi#omittedInformation</code>
+                <code>http://w3id.org/bodi#redactedInformation</code>
               </td>
             </tr>
             <tr>
@@ -3606,6 +3597,19 @@ td {
       </div>
       <div class="section" id="annotationproperties">
         <h2>Annotation Properties</h2>
+        <div class="property entity" id="created">
+          <h3>created
+            <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://purl.org/dc/terms/created</code>
+              </td>
+            </tr>
+          </table>
+        </div>
         <div class="property entity" id="license">
           <h3>license
             <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
@@ -3635,6 +3639,19 @@ td {
                 <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
               </th>
               <td><p>Count of Records with identical content - files sharing the same hash code indicate byte-for-byte identical content.</p></td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="versionIRI">
+          <h3>version iri
+            <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://www.w3.org/2002/07/owl#versionIRI</code>
+              </td>
             </tr>
           </table>
         </div>
@@ -3677,6 +3694,10 @@ td {
           <dt id="terms">terms</dt>
           <dd>
             <code>http://purl.org/dc/terms/</code>
+          </dd>
+          <dt id="vann">vann</dt>
+          <dd>
+            <code>http://purl.org/vocab/vann/</code>
           </dd>
           <dt id="xsd">xsd</dt>
           <dd>
@@ -3820,13 +3841,13 @@ td {
           </h4>
           <ul class="second">
             <li>
-              <a href="#generatedBy">Generated by</a>
+              <a href="#Generatedby">Generated by</a>
             </li>
             <li>
               <a href="#hasFileClusterPosition">Has file cluster position</a>
             </li>
             <li>
-              <a href="#hasGenerated">Has generated</a>
+              <a href="#Hasgenerated">Has generated</a>
             </li>
             <li>
               <a href="#hasHashCode">Has hash code</a>
@@ -3920,9 +3941,6 @@ td {
           </h4>
           <ul class="second">
             <li>
-              <a href="#LOCFormatCompliance">LOC Format Compliance</a>
-            </li>
-            <li>
               <a href="#confidenceScore">Confindence score</a>
             </li>
             <li>
@@ -3938,7 +3956,7 @@ td {
               <a href="#hierarchyDepth">Hierarchy depth</a>
             </li>
             <li>
-              <a href="#omittedInformation">Omitted information</a>
+              <a href="#redactedInformation">Redacted information</a>
             </li>
           </ul>
         </li>
@@ -3948,10 +3966,16 @@ td {
           </h4>
           <ul class="second">
             <li>
+              <a href="#created">created</a>
+            </li>
+            <li>
               <a href="#license">license</a>
             </li>
             <li>
               <a href="#Samecontentcount">Same content count</a>
+            </li>
+            <li>
+              <a href="#versionIRI">version iri</a>
             </li>
           </ul>
         </li>
@@ -3986,6 +4010,9 @@ td {
             </li>
             <li>
               <a href="#terms">terms</a>
+            </li>
+            <li>
+              <a href="#vann">vann</a>
             </li>
             <li>
               <a href="#xsd">xsd</a>
