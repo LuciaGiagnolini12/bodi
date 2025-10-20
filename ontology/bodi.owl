@@ -7,6 +7,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://w3id.org/bodi#">
     <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="ns" IRI="http://creativecommons.org/ns#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
@@ -16,8 +17,10 @@
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Prefix name="rico" IRI="https://www.ica.org/standards/RiC/ontology#"/>
     <Prefix name="skos" IRI="http://www.w3.org/2004/02/skos/core#"/>
+    <Prefix name="vann" IRI="http://purl.org/vocab/vann/"/>
     <Prefix name="terms" IRI="http://purl.org/dc/terms/"/>
     <Prefix name="premis" IRI="http://www.loc.gov/premis/rdf/v3/"/>
+    <Import>http://iflastandards.info/ns/lrm/lrmoo/</Import>
     <Import>https://id.loc.gov/ontologies/premis-3-0-0</Import>
     <Import>https://www.ica.org/standards/RiC/ontology/1.1</Import>
     <Annotation>
@@ -33,12 +36,12 @@
         <Literal>Lucia Giagnolini</Literal>
     </Annotation>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:date"/>
-        <Literal>2025-10-01</Literal>
-    </Annotation>
-    <Annotation>
         <AnnotationProperty abbreviatedIRI="dc:title"/>
         <Literal>BoDi (Born-Digital) Ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:created"/>
+        <Literal>2025-10-01</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="terms:description"/>
@@ -46,7 +49,19 @@
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="terms:license"/>
-        <Literal>This work is distributed under a Creative Commons Attribution License (https://creativecommons.org/licenses/by/4.0/legalcode).</Literal>
+        <Literal>This work is distributed under a Creative Commons Attribution License (https://creativecommons.org/licenses/by/4.0/).</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="vann:preferredNamespacePrefix"/>
+        <Literal>bodi</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="vann:preferredNamespaceUri"/>
+        <Literal>http://w3id.org/bodi#</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionIRI"/>
+        <Literal>http://w3id.org/bodi/1.0</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
@@ -218,9 +233,6 @@
         <ObjectProperty abbreviatedIRI="rico:isRelatedTo"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="LOCFormatCompliance"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="confidenceScore"/>
     </Declaration>
     <Declaration>
@@ -236,13 +248,19 @@
         <DataProperty IRI="hierarchyDepth"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="omittedInformation"/>
+        <DataProperty IRI="redactedInformation"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="terms:created"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="terms:license"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="sameContentCount"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="owl:versionIRI"/>
     </Declaration>
     <SubClassOf>
         <Class IRI="Algorithm"/>
@@ -517,7 +535,10 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="hasGenerated"/>
-        <Class abbreviatedIRI="rico:Agent"/>
+        <ObjectUnionOf>
+            <Class abbreviatedIRI="rico:Activity"/>
+            <Class abbreviatedIRI="rico:Agent"/>
+        </ObjectUnionOf>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="hasHashCode"/>
@@ -537,7 +558,7 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="hasSoftwareComponent"/>
-        <Class IRI="SoftwareStack"/>
+        <Class IRI="Software"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="hasStackElement"/>
@@ -577,7 +598,7 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="isSoftwareComponentOf"/>
-        <Class abbreviatedIRI="rico:Mechanism"/>
+        <Class IRI="SoftwareComponent"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="isStackElementOf"/>
@@ -609,7 +630,10 @@
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
         <ObjectProperty IRI="generatedBy"/>
-        <Class abbreviatedIRI="rico:Agent"/>
+        <ObjectUnionOf>
+            <Class abbreviatedIRI="rico:Activity"/>
+            <Class abbreviatedIRI="rico:Agent"/>
+        </ObjectUnionOf>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="hasFileClusterPosition"/>
@@ -637,7 +661,7 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="hasSoftwareComponent"/>
-        <Class abbreviatedIRI="rico:Mechanism"/>
+        <Class IRI="SoftwareComponent"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="hasStackElement"/>
@@ -677,7 +701,7 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="isSoftwareComponentOf"/>
-        <Class IRI="SoftwareStack"/>
+        <Class IRI="Software"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="isStackElementOf"/>
@@ -708,13 +732,9 @@
         <Class abbreviatedIRI="rico:Agent"/>
     </ObjectPropertyRange>
     <SubDataPropertyOf>
-        <DataProperty IRI="omittedInformation"/>
+        <DataProperty IRI="redactedInformation"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
-    <DataPropertyDomain>
-        <DataProperty IRI="LOCFormatCompliance"/>
-        <Class abbreviatedIRI="rico:Instantiation"/>
-    </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="confidenceScore"/>
         <Class IRI="TechnicalDescription"/>
@@ -736,13 +756,9 @@
         <Class abbreviatedIRI="rico:Instantiation"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="omittedInformation"/>
+        <DataProperty IRI="redactedInformation"/>
         <Class abbreviatedIRI="rico:RecordResource"/>
     </DataPropertyDomain>
-    <DataPropertyRange>
-        <DataProperty IRI="LOCFormatCompliance"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="confidenceScore"/>
         <Datatype abbreviatedIRI="xsd:decimal"/>
@@ -764,7 +780,7 @@
         <Datatype abbreviatedIRI="xsd:integer"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="omittedInformation"/>
+        <DataProperty IRI="redactedInformation"/>
         <Datatype abbreviatedIRI="rdfs:Literal"/>
     </DataPropertyRange>
     <AnnotationAssertion>
@@ -796,16 +812,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>FileClusterPosition</IRI>
         <Literal>File cluster position</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>LOCFormatCompliance</IRI>
-        <Literal>Compliance of the file format to the Library of Congress Fle Formats Recommendations. May be &quot;preferred&quot;, &quot;acceptable&quot; or &quot;not recommended&quot;.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>LOCFormatCompliance</IRI>
-        <Literal>LOC Format Compliance</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1174,12 +1180,12 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>omittedInformation</IRI>
+        <IRI>redactedInformation</IRI>
         <Literal>Indication of whether or not the resource has been anonymized.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>omittedInformation</IRI>
+        <IRI>redactedInformation</IRI>
         <Literal>Omitted information</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
