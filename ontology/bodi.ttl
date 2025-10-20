@@ -381,7 +381,7 @@ bodi:redactedInformation rdf:type owl:DatatypeProperty ;
                          rdfs:domain rico:RecordResource ;
                          rdfs:range rdfs:Literal ;
                          rdfs:comment "Indication of whether or not the resource has been anonymized." ;
-                         rdfs:label "Omitted information" .
+                         rdfs:label "Redacted information" .
 
 
 #################################################################
