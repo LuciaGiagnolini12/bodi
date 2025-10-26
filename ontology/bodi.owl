@@ -851,7 +851,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>TechnicalDescription</IRI>
-        <Literal>AI generated text</Literal>
+        <Literal>Technical Description</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -871,7 +871,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>TechnicalMetadata</IRI>
-        <Literal>Technical metadata</Literal>
+        <Literal>Technical Metadata</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
