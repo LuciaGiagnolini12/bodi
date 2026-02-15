@@ -1,0 +1,658 @@
+@prefix rico: <https://www.ica.org/standards/RiC/ontology#> .
+@prefix bodi: <http://ficlit.unibo.it/ArchivioEvangelisti/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ae: <http://ficlit.unibo.it/ArchivioEvangelisti/> .
+@prefix lrmoo: <http://iflastandards.info/ns/lrm/lrmoo/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix premis: <http://www.loc.gov/premis/rdf/v3/> .
+
+# --- Record Set ---
+
+ae:RS1_RS1_RS7_RS15 a rico:RecordSet ;
+  rdfs:label "Copertine" ;
+  rico:includesOrIncluded ae:record_cherudek_polacco .
+
+# --- Record ---
+
+ae:record_cherudek_polacco a rico:Record ;
+  rico:hasOrHadTitle ae:title_cherudek_polacco ;
+  rico:hasOrHadInstantiation ae:inst_cherudek_polacco_jpg ;
+  rico:isRelatedTo ae:work_cherudek, ae:work_ciclo_di_eymerich ;
+  bodi:redactedInformation "no" .
+
+# --- Title ---
+
+ae:title_cherudek_polacco a rico:Title ;
+  rdfs:label "CherudekPolacco (2020_02_07 16_14_24 UTC).jpg" .
+
+# --- Instantiation ---
+
+ae:inst_cherudek_polacco_jpg a rico:Instantiation ;
+  rico:isOrWasInstantiationOf ae:record_cherudek_polacco ;
+  rico:type "Immagine (JPEG)" ;
+  bodi:hierarchyDepth 4 ;
+  prov:atLocation ae:loc_cherudek_polacco ;
+  bodi:hasHashCode ae:fixity_cherudek_001 ;
+  bodi:hasSameHashCodeAs ae:inst_cherudek_polacco_jpg ;
+  bodi:hasTechnicalMetadata ae:metadata_cherudek_st_size ;
+  bodi:hasTechnicalMetadata ae:metadata_cherudek_st_mtime ;
+  bodi:hasTechnicalMetadata ae:metadata_cherudek_st_ctime ;
+  bodi:hasTechnicalMetadata ae:metadata_cherudek_st_atime ;
+  bodi:hasTechnicalMetadata ae:metadata_cherudek_st_mode ;
+  bodi:hasTechnicalMetadata ae:metadata_cherudek_st_uid ;
+  bodi:hasTechnicalMetadata ae:metadata_cherudek_st_gid ;
+  bodi:hasTechnicalMetadata ae:metadata_cherudek_file_type ;
+  bodi:hasTechnicalMetadata ae:metadata_cherudek_st_nlink ;
+  bodi:hasTechnicalMetadata ae:metadata_cherudek_st_ino ;
+  bodi:hasTechnicalMetadata ae:metadata_cherudek_st_dev ;
+  bodi:hasTechnicalMetadata ae:metadata_cherudek_st_blksize ;
+  bodi:hasTechnicalMetadata ae:metadata_cherudek_st_blocks ;
+  bodi:hasTechnicalMetadata ae:metadata_cherudek_directory ;
+  bodi:hasTechnicalMetadata ae:metadata_cherudek_file_access_date ;
+  bodi:hasTechnicalMetadata ae:metadata_cherudek_file_inode_change_date ;
+  bodi:hasTechnicalMetadata ae:metadata_cherudek_file_modify_date ;
+  bodi:hasTechnicalMetadata ae:metadata_cherudek_file_name ;
+  bodi:hasTechnicalMetadata ae:metadata_cherudek_file_permissions ;
+  bodi:hasTechnicalMetadata ae:metadata_cherudek_file_size ;
+  bodi:hasTechnicalMetadata ae:metadata_cherudek_file_type_exif ;
+  bodi:hasTechnicalMetadata ae:metadata_cherudek_modify_date ;
+  bodi:hasTechnicalMetadata ae:metadata_cherudek_software ;
+  bodi:hasTechnicalMetadata ae:metadata_cherudek_bits_per_sample ;
+  bodi:hasTechnicalMetadata ae:metadata_cherudek_exif_byte_order ;
+  bodi:hasTechnicalMetadata ae:metadata_cherudek_exif_image_height ;
+  bodi:hasTechnicalMetadata ae:metadata_cherudek_exif_image_width ;
+  bodi:hasTechnicalMetadata ae:metadata_cherudek_image_size ;
+  bodi:hasTechnicalMetadata ae:metadata_cherudek_jfif_version ;
+  bodi:hasTechnicalMetadata ae:metadata_cherudek_megapixels ;
+  bodi:hasTechnicalMetadata ae:metadata_cherudek_ycbcr_subsampling ;
+  bodi:hasTechnicalMetadata ae:metadata_cherudek_photoshop_format ;
+  bodi:hasTechnicalMetadata ae:metadata_cherudek_photoshop_quality ;
+  bodi:hasTechnicalMetadata ae:metadata_cherudek_photoshop_thumbnail ;
+  bodi:hasTechnicalMetadata ae:metadata_cherudek_application_record_version ;
+  bodi:hasTechnicalMetadata ae:metadata_cherudek_color_components ;
+  bodi:hasTechnicalMetadata ae:metadata_cherudek_color_space ;
+  bodi:hasTechnicalMetadata ae:metadata_cherudek_compression ;
+  bodi:hasTechnicalDescription ae:techdesc_cherudek_ai .
+
+# --- Works ---
+
+ae:work_cherudek a lrmoo:Work ;
+  rdfs:label "Cherudek" .
+
+ae:work_ciclo_di_eymerich a lrmoo:Work ;
+  rdfs:label "Ciclo di Eymerich" .
+
+# --- Location ---
+
+ae:loc_cherudek_polacco a prov:Location ;
+  rdfs:label "/media/sdb1/evangelisti/data/HardDiskValerio/FileHistory/Valerio/VALERIO/Data/C/Users/Valerio/Pictures/Copertine" .
+
+# --- Hash Code / Fixity ---
+
+ae:fixity_cherudek_001 a premis:Fixity ;
+  rdf:value "09bf472a476566d4bfbd6c1708683fb47f3d09d85553aaec388e7d4af58f9eee" ;
+  bodi:isHashCodeOf ae:inst_cherudek_polacco_jpg ;
+  bodi:generatedBy ae:activity_hash_generation_001 .
+
+# --- Hash Generation Activity ---
+
+ae:activity_hash_generation_001 a rico:Activity ;
+  rico:title "Generazione hash SHA-256 per CherudekPolacco (2020_02_07 16_14_24 UTC).jpg" ;
+  bodi:hasGenerated ae:fixity_cherudek_001 ;
+  rico:isOrWasPerformedBy ae:algorithm_sha256 ;
+  rico:occurredAtDate ae:date_hash_generation .
+
+# --- Hash Algorithm ---
+
+ae:algorithm_sha256 a bodi:Algorithm ;
+  rico:name "SHA-256" ;
+  rico:technicalCharacteristics "Secure Hash Algorithm 256-bit (SHA-256)" .
+
+# --- Hash Generation Date ---
+
+ae:date_hash_generation a rico:Date ;
+  rico:normalizedDateValue "2025-08-06T12:45:00"^^xsd:dateTime .
+
+# --- Technical Metadata Type Sets ---
+
+ae:technical_metadata_set_ImageMetadata a bodi:TechnicalMetadataSet ;
+  rdfs:label "Image metadata" .
+
+ae:technical_metadata_set_Other a bodi:TechnicalMetadataSet ;
+  rdfs:label "Other metadata" .
+
+ae:technical_metadata_set_DocumentContentMetadata a bodi:TechnicalMetadataSet ;
+  rdfs:label "Document content metadata" .
+
+ae:technical_metadata_set_FileSystemMetadata a bodi:TechnicalMetadataSet ;
+  rdfs:label "File system metadata" .
+
+# --- Technical Metadata Types ---
+
+ae:type_st_size a bodi:TechnicalMetadataType ;
+  rdfs:label "st_size" ;
+  bodi:isOrWasPartOf ae:technical_metadata_set_FileSystemMetadata .
+
+ae:type_st_mtime a bodi:TechnicalMetadataType ;
+  rdfs:label "st_mtime" ;
+  bodi:isOrWasPartOf ae:technical_metadata_set_FileSystemMetadata .
+
+ae:type_st_ctime a bodi:TechnicalMetadataType ;
+  rdfs:label "st_ctime" ;
+  bodi:isOrWasPartOf ae:technical_metadata_set_FileSystemMetadata .
+
+ae:type_st_atime a bodi:TechnicalMetadataType ;
+  rdfs:label "st_atime" ;
+  bodi:isOrWasPartOf ae:technical_metadata_set_FileSystemMetadata .
+
+ae:type_st_mode a bodi:TechnicalMetadataType ;
+  rdfs:label "st_mode" ;
+  bodi:isOrWasPartOf ae:technical_metadata_set_FileSystemMetadata .
+
+ae:type_st_uid a bodi:TechnicalMetadataType ;
+  rdfs:label "st_uid" ;
+  bodi:isOrWasPartOf ae:technical_metadata_set_FileSystemMetadata .
+
+ae:type_st_gid a bodi:TechnicalMetadataType ;
+  rdfs:label "st_gid" ;
+  bodi:isOrWasPartOf ae:technical_metadata_set_FileSystemMetadata .
+
+ae:type_file_type a bodi:TechnicalMetadataType ;
+  rdfs:label "file_type" ;
+  bodi:isOrWasPartOf ae:technical_metadata_set_FileSystemMetadata .
+
+ae:type_st_nlink a bodi:TechnicalMetadataType ;
+  rdfs:label "st_nlink" ;
+  bodi:isOrWasPartOf ae:technical_metadata_set_FileSystemMetadata .
+
+ae:type_st_ino a bodi:TechnicalMetadataType ;
+  rdfs:label "st_ino" ;
+  bodi:isOrWasPartOf ae:technical_metadata_set_FileSystemMetadata .
+
+ae:type_st_dev a bodi:TechnicalMetadataType ;
+  rdfs:label "st_dev" ;
+  bodi:isOrWasPartOf ae:technical_metadata_set_FileSystemMetadata .
+
+ae:type_st_blksize a bodi:TechnicalMetadataType ;
+  rdfs:label "st_blksize" ;
+  bodi:isOrWasPartOf ae:technical_metadata_set_FileSystemMetadata .
+
+ae:type_st_blocks a bodi:TechnicalMetadataType ;
+  rdfs:label "st_blocks" ;
+  bodi:isOrWasPartOf ae:technical_metadata_set_FileSystemMetadata .
+
+ae:type_directory a bodi:TechnicalMetadataType ;
+  rdfs:label "Directory" ;
+  bodi:isOrWasPartOf ae:technical_metadata_set_FileSystemMetadata .
+
+ae:type_file_access_date a bodi:TechnicalMetadataType ;
+  rdfs:label "FileAccessDate" ;
+  bodi:isOrWasPartOf ae:technical_metadata_set_FileSystemMetadata .
+
+ae:type_file_inode_change_date a bodi:TechnicalMetadataType ;
+  rdfs:label "FileInodeChangeDate" ;
+  bodi:isOrWasPartOf ae:technical_metadata_set_FileSystemMetadata .
+
+ae:type_file_modify_date a bodi:TechnicalMetadataType ;
+  rdfs:label "FileModifyDate" ;
+  bodi:isOrWasPartOf ae:technical_metadata_set_FileSystemMetadata .
+
+ae:type_file_name a bodi:TechnicalMetadataType ;
+  rdfs:label "FileName" ;
+  bodi:isOrWasPartOf ae:technical_metadata_set_FileSystemMetadata .
+
+ae:type_file_permissions a bodi:TechnicalMetadataType ;
+  rdfs:label "FilePermissions" ;
+  bodi:isOrWasPartOf ae:technical_metadata_set_FileSystemMetadata .
+
+ae:type_file_size a bodi:TechnicalMetadataType ;
+  rdfs:label "FileSize" ;
+  bodi:isOrWasPartOf ae:technical_metadata_set_FileSystemMetadata .
+
+ae:type_file_type_exif a bodi:TechnicalMetadataType ;
+  rdfs:label "FileType" ;
+  bodi:isOrWasPartOf ae:technical_metadata_set_DocumentContentMetadata .
+
+ae:type_modify_date a bodi:TechnicalMetadataType ;
+  rdfs:label "ModifyDate" ;
+  bodi:isOrWasPartOf ae:technical_metadata_set_DocumentContentMetadata .
+
+ae:type_software a bodi:TechnicalMetadataType ;
+  rdfs:label "Software" ;
+  bodi:isOrWasPartOf ae:technical_metadata_set_DocumentContentMetadata .
+
+ae:type_bits_per_sample a bodi:TechnicalMetadataType ;
+  rdfs:label "BitsPerSample" ;
+  bodi:isOrWasPartOf ae:technical_metadata_set_ImageMetadata .
+
+ae:type_exif_byte_order a bodi:TechnicalMetadataType ;
+  rdfs:label "ExifByteOrder" ;
+  bodi:isOrWasPartOf ae:technical_metadata_set_ImageMetadata .
+
+ae:type_exif_image_height a bodi:TechnicalMetadataType ;
+  rdfs:label "ExifImageHeight" ;
+  bodi:isOrWasPartOf ae:technical_metadata_set_ImageMetadata .
+
+ae:type_exif_image_width a bodi:TechnicalMetadataType ;
+  rdfs:label "ExifImageWidth" ;
+  bodi:isOrWasPartOf ae:technical_metadata_set_ImageMetadata .
+
+ae:type_image_size a bodi:TechnicalMetadataType ;
+  rdfs:label "ImageSize" ;
+  bodi:isOrWasPartOf ae:technical_metadata_set_ImageMetadata .
+
+ae:type_jfif_version a bodi:TechnicalMetadataType ;
+  rdfs:label "JFIFVersion" ;
+  bodi:isOrWasPartOf ae:technical_metadata_set_ImageMetadata .
+
+ae:type_megapixels a bodi:TechnicalMetadataType ;
+  rdfs:label "Megapixels" ;
+  bodi:isOrWasPartOf ae:technical_metadata_set_ImageMetadata .
+
+ae:type_ycbcr_subsampling a bodi:TechnicalMetadataType ;
+  rdfs:label "YCbCrSubSampling" ;
+  bodi:isOrWasPartOf ae:technical_metadata_set_ImageMetadata .
+
+ae:type_photoshop_format a bodi:TechnicalMetadataType ;
+  rdfs:label "PhotoshopFormat" ;
+  bodi:isOrWasPartOf ae:technical_metadata_set_Other .
+
+ae:type_photoshop_quality a bodi:TechnicalMetadataType ;
+  rdfs:label "PhotoshopQuality" ;
+  bodi:isOrWasPartOf ae:technical_metadata_set_Other .
+
+ae:type_photoshop_thumbnail a bodi:TechnicalMetadataType ;
+  rdfs:label "PhotoshopThumbnail" ;
+  bodi:isOrWasPartOf ae:technical_metadata_set_Other .
+
+ae:type_application_record_version a bodi:TechnicalMetadataType ;
+  rdfs:label "ApplicationRecordVersion" ;
+  bodi:isOrWasPartOf ae:technical_metadata_set_Other .
+
+ae:type_color_components a bodi:TechnicalMetadataType ;
+  rdfs:label "ColorComponents" ;
+  bodi:isOrWasPartOf ae:technical_metadata_set_Other .
+
+ae:type_color_space a bodi:TechnicalMetadataType ;
+  rdfs:label "ColorSpace" ;
+  bodi:isOrWasPartOf ae:technical_metadata_set_Other .
+
+ae:type_compression a bodi:TechnicalMetadataType ;
+  rdfs:label "Compression" ;
+  bodi:isOrWasPartOf ae:technical_metadata_set_Other .
+
+# --- Technical Metadata Instances ---
+
+# File System Metadata - Python os
+ae:metadata_cherudek_st_size a bodi:TechnicalMetadata ;
+  rdf:value "29891"^^xsd:integer ;
+  bodi:hasTechnicalMetadataType ae:type_st_size ;
+  bodi:isTechnicalMetadataOf ae:inst_cherudek_polacco_jpg ;
+  bodi:generatedBy ae:activity_metadata_extraction_python_os_001 .
+
+ae:metadata_cherudek_st_mtime a bodi:TechnicalMetadata ;
+  rdf:value "1.20649432408E9"^^xsd:decimal ;
+  bodi:hasTechnicalMetadataType ae:type_st_mtime ;
+  bodi:isTechnicalMetadataOf ae:inst_cherudek_polacco_jpg ;
+  bodi:generatedBy ae:activity_metadata_extraction_python_os_001 .
+
+ae:metadata_cherudek_st_ctime a bodi:TechnicalMetadata ;
+  rdf:value "1.7544731965511587E9"^^xsd:decimal ;
+  bodi:hasTechnicalMetadataType ae:type_st_ctime ;
+  bodi:isTechnicalMetadataOf ae:inst_cherudek_polacco_jpg ;
+  bodi:generatedBy ae:activity_metadata_extraction_python_os_001 .
+
+ae:metadata_cherudek_st_atime a bodi:TechnicalMetadata ;
+  rdf:value "1.754473243036085E9"^^xsd:decimal ;
+  bodi:hasTechnicalMetadataType ae:type_st_atime ;
+  bodi:isTechnicalMetadataOf ae:inst_cherudek_polacco_jpg ;
+  bodi:generatedBy ae:activity_metadata_extraction_python_os_001 .
+
+ae:metadata_cherudek_st_mode a bodi:TechnicalMetadata ;
+  rdf:value "0o555" ;
+  bodi:hasTechnicalMetadataType ae:type_st_mode ;
+  bodi:isTechnicalMetadataOf ae:inst_cherudek_polacco_jpg ;
+  bodi:generatedBy ae:activity_metadata_extraction_python_os_001 .
+
+ae:metadata_cherudek_st_uid a bodi:TechnicalMetadata ;
+  rdf:value "1000"^^xsd:integer ;
+  bodi:hasTechnicalMetadataType ae:type_st_uid ;
+  bodi:isTechnicalMetadataOf ae:inst_cherudek_polacco_jpg ;
+  bodi:generatedBy ae:activity_metadata_extraction_python_os_001 .
+
+ae:metadata_cherudek_st_gid a bodi:TechnicalMetadata ;
+  rdf:value "1000"^^xsd:integer ;
+  bodi:hasTechnicalMetadataType ae:type_st_gid ;
+  bodi:isTechnicalMetadataOf ae:inst_cherudek_polacco_jpg ;
+  bodi:generatedBy ae:activity_metadata_extraction_python_os_001 .
+
+ae:metadata_cherudek_file_type a bodi:TechnicalMetadata ;
+  rdf:value "file" ;
+  bodi:hasTechnicalMetadataType ae:type_file_type ;
+  bodi:isTechnicalMetadataOf ae:inst_cherudek_polacco_jpg ;
+  bodi:generatedBy ae:activity_metadata_extraction_python_os_001 .
+
+ae:metadata_cherudek_st_nlink a bodi:TechnicalMetadata ;
+  rdf:value "1"^^xsd:integer ;
+  bodi:hasTechnicalMetadataType ae:type_st_nlink ;
+  bodi:isTechnicalMetadataOf ae:inst_cherudek_polacco_jpg ;
+  bodi:generatedBy ae:activity_metadata_extraction_python_os_001 .
+
+ae:metadata_cherudek_st_ino a bodi:TechnicalMetadata ;
+  rdf:value "280508560"^^xsd:integer ;
+  bodi:hasTechnicalMetadataType ae:type_st_ino ;
+  bodi:isTechnicalMetadataOf ae:inst_cherudek_polacco_jpg ;
+  bodi:generatedBy ae:activity_metadata_extraction_python_os_001 .
+
+ae:metadata_cherudek_st_dev a bodi:TechnicalMetadata ;
+  rdf:value "2065"^^xsd:integer ;
+  bodi:hasTechnicalMetadataType ae:type_st_dev ;
+  bodi:isTechnicalMetadataOf ae:inst_cherudek_polacco_jpg ;
+  bodi:generatedBy ae:activity_metadata_extraction_python_os_001 .
+
+ae:metadata_cherudek_st_blksize a bodi:TechnicalMetadata ;
+  rdf:value "4096"^^xsd:integer ;
+  bodi:hasTechnicalMetadataType ae:type_st_blksize ;
+  bodi:isTechnicalMetadataOf ae:inst_cherudek_polacco_jpg ;
+  bodi:generatedBy ae:activity_metadata_extraction_python_os_001 .
+
+ae:metadata_cherudek_st_blocks a bodi:TechnicalMetadata ;
+  rdf:value "64"^^xsd:integer ;
+  bodi:hasTechnicalMetadataType ae:type_st_blocks ;
+  bodi:isTechnicalMetadataOf ae:inst_cherudek_polacco_jpg ;
+  bodi:generatedBy ae:activity_metadata_extraction_python_os_001 .
+
+# File System Metadata - ExifTool
+ae:metadata_cherudek_directory a bodi:TechnicalMetadata ;
+  rdf:value "/media/sdb1/evangelisti/data/HardDiskValerio/FileHistory/Valerio/VALERIO/Data/C/Users/Valerio/Pictures/Copertine" ;
+  bodi:hasTechnicalMetadataType ae:type_directory ;
+  bodi:isTechnicalMetadataOf ae:inst_cherudek_polacco_jpg ;
+  bodi:generatedBy ae:activity_metadata_extraction_exiftool_001 .
+
+ae:metadata_cherudek_file_access_date a bodi:TechnicalMetadata ;
+  rdf:value "2025:08:06 11:40:43+02:00" ;
+  bodi:hasTechnicalMetadataType ae:type_file_access_date ;
+  bodi:isTechnicalMetadataOf ae:inst_cherudek_polacco_jpg ;
+  bodi:generatedBy ae:activity_metadata_extraction_exiftool_001 .
+
+ae:metadata_cherudek_file_inode_change_date a bodi:TechnicalMetadata ;
+  rdf:value "2025:08:06 11:39:56+02:00" ;
+  bodi:hasTechnicalMetadataType ae:type_file_inode_change_date ;
+  bodi:isTechnicalMetadataOf ae:inst_cherudek_polacco_jpg ;
+  bodi:generatedBy ae:activity_metadata_extraction_exiftool_001 .
+
+ae:metadata_cherudek_file_modify_date a bodi:TechnicalMetadata ;
+  rdf:value "2008:03:26 02:18:44+01:00" ;
+  bodi:hasTechnicalMetadataType ae:type_file_modify_date ;
+  bodi:isTechnicalMetadataOf ae:inst_cherudek_polacco_jpg ;
+  bodi:generatedBy ae:activity_metadata_extraction_exiftool_001 .
+
+ae:metadata_cherudek_file_name a bodi:TechnicalMetadata ;
+  rdf:value "Anonymized information" ;
+  bodi:hasTechnicalMetadataType ae:type_file_name ;
+  bodi:isTechnicalMetadataOf ae:inst_cherudek_polacco_jpg ;
+  bodi:generatedBy ae:activity_metadata_extraction_exiftool_001 .
+
+ae:metadata_cherudek_file_permissions a bodi:TechnicalMetadata ;
+  rdf:value "-r-xr-xr-x" ;
+  bodi:hasTechnicalMetadataType ae:type_file_permissions ;
+  bodi:isTechnicalMetadataOf ae:inst_cherudek_polacco_jpg ;
+  bodi:generatedBy ae:activity_metadata_extraction_exiftool_001 .
+
+ae:metadata_cherudek_file_size a bodi:TechnicalMetadata ;
+  rdf:value "30 kB" ;
+  bodi:hasTechnicalMetadataType ae:type_file_size ;
+  bodi:isTechnicalMetadataOf ae:inst_cherudek_polacco_jpg ;
+  bodi:generatedBy ae:activity_metadata_extraction_exiftool_001 .
+
+# Content Metadata - ExifTool
+ae:metadata_cherudek_file_type_exif a bodi:TechnicalMetadata ;
+  rdf:value "JPEG" ;
+  bodi:hasTechnicalMetadataType ae:type_file_type_exif ;
+  bodi:isTechnicalMetadataOf ae:inst_cherudek_polacco_jpg ;
+  bodi:generatedBy ae:activity_metadata_extraction_exiftool_001 .
+
+ae:metadata_cherudek_modify_date a bodi:TechnicalMetadata ;
+  rdf:value "2007:10:29 10:46:20" ;
+  bodi:hasTechnicalMetadataType ae:type_modify_date ;
+  bodi:isTechnicalMetadataOf ae:inst_cherudek_polacco_jpg ;
+  bodi:generatedBy ae:activity_metadata_extraction_exiftool_001 .
+
+ae:metadata_cherudek_software a bodi:TechnicalMetadata ;
+  rdf:value "Adobe Photoshop CS Windows" ;
+  bodi:hasTechnicalMetadataType ae:type_software ;
+  bodi:isTechnicalMetadataOf ae:inst_cherudek_polacco_jpg ;
+  bodi:generatedBy ae:activity_metadata_extraction_exiftool_001 .
+
+# Image Metadata - ExifTool
+ae:metadata_cherudek_bits_per_sample a bodi:TechnicalMetadata ;
+  rdf:value "8"^^xsd:integer ;
+  bodi:hasTechnicalMetadataType ae:type_bits_per_sample ;
+  bodi:isTechnicalMetadataOf ae:inst_cherudek_polacco_jpg ;
+  bodi:generatedBy ae:activity_metadata_extraction_exiftool_001 .
+
+ae:metadata_cherudek_exif_byte_order a bodi:TechnicalMetadata ;
+  rdf:value "Big-endian (Motorola, MM)" ;
+  bodi:hasTechnicalMetadataType ae:type_exif_byte_order ;
+  bodi:isTechnicalMetadataOf ae:inst_cherudek_polacco_jpg ;
+  bodi:generatedBy ae:activity_metadata_extraction_exiftool_001 .
+
+ae:metadata_cherudek_exif_image_height a bodi:TechnicalMetadata ;
+  rdf:value "2422"^^xsd:integer ;
+  bodi:hasTechnicalMetadataType ae:type_exif_image_height ;
+  bodi:isTechnicalMetadataOf ae:inst_cherudek_polacco_jpg ;
+  bodi:generatedBy ae:activity_metadata_extraction_exiftool_001 .
+
+ae:metadata_cherudek_exif_image_width a bodi:TechnicalMetadata ;
+  rdf:value "1608"^^xsd:integer ;
+  bodi:hasTechnicalMetadataType ae:type_exif_image_width ;
+  bodi:isTechnicalMetadataOf ae:inst_cherudek_polacco_jpg ;
+  bodi:generatedBy ae:activity_metadata_extraction_exiftool_001 .
+
+ae:metadata_cherudek_image_size a bodi:TechnicalMetadata ;
+  rdf:value "150x225" ;
+  bodi:hasTechnicalMetadataType ae:type_image_size ;
+  bodi:isTechnicalMetadataOf ae:inst_cherudek_polacco_jpg ;
+  bodi:generatedBy ae:activity_metadata_extraction_exiftool_001 .
+
+ae:metadata_cherudek_jfif_version a bodi:TechnicalMetadata ;
+  rdf:value "1.01" ;
+  bodi:hasTechnicalMetadataType ae:type_jfif_version ;
+  bodi:isTechnicalMetadataOf ae:inst_cherudek_polacco_jpg ;
+  bodi:generatedBy ae:activity_metadata_extraction_exiftool_001 .
+
+ae:metadata_cherudek_megapixels a bodi:TechnicalMetadata ;
+  rdf:value "0.034"^^xsd:decimal ;
+  bodi:hasTechnicalMetadataType ae:type_megapixels ;
+  bodi:isTechnicalMetadataOf ae:inst_cherudek_polacco_jpg ;
+  bodi:generatedBy ae:activity_metadata_extraction_exiftool_001 .
+
+ae:metadata_cherudek_ycbcr_subsampling a bodi:TechnicalMetadata ;
+  rdf:value "YCbCr4:2:0 (2 2)" ;
+  bodi:hasTechnicalMetadataType ae:type_ycbcr_subsampling ;
+  bodi:isTechnicalMetadataOf ae:inst_cherudek_polacco_jpg ;
+  bodi:generatedBy ae:activity_metadata_extraction_exiftool_001 .
+
+# Photoshop and Other Metadata - ExifTool
+ae:metadata_cherudek_photoshop_format a bodi:TechnicalMetadata ;
+  rdf:value "Standard" ;
+  bodi:hasTechnicalMetadataType ae:type_photoshop_format ;
+  bodi:isTechnicalMetadataOf ae:inst_cherudek_polacco_jpg ;
+  bodi:generatedBy ae:activity_metadata_extraction_exiftool_001 .
+
+ae:metadata_cherudek_photoshop_quality a bodi:TechnicalMetadata ;
+  rdf:value "9"^^xsd:integer ;
+  bodi:hasTechnicalMetadataType ae:type_photoshop_quality ;
+  bodi:isTechnicalMetadataOf ae:inst_cherudek_polacco_jpg ;
+  bodi:generatedBy ae:activity_metadata_extraction_exiftool_001 .
+
+ae:metadata_cherudek_photoshop_thumbnail a bodi:TechnicalMetadata ;
+  rdf:value "(Binary data 7848 bytes, use -b option to extract)" ;
+  bodi:hasTechnicalMetadataType ae:type_photoshop_thumbnail ;
+  bodi:isTechnicalMetadataOf ae:inst_cherudek_polacco_jpg ;
+  bodi:generatedBy ae:activity_metadata_extraction_exiftool_001 .
+
+ae:metadata_cherudek_application_record_version a bodi:TechnicalMetadata ;
+  rdf:value "2"^^xsd:integer ;
+  bodi:hasTechnicalMetadataType ae:type_application_record_version ;
+  bodi:isTechnicalMetadataOf ae:inst_cherudek_polacco_jpg ;
+  bodi:generatedBy ae:activity_metadata_extraction_exiftool_001 .
+
+ae:metadata_cherudek_color_components a bodi:TechnicalMetadata ;
+  rdf:value "3"^^xsd:integer ;
+  bodi:hasTechnicalMetadataType ae:type_color_components ;
+  bodi:isTechnicalMetadataOf ae:inst_cherudek_polacco_jpg ;
+  bodi:generatedBy ae:activity_metadata_extraction_exiftool_001 .
+
+ae:metadata_cherudek_color_space a bodi:TechnicalMetadata ;
+  rdf:value "Uncalibrated" ;
+  bodi:hasTechnicalMetadataType ae:type_color_space ;
+  bodi:isTechnicalMetadataOf ae:inst_cherudek_polacco_jpg ;
+  bodi:generatedBy ae:activity_metadata_extraction_exiftool_001 .
+
+ae:metadata_cherudek_compression a bodi:TechnicalMetadata ;
+  rdf:value "JPEG" ;
+  bodi:hasTechnicalMetadataType ae:type_compression ;
+  bodi:isTechnicalMetadataOf ae:inst_cherudek_polacco_jpg ;
+  bodi:generatedBy ae:activity_metadata_extraction_exiftool_001 .
+
+# --- Metadata Extraction Activities ---
+
+ae:activity_metadata_extraction_python_os_001 a rico:Activity ;
+  rico:title "Estrazione metadati file system con Python os module" ;
+  bodi:hasGenerated ae:metadata_cherudek_st_size ;
+  bodi:hasGenerated ae:metadata_cherudek_st_mtime ;
+  bodi:hasGenerated ae:metadata_cherudek_st_ctime ;
+  bodi:hasGenerated ae:metadata_cherudek_st_atime ;
+  bodi:hasGenerated ae:metadata_cherudek_st_mode ;
+  bodi:hasGenerated ae:metadata_cherudek_st_uid ;
+  bodi:hasGenerated ae:metadata_cherudek_st_gid ;
+  bodi:hasGenerated ae:metadata_cherudek_file_type ;
+  bodi:hasGenerated ae:metadata_cherudek_st_nlink ;
+  bodi:hasGenerated ae:metadata_cherudek_st_ino ;
+  bodi:hasGenerated ae:metadata_cherudek_st_dev ;
+  bodi:hasGenerated ae:metadata_cherudek_st_blksize ;
+  bodi:hasGenerated ae:metadata_cherudek_st_blocks ;
+  rico:isOrWasPerformedBy ae:softwarestack_python_os_extraction ;
+  bodi:hasOrHadSupervisor ae:person_giagnolini ;
+  rico:occurredAtDate ae:date_extraction_2025_08_06_1245 ;
+  rico:hasExtent ae:extent_exiftool_processing_time .
+
+
+ae:activity_metadata_extraction_exiftool_001 a rico:Activity ;
+  rico:title "Estrazione metadati nativi con ExifTool" ;
+  bodi:hasGenerated ae:metadata_cherudek_directory ;
+  bodi:hasGenerated ae:metadata_cherudek_file_access_date ;
+  bodi:hasGenerated ae:metadata_cherudek_file_inode_change_date ;
+  bodi:hasGenerated ae:metadata_cherudek_file_modify_date ;
+  bodi:hasGenerated ae:metadata_cherudek_file_name ;
+  bodi:hasGenerated ae:metadata_cherudek_file_permissions ;
+  bodi:hasGenerated ae:metadata_cherudek_file_size ;
+  bodi:hasGenerated ae:metadata_cherudek_file_type_exif ;
+  bodi:hasGenerated ae:metadata_cherudek_modify_date ;
+  bodi:hasGenerated ae:metadata_cherudek_software ;
+  bodi:hasGenerated ae:metadata_cherudek_bits_per_sample ;
+  bodi:hasGenerated ae:metadata_cherudek_exif_byte_order ;
+  bodi:hasGenerated ae:metadata_cherudek_exif_image_height ;
+  bodi:hasGenerated ae:metadata_cherudek_exif_image_width ;
+  bodi:hasGenerated ae:metadata_cherudek_image_size ;
+  bodi:hasGenerated ae:metadata_cherudek_jfif_version ;
+  bodi:hasGenerated ae:metadata_cherudek_megapixels ;
+  bodi:hasGenerated ae:metadata_cherudek_ycbcr_subsampling ;
+  bodi:hasGenerated ae:metadata_cherudek_photoshop_format ;
+  bodi:hasGenerated ae:metadata_cherudek_photoshop_quality ;
+  bodi:hasGenerated ae:metadata_cherudek_photoshop_thumbnail ;
+  bodi:hasGenerated ae:metadata_cherudek_application_record_version ;
+  bodi:hasGenerated ae:metadata_cherudek_color_components ;
+  bodi:hasGenerated ae:metadata_cherudek_color_space ;
+  bodi:hasGenerated ae:metadata_cherudek_compression ;
+  rico:isOrWasPerformedBy ae:softwarestack_exiftool_extraction ;
+  bodi:hasOrHadSupervisor ae:person_giagnolini ;
+  rico:occurredAtDate ae:date_extraction_2025_08_06_1245 ;
+  rico:hasExtent ae:extent_exiftool_processing_time .
+
+# --- Software Stacks ---
+
+ae:softwarestack_python_os_extraction a bodi:SoftwareStack ;
+  rdfs:label "Python os Module Extraction Environment" ;
+  bodi:hasStackElement ae:software_python .
+
+ae:softwarestack_exiftool_extraction a bodi:SoftwareStack ;
+  rdfs:label "ExifTool Extraction Environment" ;
+  bodi:hasStackElement ae:software_exiftool .
+
+# --- Software ---
+
+ae:software_python a bodi:Software ;
+  rico:name "Python" ;
+  rico:hasOrHadIdentifier "3.11" ;
+  bodi:hasDocumentation <https://docs.python.org/3/library/os.html> .
+
+ae:software_exiftool a bodi:Software ;
+  rico:name "ExifTool" ;
+  rico:hasOrHadIdentifier "12.76" ;
+  bodi:hasDocumentation <https://exiftool.org/> .
+
+ae:software_llama a bodi:Software ;
+  rico:name "Llama" ;
+  rico:hasOrHadIdentifier "3.2" ;
+  bodi:hasDocumentation <https://ollama.com/library/llama3.2> .
+
+# --- Dates ---
+
+ae:date_extraction_2025_08_06_1245 a rico:Date ;
+  rico:normalizedDateValue "2025-08-06T12:45:00"^^xsd:dateTime .
+
+ae:date_ai_generation_2025_08_13_0101 a rico:Date ;
+  rico:normalizedDateValue "2025-08-13T01:01:00"^^xsd:dateTime .
+
+# --- AI Generated Technical Description ---
+
+ae:techdesc_cherudek_ai a bodi:AIGeneratedText ;
+  rdfs:label "AI generated technical description for CherudekPolacco (2020_02_07 16_14_24 UTC).jpg" ;
+  rdf:value """This digital file is a JPEG image with display dimensions of 150x225 pixels (0.034 megapixels) and an original size of 1608x2422 pixels. The file size is 29,891 bytes (30 kB). The image was created on October 29, 2007 at 10:46:20 using Adobe Photoshop CS for Windows, with JFIF version 1.01. The file was subsequently modified on March 26, 2008 at 02:18:44+01:00. The image uses 8-bit color depth with 3 color components in an uncalibrated color space and YCbCr 4:2:0 subsampling. The compression format is JPEG. The file contains embedded Photoshop data including a thumbnail of 7,848 bytes, with quality set to 9 and format set to Standard. The byte order is Big-endian (Motorola, MM). File permissions are -r-xr-xr-x. No creation or modification dates are available at the record level.""" ;
+  bodi:hasHumanValidation "false"^^xsd:boolean ;
+  bodi:isTechnicalDescriptionOf ae:inst_cherudek_polacco_jpg ;
+  bodi:generatedBy ae:activity_ai_text_generation_001 .
+
+# --- AI Text Generation Activity ---
+
+ae:activity_ai_text_generation_001 a rico:Activity ;
+  rico:title "Generazione descrizione tecnica AI" ;
+  bodi:hasGenerated ae:techdesc_cherudek_ai ;
+  rico:isOrWasPerformedBy ae:softwarestack_llama_generation ;
+  bodi:hasOrHadSupervisor ae:person_giagnolini ;
+  rico:occurredAtDate ae:date_ai_generation_2025_08_13_0101 .
+
+ae:softwarestack_llama_generation a bodi:SoftwareStack ;
+  rdfs:label "Llama AI Generation Environment" ;
+  bodi:hasStackElement ae:software_llama .
+
+
+# --- Person ---
+
+ae:person_giagnolini a rico:Person ;
+  rico:name "Giagnolini, Lucia" ;
+  bodi:isOrWasSupervisorOf ae:activity_metadata_extraction_python_os_001 ;
+  bodi:isOrWasSupervisorOf ae:activity_metadata_extraction_exiftool_001 ;
+  bodi:isOrWasSupervisorOf ae:activity_ai_text_generation_001 ;
+  bodi:hasRevisioned ae:techdesc_cherudek_ai .
+
+
+# --- Extent Definitions ---
+
+# Extent per Python os processing time
+ae:extent_python_os_processing_time a rico:Extent ;
+  rdf:value "0.02 milliseconds" ;
+  rico:hasExtentType ae:extent_type_processing_time .
+
+# Extent per ExifTool processing time
+ae:extent_exiftool_processing_time a rico:Extent ;
+  rdf:value "6.38 milliseconds" ;
+  rico:hasExtentType ae:extent_type_processing_time .
+
+# ExtentType per processing time
+ae:extent_type_processing_time a rico:ExtentType ;
+  rdfs:label "processing time" .
