@@ -44,7 +44,7 @@ This work is distributed under a [Creative Commons Attribution License](https://
 
 ## References
 
-* TBD
+Giagnolini, Lucia. 2026. Rappresentare il digitale d'autore: dal file system al knowledge graph, PhD Thesis, Alma Mater Studiorum Università di Bologna. Dottorato di ricerca in Patrimonio culturale nell'ecosistema digitale, 38 Ciclo.
 
 
 
