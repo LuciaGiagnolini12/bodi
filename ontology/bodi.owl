@@ -1,1216 +1,423 @@
-<?xml version="1.0"?>
-<Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="http://w3id.org/bodi#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     ontologyIRI="http://w3id.org/bodi#">
-    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
-    <Prefix name="ns" IRI="http://creativecommons.org/ns#"/>
-    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
-    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
-    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
-    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
-    <Prefix name="bodi" IRI="http://w3id.org/bodi#"/>
-    <Prefix name="prov" IRI="http://www.w3.org/ns/prov#"/>
-    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Prefix name="rico" IRI="https://www.ica.org/standards/RiC/ontology#"/>
-    <Prefix name="skos" IRI="http://www.w3.org/2004/02/skos/core#"/>
-    <Prefix name="vann" IRI="http://purl.org/vocab/vann/"/>
-    <Prefix name="terms" IRI="http://purl.org/dc/terms/"/>
-    <Prefix name="premis" IRI="http://www.loc.gov/premis/rdf/v3/"/>
-    <Import>http://iflastandards.info/ns/lrm/lrmoo/</Import>
-    <Import>https://id.loc.gov/ontologies/premis-3-0-0</Import>
-    <Import>https://www.ica.org/standards/RiC/ontology/1.1</Import>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:contributor"/>
-        <Literal>Francesca Tomasi</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:contributor"/>
-        <Literal>Paolo Bonora</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:creator"/>
-        <Literal>Lucia Giagnolini</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:title"/>
-        <Literal>BoDi (Born-Digital) Ontology</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="terms:created"/>
-        <Literal>2025-10-01</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="terms:description"/>
-        <Literal>An extension of RiC-O (Records in Contexts Ontology) designed to represent the complexity of born-digital archival materials, addressing requirements for technical metadata, digital provenance, integrity verification, and contextual relationships.</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="terms:license"/>
-        <Literal>This work is distributed under a Creative Commons Attribution License (https://creativecommons.org/licenses/by/4.0/).</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="vann:preferredNamespacePrefix"/>
-        <Literal>bodi</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="vann:preferredNamespaceUri"/>
-        <Literal>http://w3id.org/bodi#</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="owl:versionIRI"/>
-        <Literal>http://w3id.org/bodi/1.0</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">1.0</Literal>
-    </Annotation>
-    <Declaration>
-        <Class IRI="Algorithm"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Exception"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="FileClusterPosition"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Software"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="SoftwareComponent"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="SoftwareStack"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="TechnicalDescription"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="TechnicalDescriptionType"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="TechnicalMetadata"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="TechnicalMetadataType"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="TechnicalMetadataTypeSet"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="premis:Fixity"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="premis:SoftwareAgent"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="premis:StorageLocation"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="prov:Entity"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="rico:Activity"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="rico:Agent"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="rico:Concept"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="rico:Extent"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="rico:Instantiation"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="rico:Mechanism"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="rico:RecordResource"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="rico:Thing"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="rico:Type"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="generatedBy"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="hasFileClusterPosition"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="hasGenerated"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="hasHashCode"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="hasOrHadSupervisor"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="hasRevisioned"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="hasSameHashCodeAs"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="hasSoftwareComponent"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="hasStackElement"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="hasStorageLocation"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="hasTechnicalDescription"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="hasTechnicalDescriptionType"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="hasTechnicalMetadata"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="hasTechnicalMetadataType"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="isFileClusterPositionOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="isHashCodeOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="isOrWasSupervisorOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="isSoftwareComponentOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="isStackElementOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="isStorageLocationOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="isTechnicalDescriptionOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="isTechnicalDescriptionTypeOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="isTechnicalMetadataOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="isTechnicalMetadataTypeOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="revisedBy"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="rico:hasOrHadPart"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="rico:hasOrHadType"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="rico:isInstantiationAssociatedWithInstantiation"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="rico:isOrWasPartOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="rico:isOrWasTypeOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="rico:isRelatedTo"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="confidenceScore"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="exceptionMessage"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="hasDocumentation"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="hasHumanValidation"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="hierarchyDepth"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="redactedInformation"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="terms:created"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="terms:license"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="sameContentCount"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="owl:versionIRI"/>
-    </Declaration>
-    <SubClassOf>
-        <Class IRI="Algorithm"/>
-        <Class abbreviatedIRI="rico:Mechanism"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Exception"/>
-        <Class abbreviatedIRI="rico:Concept"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="FileClusterPosition"/>
-        <Class abbreviatedIRI="rico:Thing"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Software"/>
-        <Class abbreviatedIRI="premis:SoftwareAgent"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Software"/>
-        <Class abbreviatedIRI="rico:Mechanism"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="SoftwareComponent"/>
-        <Class abbreviatedIRI="rico:Mechanism"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="SoftwareStack"/>
-        <Class abbreviatedIRI="rico:Agent"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="TechnicalDescription"/>
-        <Class abbreviatedIRI="rico:Concept"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="TechnicalDescriptionType"/>
-        <Class abbreviatedIRI="rico:Type"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="TechnicalMetadata"/>
-        <Class abbreviatedIRI="rico:Concept"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="TechnicalMetadataType"/>
-        <Class abbreviatedIRI="rico:Type"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="TechnicalMetadataTypeSet"/>
-        <Class abbreviatedIRI="rico:Concept"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="rico:Activity"/>
-        <Class abbreviatedIRI="rico:Thing"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="rico:Agent"/>
-        <Class abbreviatedIRI="rico:Thing"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="rico:Concept"/>
-        <Class abbreviatedIRI="rico:Thing"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="rico:Extent"/>
-        <Class abbreviatedIRI="rico:Thing"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="rico:Instantiation"/>
-        <Class abbreviatedIRI="prov:Entity"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="rico:Instantiation"/>
-        <Class abbreviatedIRI="rico:Thing"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="rico:Mechanism"/>
-        <Class abbreviatedIRI="rico:Agent"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="rico:RecordResource"/>
-        <Class abbreviatedIRI="prov:Entity"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="rico:RecordResource"/>
-        <Class abbreviatedIRI="rico:Thing"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="rico:Type"/>
-        <Class abbreviatedIRI="rico:Thing"/>
-    </SubClassOf>
-    <DisjointClasses>
-        <Class IRI="SoftwareStack"/>
-        <Class abbreviatedIRI="rico:Mechanism"/>
-    </DisjointClasses>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="generatedBy"/>
-        <ObjectProperty abbreviatedIRI="rico:isRelatedTo"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="hasFileClusterPosition"/>
-        <ObjectProperty abbreviatedIRI="rico:isRelatedTo"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="hasGenerated"/>
-        <ObjectProperty abbreviatedIRI="rico:isRelatedTo"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="hasHashCode"/>
-        <ObjectProperty abbreviatedIRI="rico:isRelatedTo"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="hasOrHadSupervisor"/>
-        <ObjectProperty abbreviatedIRI="rico:isOrWasUnderAuthorityOf"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="hasRevisioned"/>
-        <ObjectProperty abbreviatedIRI="rico:isRelatedTo"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="hasSameHashCodeAs"/>
-        <ObjectProperty abbreviatedIRI="rico:isInstantiationAssociatedWithInstantiation"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="hasSoftwareComponent"/>
-        <ObjectProperty abbreviatedIRI="rico:hasOrHadPart"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="hasStackElement"/>
-        <ObjectProperty abbreviatedIRI="rico:hasOrHadPart"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="hasStorageLocation"/>
-        <ObjectProperty abbreviatedIRI="rico:isRelatedTo"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="hasTechnicalDescription"/>
-        <ObjectProperty abbreviatedIRI="rico:isRelatedTo"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="hasTechnicalDescriptionType"/>
-        <ObjectProperty abbreviatedIRI="rico:hasOrHadType"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="hasTechnicalMetadata"/>
-        <ObjectProperty abbreviatedIRI="rico:isRelatedTo"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="hasTechnicalMetadataType"/>
-        <ObjectProperty abbreviatedIRI="rico:hasOrHadType"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="isFileClusterPositionOf"/>
-        <ObjectProperty abbreviatedIRI="rico:isRelatedTo"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="isHashCodeOf"/>
-        <ObjectProperty abbreviatedIRI="rico:isRelatedTo"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="isOrWasSupervisorOf"/>
-        <ObjectProperty abbreviatedIRI="rico:hasOrHadAuthorityOver"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="isSoftwareComponentOf"/>
-        <ObjectProperty abbreviatedIRI="rico:isOrWasPartOf"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="isStackElementOf"/>
-        <ObjectProperty abbreviatedIRI="rico:isOrWasPartOf"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="isStorageLocationOf"/>
-        <ObjectProperty abbreviatedIRI="rico:isRelatedTo"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="isTechnicalDescriptionOf"/>
-        <ObjectProperty abbreviatedIRI="rico:isRelatedTo"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="isTechnicalDescriptionTypeOf"/>
-        <ObjectProperty abbreviatedIRI="rico:isOrWasTypeOf"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="isTechnicalMetadataOf"/>
-        <ObjectProperty abbreviatedIRI="rico:isRelatedTo"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="isTechnicalMetadataTypeOf"/>
-        <ObjectProperty abbreviatedIRI="rico:isOrWasTypeOf"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="revisedBy"/>
-        <ObjectProperty abbreviatedIRI="rico:isRelatedTo"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty abbreviatedIRI="rico:hasOrHadPart"/>
-        <ObjectProperty abbreviatedIRI="rico:isRelatedTo"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty abbreviatedIRI="rico:hasOrHadType"/>
-        <ObjectProperty abbreviatedIRI="rico:isRelatedTo"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty abbreviatedIRI="rico:isInstantiationAssociatedWithInstantiation"/>
-        <ObjectProperty abbreviatedIRI="rico:isRelatedTo"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty abbreviatedIRI="rico:isOrWasPartOf"/>
-        <ObjectProperty abbreviatedIRI="rico:isRelatedTo"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty abbreviatedIRI="rico:isOrWasTypeOf"/>
-        <ObjectProperty abbreviatedIRI="rico:isRelatedTo"/>
-    </SubObjectPropertyOf>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="generatedBy"/>
-        <ObjectProperty IRI="hasGenerated"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="hasFileClusterPosition"/>
-        <ObjectProperty IRI="isFileClusterPositionOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="hasHashCode"/>
-        <ObjectProperty IRI="isHashCodeOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="hasOrHadSupervisor"/>
-        <ObjectProperty IRI="isOrWasSupervisorOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="hasRevisioned"/>
-        <ObjectProperty IRI="revisedBy"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="hasSoftwareComponent"/>
-        <ObjectProperty IRI="isSoftwareComponentOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="hasStackElement"/>
-        <ObjectProperty IRI="isStackElementOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="hasStorageLocation"/>
-        <ObjectProperty IRI="isStorageLocationOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="hasTechnicalDescription"/>
-        <ObjectProperty IRI="isTechnicalDescriptionOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="hasTechnicalDescriptionType"/>
-        <ObjectProperty IRI="isTechnicalDescriptionTypeOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="hasTechnicalMetadata"/>
-        <ObjectProperty IRI="isTechnicalMetadataOf"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="hasTechnicalMetadataType"/>
-        <ObjectProperty IRI="isTechnicalMetadataTypeOf"/>
-    </InverseObjectProperties>
-    <SymmetricObjectProperty>
-        <ObjectProperty IRI="hasSameHashCodeAs"/>
-    </SymmetricObjectProperty>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="generatedBy"/>
-        <Class abbreviatedIRI="owl:Thing"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="hasFileClusterPosition"/>
-        <Class abbreviatedIRI="rico:Instantiation"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="hasGenerated"/>
-        <ObjectUnionOf>
-            <Class abbreviatedIRI="rico:Activity"/>
-            <Class abbreviatedIRI="rico:Agent"/>
-        </ObjectUnionOf>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="hasHashCode"/>
-        <Class abbreviatedIRI="rico:Instantiation"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="hasOrHadSupervisor"/>
-        <Class abbreviatedIRI="rico:Activity"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="hasRevisioned"/>
-        <Class abbreviatedIRI="rico:Agent"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="hasSameHashCodeAs"/>
-        <Class abbreviatedIRI="rico:Instantiation"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="hasSoftwareComponent"/>
-        <Class IRI="Software"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="hasStackElement"/>
-        <Class IRI="SoftwareStack"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="hasStorageLocation"/>
-        <Class abbreviatedIRI="owl:Thing"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="hasTechnicalDescription"/>
-        <Class abbreviatedIRI="owl:Thing"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="hasTechnicalDescriptionType"/>
-        <Class IRI="TechnicalDescription"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="hasTechnicalMetadata"/>
-        <Class abbreviatedIRI="rico:Instantiation"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="hasTechnicalMetadataType"/>
-        <Class IRI="TechnicalMetadata"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="isFileClusterPositionOf"/>
-        <Class IRI="FileClusterPosition"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="isHashCodeOf"/>
-        <Class abbreviatedIRI="premis:Fixity"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="isOrWasSupervisorOf"/>
-        <Class abbreviatedIRI="rico:Agent"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="isSoftwareComponentOf"/>
-        <Class IRI="SoftwareComponent"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="isStackElementOf"/>
-        <Class abbreviatedIRI="rico:Mechanism"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="isStorageLocationOf"/>
-        <Class abbreviatedIRI="premis:StorageLocation"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="isTechnicalDescriptionOf"/>
-        <Class IRI="TechnicalDescription"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="isTechnicalDescriptionTypeOf"/>
-        <Class IRI="TechnicalDescriptionType"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="isTechnicalMetadataOf"/>
-        <Class IRI="TechnicalMetadata"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="isTechnicalMetadataTypeOf"/>
-        <Class IRI="TechnicalMetadataType"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="revisedBy"/>
-        <Class IRI="TechnicalDescription"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="generatedBy"/>
-        <ObjectUnionOf>
-            <Class abbreviatedIRI="rico:Activity"/>
-            <Class abbreviatedIRI="rico:Agent"/>
-        </ObjectUnionOf>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="hasFileClusterPosition"/>
-        <Class IRI="FileClusterPosition"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="hasGenerated"/>
-        <Class abbreviatedIRI="owl:Thing"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="hasHashCode"/>
-        <Class abbreviatedIRI="premis:Fixity"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="hasOrHadSupervisor"/>
-        <Class abbreviatedIRI="rico:Agent"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="hasRevisioned"/>
-        <Class IRI="TechnicalDescription"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="hasSameHashCodeAs"/>
-        <Class abbreviatedIRI="rico:Instantiation"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="hasSoftwareComponent"/>
-        <Class IRI="SoftwareComponent"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="hasStackElement"/>
-        <Class abbreviatedIRI="rico:Mechanism"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="hasStorageLocation"/>
-        <Class abbreviatedIRI="premis:StorageLocation"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="hasTechnicalDescription"/>
-        <Class IRI="TechnicalDescription"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="hasTechnicalDescriptionType"/>
-        <Class IRI="TechnicalDescriptionType"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="hasTechnicalMetadata"/>
-        <Class IRI="TechnicalMetadata"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="hasTechnicalMetadataType"/>
-        <Class IRI="TechnicalMetadataType"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="isFileClusterPositionOf"/>
-        <Class abbreviatedIRI="rico:Instantiation"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="isHashCodeOf"/>
-        <Class abbreviatedIRI="rico:Instantiation"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="isOrWasSupervisorOf"/>
-        <Class abbreviatedIRI="rico:Activity"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="isSoftwareComponentOf"/>
-        <Class IRI="Software"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="isStackElementOf"/>
-        <Class IRI="SoftwareStack"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="isStorageLocationOf"/>
-        <Class abbreviatedIRI="owl:Thing"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="isTechnicalDescriptionOf"/>
-        <Class abbreviatedIRI="owl:Thing"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="isTechnicalDescriptionTypeOf"/>
-        <Class IRI="TechnicalDescription"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="isTechnicalMetadataOf"/>
-        <Class abbreviatedIRI="rico:Instantiation"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="isTechnicalMetadataTypeOf"/>
-        <Class IRI="TechnicalMetadata"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="revisedBy"/>
-        <Class abbreviatedIRI="rico:Agent"/>
-    </ObjectPropertyRange>
-    <SubDataPropertyOf>
-        <DataProperty IRI="redactedInformation"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <DataPropertyDomain>
-        <DataProperty IRI="confidenceScore"/>
-        <Class IRI="TechnicalDescription"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="exceptionMessage"/>
-        <Class IRI="Exception"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="hasDocumentation"/>
-        <Class abbreviatedIRI="rico:Thing"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="hasHumanValidation"/>
-        <Class IRI="TechnicalDescription"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="hierarchyDepth"/>
-        <Class abbreviatedIRI="rico:Instantiation"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="redactedInformation"/>
-        <Class abbreviatedIRI="rico:RecordResource"/>
-    </DataPropertyDomain>
-    <DataPropertyRange>
-        <DataProperty IRI="confidenceScore"/>
-        <Datatype abbreviatedIRI="xsd:decimal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="exceptionMessage"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="hasDocumentation"/>
-        <Datatype abbreviatedIRI="xsd:anyURI"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="hasHumanValidation"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="hierarchyDepth"/>
-        <Datatype abbreviatedIRI="xsd:integer"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="redactedInformation"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Algorithm</IRI>
-        <Literal>A computational procedure, formula, or set of rules designed to perform a specific task or solve a particular problem.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Algorithm</IRI>
-        <Literal>Algorithm</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Exception</IRI>
-        <Literal>An error condition, unexpected event, or abnormal situation that occurs during the execution of digital preservation processes. Exceptions are important for system monitoring, quality control, and troubleshooting automated workflows.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Exception</IRI>
-        <Literal>Exception</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>FileClusterPosition</IRI>
-        <Literal>Represents the physical allocation of a digital file’s data on a storage medium. It captures the material trace of a digital document at the level of bit distribution across clusters or sectors of the device.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>FileClusterPosition</IRI>
-        <Literal>File cluster position</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Software</IRI>
-        <Literal>A computer program, application, or digital tool that performs specific functions. Software entities are characterized by their functionality, version information, and technical specifications.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Software</IRI>
-        <Literal>Software</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>SoftwareComponent</IRI>
-        <Literal>A modular, reusable part of a software system that provides specific functionality and can be combined with other components to create larger applications.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>SoftwareComponent</IRI>
-        <Literal>Software component</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>SoftwareStack</IRI>
-        <Literal>A collection of mechanisms that performs an Activity together to provide a solution for a specific task.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>SoftwareStack</IRI>
-        <Literal>Software Stack</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>TechnicalDescription</IRI>
-        <Literal>Technical Description of the Instantiation generated by humans, by artificial intelligence (AI), or through a hybrid approach (AI-generated and human-revised).</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>TechnicalDescription</IRI>
-        <Literal>Technical Description</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>TechnicalDescriptionType</IRI>
-        <Literal>The type of Technical Description, e.g. a description note on the file format.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>TechnicalDescriptionType</IRI>
-        <Literal>Technical Description Type</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>TechnicalMetadata</IRI>
-        <Literal>The actual value or content of technical metadata associated with a digital resource. For example, in &apos;cp:revision = 1&apos;, the value &apos;1&apos; represents the TechnicalMetadata instance, while &apos;cp:revision&apos; is the Technical Metadata Type. These values describe specific technical characteristics such as format parameters, creation settings, and other measurable attributes.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>TechnicalMetadata</IRI>
-        <Literal>Technical Metadata</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>TechnicalMetadataType</IRI>
-        <Literal>The type, property, or category that defines what kind of technical metadata is being described. For example, in &apos;cp:revision = 1&apos;, &apos;cp:revision&apos; represents the TechnicalMetadataType that categorizes the metadata as revision information. This classification enables systematic organization of different kind of metadata like version identifiers, format specifications, encoding parameters, and preservation characteristics.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>TechnicalMetadataType</IRI>
-        <Literal>Technical Metadata Type</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>TechnicalMetadataTypeSet</IRI>
-        <Literal>Group of Technical Metadata Types</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>TechnicalMetadataTypeSet</IRI>
-        <Literal>Technical Metadata Type Set</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>confidenceScore</IRI>
-        <Literal>A numerical value between 0 and 10 indicating the confidence level or reliability of AI-generated text. Higher values indicate greater confidence in the accuracy or quality of the generated content, supporting quality assessment and validation workflows.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>confidenceScore</IRI>
-        <Literal>Confindence score</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>exceptionMessage</IRI>
-        <Literal>Contains the error message or description associated with an exception that occurred during processing. This property is essential for logging, debugging, and understanding failures in automated workflows.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>exceptionMessage</IRI>
-        <Literal>Exception message</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>generatedBy</IRI>
-        <Literal>Indicates that a resource was created, produced, or brought into existence by a specific Agent or Activity. This property establishes a creation relationship between any resource and the agent pr activity responsible for its generation, whether through automated processes, human intervention, or hybrid approaches.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>generatedBy</IRI>
-        <Literal>Generated by</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>hasDocumentation</IRI>
-        <Literal>Provides a URI reference to official documentation, specifications, manuals, or other authoritative sources that describe the resource.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasDocumentation</IRI>
-        <Literal>Has documentation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>hasFileClusterPosition</IRI>
-        <Literal>Links a logical instantiation of a digital resource to its corresponding physical allocation on the storage medium.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasFileClusterPosition</IRI>
-        <Literal>Has file cluster position</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>hasGenerated</IRI>
-        <Literal>Indicates that an Agent or Activity has created, produced, or brought into existence a specific resource. This property represents the inverse relationship of &apos;generatedBy&apos;, allowing navigation from agents and activities to their generated outputs.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasGenerated</IRI>
-        <Literal>Has generated</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>hasHashCode</IRI>
-        <Literal>Associates an instantiation with its cryptographic hash code or checksum value. This property is crucial for digital preservation workflows, enabling integrity verification, duplicate detection, and authenticity validation of digital resources over time.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasHashCode</IRI>
-        <Literal>Has hash code</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>hasHumanValidation</IRI>
-        <Literal>Indicates whether AI-generated text has been reviewed, verified, or validated by human experts. This property is crucial for quality assurance in systems that combine automated processing with human oversight.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasHumanValidation</IRI>
-        <Literal>Has human validation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>hasOrHadSupervisor</IRI>
-        <Literal>Indicates that an activity is or was supervised, managed, or overseen by a specific Agent. This property captures both current and historical supervisory relationships, essential for tracking accountability and governance in digital preservation workflows.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasOrHadSupervisor</IRI>
-        <Literal>Has or had supervisor</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>hasRevisioned</IRI>
-        <Literal>Connects a Person to the AI Generated Text that she has revised.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasRevisioned</IRI>
-        <Literal>Has revisioned</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>hasSameHashCodeAs</IRI>
-        <Literal>Establishes that two digital instantiations have identical hash codes, indicating they are likely exact digital copies or duplicates.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasSameHashCodeAs</IRI>
-        <Literal>Has same hash code as</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>hasSoftwareComponent</IRI>
-        <Literal>Indicates that a Software contains or includes a specific Software Component as one of its constituent parts. This property helps model the hierarchical structure of complex software environments.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasSoftwareComponent</IRI>
-        <Literal>Has Software Component</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>hasStackElement</IRI>
-        <Literal>Indicates that a software stack includes a specific Mechanism as one of its constituent elements. This property allows for modeling the various components (Software, Algorithms, Software Components) that together form a complete technological stack responsible for some Activity.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasStackElement</IRI>
-        <Literal>Has stack element</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>hasStorageLocation</IRI>
-        <Literal>Connects an Entity to the Storage Location in which is located.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasStorageLocation</IRI>
-        <Literal>Has Storage Location</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>hasTechnicalDescription</IRI>
-        <Literal>Links an instantiation to its technical description, which provides detailed information about the technical characteristics, structure, format, or implementation details of the resource.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasTechnicalDescription</IRI>
-        <Literal>Has technical description</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>hasTechnicalDescriptionType</IRI>
-        <Literal>Connects a Technical Description to a Technical Description Type that defines it.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasTechnicalDescriptionType</IRI>
-        <Literal>Has Technical Description Type</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>hasTechnicalMetadata</IRI>
-        <Literal>Associates an Instantiation with technical metadata that describes its technical properties, format specifications, creation parameters, or other characteristics.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasTechnicalMetadata</IRI>
-        <Literal>Has Technical Metadata</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>hasTechnicalMetadataType</IRI>
-        <Literal>Connects a Technical Metadata to its Type</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasTechnicalMetadataType</IRI>
-        <Literal>Has technical metadata type</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>hierarchyDepth</IRI>
-        <Literal>Specifies the numerical depth level of a resource within a directory or organizational hierarchy, with level 0 representing the root.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hierarchyDepth</IRI>
-        <Literal>Hierarchy depth</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>isFileClusterPositionOf</IRI>
-        <Literal>Associates a physical file cluster position with the logical instantiation  whose data it stores on the medium.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>isHashCodeOf</IRI>
-        <Literal>Associates a cryptographic hash code or checksum value with the instantiation it identifies. This property supports digital preservation workflows by linking the integrity marker back to the corresponding digital resource, ensuring traceability, verification, and authenticity validation.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>isHashCodeOf</IRI>
-        <Literal>Is Hash Code Of</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>isOrWasSupervisorOf</IRI>
-        <Literal>Indicates that an Agent supervises, manages, or oversees a specific Activity. This property reflects the Agent’s role in providing oversight and guidance, and it is essential for documenting responsibility, authority, and governance within digital preservation workflows.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>isOrWasSupervisorOf</IRI>
-        <Literal>Is or was supervisor of</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>isSoftwareComponentOf</IRI>
-        <Literal>Indicates that a Software Component is part of a Software Stack as one of its constituent elements. This property supports the representation of hierarchical structures within complex software environments, linking individual components to the encompassing Software.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>isSoftwareComponentOf</IRI>
-        <Literal>Is software component of</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>isStackElementOf</IRI>
-        <Literal>Indicates that a Mechanism is part of a software stack as one of its constituent elements. This property links individual components (Software, Algorithms, Software Components) to the broader technological stack of which they form a part, supporting the modeling of composite systems responsible for carrying out an Activity.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>isStackElementOf</IRI>
-        <Literal>Is stack element of</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>isStorageLocationOf</IRI>
-        <Literal>Connects a Storage Location to the Entity in which is located.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>isStorageLocationOf</IRI>
-        <Literal>is Storage Location Of</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>isTechnicalDescriptionOf</IRI>
-        <Literal>Links a technical description to the Instantiation is referred to.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>isTechnicalDescriptionOf</IRI>
-        <Literal>Is Technical Description Of</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>isTechnicalDescriptionTypeOf</IRI>
-        <Literal>Connects a Technical Descption Type to a Technical Description it defines.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>isTechnicalDescriptionTypeOf</IRI>
-        <Literal>Is Technical Description Type Of</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>isTechnicalMetadataOf</IRI>
-        <Literal>Associates a Technical Metadata to the Instatiation is referred to.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>isTechnicalMetadataOf</IRI>
-        <Literal>is Technical Metadata Of</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>isTechnicalMetadataTypeOf</IRI>
-        <Literal>Connects a Technical Metadata Type to its related Technical Metadata</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>isTechnicalMetadataTypeOf</IRI>
-        <Literal>Is Technical Metadata Type Of</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>redactedInformation</IRI>
-        <Literal>Indication of whether or not the resource has been anonymized.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>redactedInformation</IRI>
-        <Literal>Omitted information</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>revisedBy</IRI>
-        <Literal>Connects an AI Generated Text to the Person that revisioned the information.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>revisedBy</IRI>
-        <Literal>Revised by</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>sameContentCount</IRI>
-        <Literal>Count of Records with identical content - files sharing the same hash code indicate byte-for-byte identical content.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>sameContentCount</IRI>
-        <Literal>Same content count</Literal>
-    </AnnotationAssertion>
-</Ontology>
-
-
-
-<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
-
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:vann="http://purl.org/vocab/vann/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:terms="http://purl.org/dc/terms/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <owl:ObjectProperty rdf:about="http://w3id.org/bodi#hasHashCode">
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="https://www.ica.org/standards/RiC/ontology#isRelatedTo"/>
+    </rdfs:subPropertyOf>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://w3id.org/bodi#isHashCodeOf">
+        <rdfs:subPropertyOf rdf:resource="https://www.ica.org/standards/RiC/ontology#isRelatedTo"/>
+        <rdfs:domain rdf:resource="http://www.loc.gov/premis/rdf/v3/Fixity"/>
+        <rdfs:range rdf:resource="https://www.ica.org/standards/RiC/ontology#Instantiation"/>
+        <rdfs:comment>Associates a cryptographic hash code or checksum value with the instantiation it identifies. This property supports digital preservation workflows by linking the integrity marker back to the corresponding digital resource, ensuring traceability, verification, and authenticity validation.</rdfs:comment>
+        <rdfs:label>Is Hash Code Of</rdfs:label>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+    <rdfs:domain rdf:resource="https://www.ica.org/standards/RiC/ontology#Instantiation"/>
+    <rdfs:range rdf:resource="http://www.loc.gov/premis/rdf/v3/Fixity"/>
+    <rdfs:comment>Associates an instantiation with its cryptographic hash code or checksum value. This property is crucial for digital preservation workflows, enabling integrity verification, duplicate detection, and authenticity validation of digital resources over time.</rdfs:comment>
+    <rdfs:label>Has hash code</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://w3id.org/bodi#hasTechnicalMetadataType">
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="https://www.ica.org/standards/RiC/ontology#hasOrHadType">
+        <rdfs:subPropertyOf rdf:resource="https://www.ica.org/standards/RiC/ontology#isRelatedTo"/>
+      </owl:ObjectProperty>
+    </rdfs:subPropertyOf>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://w3id.org/bodi#isTechnicalMetadataTypeOf">
+        <rdfs:subPropertyOf rdf:resource="https://www.ica.org/standards/RiC/ontology#isOrWasTypeOf"/>
+        <rdfs:domain rdf:resource="http://w3id.org/bodi#TechnicalMetadataType"/>
+        <rdfs:range rdf:resource="http://w3id.org/bodi#TechnicalMetadata"/>
+        <rdfs:comment>Connects a Technical Metadata Type to its related Technical Metadata</rdfs:comment>
+        <rdfs:label>Is Technical Metadata Type Of</rdfs:label>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+    <rdfs:domain rdf:resource="http://w3id.org/bodi#TechnicalMetadata"/>
+    <rdfs:range rdf:resource="http://w3id.org/bodi#TechnicalMetadataType"/>
+    <rdfs:comment>Connects a Technical Metadata to its Type</rdfs:comment>
+    <rdfs:label>Has technical metadata type</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:Ontology rdf:about="http://w3id.org/bodi#">
+    <owl:imports rdf:resource="https://www.ica.org/standards/RiC/ontology/1.1"/>
+    <dc:contributor>Francesca Tomasi</dc:contributor>
+    <dc:contributor>Paolo Bonora</dc:contributor>
+    <dc:creator>Lucia Giagnolini</dc:creator>
+    <dc:title>BoDi (Born-Digital) Ontology</dc:title>
+    <terms:created>2025-10-01</terms:created>
+    <terms:description>An extension of RiC-O (Records in Contexts Ontology) designed to represent the complexity of born-digital archival materials, addressing requirements for technical metadata, digital provenance, integrity verification, and contextual relationships.</terms:description>
+    <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+    <vann:preferredNamespacePrefix>bodi</vann:preferredNamespacePrefix>
+    <vann:preferredNamespaceUri>http://w3id.org/bodi#</vann:preferredNamespaceUri>
+    <owl:versionIRI rdf:resource="http://w3id.org/bodi/1.0.1"/>
+    <owl:priorVersion rdf:resource="http://w3id.org/bodi/1.0"/>
+    <owl:versionInfo>1.0.1</owl:versionInfo>
+  </owl:Ontology>
+  <owl:ObjectProperty rdf:about="http://w3id.org/bodi#hasTechnicalMetadata">
+    <rdfs:subPropertyOf rdf:resource="https://www.ica.org/standards/RiC/ontology#isRelatedTo"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://w3id.org/bodi#isTechnicalMetadataOf">
+        <rdfs:subPropertyOf rdf:resource="https://www.ica.org/standards/RiC/ontology#isRelatedTo"/>
+        <rdfs:domain rdf:resource="http://w3id.org/bodi#TechnicalMetadata"/>
+        <rdfs:range rdf:resource="https://www.ica.org/standards/RiC/ontology#Instantiation"/>
+        <rdfs:comment>Associates a Technical Metadata to the Instantiation it refers to.</rdfs:comment>
+        <rdfs:label>is Technical Metadata Of</rdfs:label>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+    <rdfs:domain rdf:resource="https://www.ica.org/standards/RiC/ontology#Instantiation"/>
+    <rdfs:range rdf:resource="http://w3id.org/bodi#TechnicalMetadata"/>
+    <rdfs:comment>Associates an Instantiation with technical metadata that describes its technical properties, format specifications, creation parameters, or other characteristics.</rdfs:comment>
+    <rdfs:label>Has Technical Metadata</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://w3id.org/bodi#confidenceScore">
+    <rdfs:domain rdf:resource="http://w3id.org/bodi#TechnicalDescription"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:comment>A numerical value between 0 and 10 indicating the confidence level or reliability of AI-generated text. Higher values indicate greater confidence in the accuracy or quality of the generated content, supporting quality assessment and validation workflows.</rdfs:comment>
+    <rdfs:label>Confidence score</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="http://www.loc.gov/premis/rdf/v3/medium">
+    <rdfs:isDefinedBy rdf:resource="http://www.loc.gov/premis/rdf/v3/"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://w3id.org/bodi#hasTechnicalDescription">
+    <rdfs:subPropertyOf rdf:resource="https://www.ica.org/standards/RiC/ontology#isRelatedTo"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://w3id.org/bodi#isTechnicalDescriptionOf">
+        <rdfs:subPropertyOf rdf:resource="https://www.ica.org/standards/RiC/ontology#isRelatedTo"/>
+        <rdfs:domain rdf:resource="http://w3id.org/bodi#TechnicalDescription"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment>Links a technical description to the Instantiation it refers to.</rdfs:comment>
+        <rdfs:label>Is Technical Description Of</rdfs:label>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+    <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:range rdf:resource="http://w3id.org/bodi#TechnicalDescription"/>
+    <rdfs:comment>Links an instantiation to its technical description, which provides detailed information about the technical characteristics, structure, format, or implementation details of the resource.</rdfs:comment>
+    <rdfs:label>Has technical description</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://w3id.org/bodi#hasFileClusterPosition">
+    <rdfs:subPropertyOf rdf:resource="https://www.ica.org/standards/RiC/ontology#isRelatedTo"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://w3id.org/bodi#isFileClusterPositionOf">
+        <rdfs:subPropertyOf rdf:resource="https://www.ica.org/standards/RiC/ontology#isRelatedTo"/>
+        <rdfs:domain rdf:resource="http://w3id.org/bodi#FileClusterPosition"/>
+        <rdfs:range rdf:resource="https://www.ica.org/standards/RiC/ontology#Instantiation"/>
+        <rdfs:comment>Associates a physical file cluster position with the logical instantiation whose data it stores on the medium.</rdfs:comment>
+        <rdfs:label>Is file cluster position of</rdfs:label>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+    <rdfs:domain rdf:resource="https://www.ica.org/standards/RiC/ontology#Instantiation"/>
+    <rdfs:range rdf:resource="http://w3id.org/bodi#FileClusterPosition"/>
+    <rdfs:comment>Links a logical instantiation of a digital resource to its corresponding physical allocation on the storage medium.</rdfs:comment>
+    <rdfs:label>Has file cluster position</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:Class rdf:about="http://w3id.org/bodi#Algorithm">
+    <rdfs:subClassOf rdf:resource="https://www.ica.org/standards/RiC/ontology#Mechanism"/>
+    <rdfs:comment>A computational procedure, formula, or set of rules designed to perform a specific task or solve a particular problem.</rdfs:comment>
+    <rdfs:label>Algorithm</rdfs:label>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://w3id.org/bodi#hasSameHashCodeAs">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="https://www.ica.org/standards/RiC/ontology#isInstantiationAssociatedWithInstantiation">
+        <rdfs:subPropertyOf rdf:resource="https://www.ica.org/standards/RiC/ontology#isRelatedTo"/>
+      </owl:ObjectProperty>
+    </rdfs:subPropertyOf>
+    <rdfs:domain rdf:resource="https://www.ica.org/standards/RiC/ontology#Instantiation"/>
+    <rdfs:range rdf:resource="https://www.ica.org/standards/RiC/ontology#Instantiation"/>
+    <rdfs:comment>Establishes that two digital instantiations have identical hash codes, indicating they are likely exact digital copies or duplicates.</rdfs:comment>
+    <rdfs:label>Has same hash code as</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://w3id.org/bodi#hierarchyDepth">
+    <rdfs:domain rdf:resource="https://www.ica.org/standards/RiC/ontology#Instantiation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:comment>Specifies the numerical depth level of a resource within a directory or organizational hierarchy, with level 0 representing the root.</rdfs:comment>
+    <rdfs:label>Hierarchy depth</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="http://w3id.org/bodi#hasRevisioned">
+    <rdfs:subPropertyOf rdf:resource="https://www.ica.org/standards/RiC/ontology#isRelatedTo"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://w3id.org/bodi#revisedBy">
+        <rdfs:subPropertyOf rdf:resource="https://www.ica.org/standards/RiC/ontology#isRelatedTo"/>
+        <rdfs:domain rdf:resource="http://w3id.org/bodi#TechnicalDescription"/>
+        <rdfs:range rdf:resource="https://www.ica.org/standards/RiC/ontology#Agent"/>
+        <rdfs:comment>Connects an AI-generated Technical Description to the Agent that revised it.</rdfs:comment>
+        <rdfs:label>Revised by</rdfs:label>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+    <rdfs:domain rdf:resource="https://www.ica.org/standards/RiC/ontology#Agent"/>
+    <rdfs:range rdf:resource="http://w3id.org/bodi#TechnicalDescription"/>
+    <rdfs:comment>Connects an Agent to the AI-generated Technical Description that they have revised.</rdfs:comment>
+    <rdfs:label>Has revised</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://w3id.org/bodi#hasHumanValidation">
+    <rdfs:domain rdf:resource="http://w3id.org/bodi#TechnicalDescription"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:comment>Indicates whether AI-generated text has been reviewed, verified, or validated by human experts. This property is crucial for quality assurance in systems that combine automated processing with human oversight.</rdfs:comment>
+    <rdfs:label>Has human validation</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="http://w3id.org/bodi#TechnicalMetadataTypeSet">
+    <rdfs:subClassOf rdf:resource="https://www.ica.org/standards/RiC/ontology#Concept"/>
+    <rdfs:comment>Group of Technical Metadata Types</rdfs:comment>
+    <rdfs:label>Technical Metadata Type Set</rdfs:label>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="http://w3id.org/bodi#redactedInformation">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <rdfs:domain rdf:resource="https://www.ica.org/standards/RiC/ontology#RecordResource"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:comment>Indication of whether or not the resource has been anonymized.</rdfs:comment>
+    <rdfs:label>Redacted information</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://w3id.org/bodi#hasDocumentation">
+    <rdfs:domain rdf:resource="https://www.ica.org/standards/RiC/ontology#Thing"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <rdfs:comment>Provides a URI reference to official documentation, specifications, manuals, or other authoritative sources that describe the resource.</rdfs:comment>
+    <rdfs:label>Has documentation</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:Class rdf:about="http://iflastandards.info/ns/lrm/lrmoo/F1_Work">
+    <rdfs:isDefinedBy rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://w3id.org/bodi#hasSoftwareComponent">
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="https://www.ica.org/standards/RiC/ontology#hasOrHadPart">
+        <rdfs:subPropertyOf rdf:resource="https://www.ica.org/standards/RiC/ontology#isRelatedTo"/>
+      </owl:ObjectProperty>
+    </rdfs:subPropertyOf>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://w3id.org/bodi#isSoftwareComponentOf">
+        <rdfs:subPropertyOf rdf:resource="https://www.ica.org/standards/RiC/ontology#isOrWasPartOf"/>
+        <rdfs:domain rdf:resource="http://w3id.org/bodi#SoftwareComponent"/>
+        <rdfs:range rdf:resource="http://w3id.org/bodi#Software"/>
+        <rdfs:comment>Indicates that a Software Component is part of a Software as one of its constituent elements. This property supports the representation of hierarchical structures within complex software environments, linking individual components to the encompassing Software.</rdfs:comment>
+        <rdfs:label>Is software component of</rdfs:label>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+    <rdfs:domain rdf:resource="http://w3id.org/bodi#Software"/>
+    <rdfs:range rdf:resource="http://w3id.org/bodi#SoftwareComponent"/>
+    <rdfs:comment>Indicates that a Software contains or includes a specific Software Component as one of its constituent parts. This property helps model the hierarchical structure of complex software environments.</rdfs:comment>
+    <rdfs:label>Has Software Component</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:AnnotationProperty rdf:about="http://w3id.org/bodi#sameContentCount">
+    <rdfs:comment>Count of Records with identical content - files sharing the same hash code indicate byte-for-byte identical content.</rdfs:comment>
+    <rdfs:label>Same content count</rdfs:label>
+  </owl:AnnotationProperty>
+  <owl:DatatypeProperty rdf:about="http://w3id.org/bodi#exceptionMessage">
+    <rdfs:domain rdf:resource="http://w3id.org/bodi#Exception"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:comment>Contains the error message or description associated with an exception that occurred during processing. This property is essential for logging, debugging, and understanding failures in automated workflows.</rdfs:comment>
+    <rdfs:label>Exception message</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="http://w3id.org/bodi#hasStorageLocation">
+    <rdfs:subPropertyOf rdf:resource="https://www.ica.org/standards/RiC/ontology#isRelatedTo"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://w3id.org/bodi#isStorageLocationOf">
+        <rdfs:subPropertyOf rdf:resource="https://www.ica.org/standards/RiC/ontology#isRelatedTo"/>
+        <rdfs:domain rdf:resource="http://www.loc.gov/premis/rdf/v3/StorageLocation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment>Connects a Storage Location to the Entity located in it.</rdfs:comment>
+        <rdfs:label>is Storage Location Of</rdfs:label>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+    <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:range rdf:resource="http://www.loc.gov/premis/rdf/v3/StorageLocation"/>
+    <rdfs:comment>Connects an Entity to the Storage Location in which it is located.</rdfs:comment>
+    <rdfs:label>Has Storage Location</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://w3id.org/bodi#generatedBy">
+    <rdfs:subPropertyOf rdf:resource="https://www.ica.org/standards/RiC/ontology#isRelatedTo"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://w3id.org/bodi#hasGenerated">
+        <rdfs:subPropertyOf rdf:resource="https://www.ica.org/standards/RiC/ontology#isRelatedTo"/>
+        <rdfs:domain>
+          <owl:Class rdf:nodeID="n47eccbe1e6d84eab8d8a69929c770392b4">
+            <owl:unionOf rdf:parseType="Collection">
+              <rdf:Description rdf:about="https://www.ica.org/standards/RiC/ontology#Activity"/>
+              <rdf:Description rdf:about="https://www.ica.org/standards/RiC/ontology#Agent"/>
+            </owl:unionOf>
+          </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment>Indicates that an Agent or Activity has created, produced, or brought into existence a specific resource. This property represents the inverse relationship of 'generatedBy', allowing navigation from agents and activities to their generated outputs.</rdfs:comment>
+        <rdfs:label>Has generated</rdfs:label>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+    <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:range>
+      <owl:Class rdf:nodeID="n47eccbe1e6d84eab8d8a69929c770392b1">
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="https://www.ica.org/standards/RiC/ontology#Activity"/>
+          <rdf:Description rdf:about="https://www.ica.org/standards/RiC/ontology#Agent"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+    <rdfs:comment>Indicates that a resource was created, produced, or brought into existence by a specific Agent or Activity. This property establishes a creation relationship between any resource and the agent or activity responsible for its generation, whether through automated processes, human intervention, or hybrid approaches.</rdfs:comment>
+    <rdfs:label>Generated by</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://w3id.org/bodi#hasOrHadSupervisor">
+    <rdfs:subPropertyOf rdf:resource="https://www.ica.org/standards/RiC/ontology#isOrWasUnderAuthorityOf"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://w3id.org/bodi#isOrWasSupervisorOf">
+        <rdfs:subPropertyOf rdf:resource="https://www.ica.org/standards/RiC/ontology#hasOrHadAuthorityOver"/>
+        <rdfs:domain rdf:resource="https://www.ica.org/standards/RiC/ontology#Agent"/>
+        <rdfs:range rdf:resource="https://www.ica.org/standards/RiC/ontology#Activity"/>
+        <rdfs:comment>Indicates that an Agent supervises, manages, or oversees a specific Activity. This property reflects the Agent’s role in providing oversight and guidance, and it is essential for documenting responsibility, authority, and governance within digital preservation workflows.</rdfs:comment>
+        <rdfs:label>Is or was supervisor of</rdfs:label>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+    <rdfs:domain rdf:resource="https://www.ica.org/standards/RiC/ontology#Activity"/>
+    <rdfs:range rdf:resource="https://www.ica.org/standards/RiC/ontology#Agent"/>
+    <rdfs:comment>Indicates that an activity is or was supervised, managed, or overseen by a specific Agent. This property captures both current and historical supervisory relationships, essential for tracking accountability and governance in digital preservation workflows.</rdfs:comment>
+    <rdfs:label>Has or had supervisor</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://w3id.org/bodi#hasStackElement">
+    <rdfs:subPropertyOf rdf:resource="https://www.ica.org/standards/RiC/ontology#hasOrHadPart"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://w3id.org/bodi#isStackElementOf">
+        <rdfs:subPropertyOf rdf:resource="https://www.ica.org/standards/RiC/ontology#isOrWasPartOf"/>
+        <rdfs:domain rdf:resource="https://www.ica.org/standards/RiC/ontology#Mechanism"/>
+        <rdfs:range rdf:resource="http://w3id.org/bodi#SoftwareStack"/>
+        <rdfs:comment>Indicates that a Mechanism is part of a software stack as one of its constituent elements. This property links individual components (Software, Algorithms, Software Components) to the broader technological stack of which they form a part, supporting the modeling of composite systems responsible for carrying out an Activity.</rdfs:comment>
+        <rdfs:label>Is stack element of</rdfs:label>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+    <rdfs:domain rdf:resource="http://w3id.org/bodi#SoftwareStack"/>
+    <rdfs:range rdf:resource="https://www.ica.org/standards/RiC/ontology#Mechanism"/>
+    <rdfs:comment>Indicates that a software stack includes a specific Mechanism as one of its constituent elements. This property allows for modeling the various components (Software, Algorithms, Software Components) that together form a complete technological stack responsible for some Activity.</rdfs:comment>
+    <rdfs:label>Has stack element</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#versionIRI"/>
+  <owl:ObjectProperty rdf:about="http://w3id.org/bodi#hasTechnicalDescriptionType">
+    <rdfs:subPropertyOf rdf:resource="https://www.ica.org/standards/RiC/ontology#hasOrHadType"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://w3id.org/bodi#isTechnicalDescriptionTypeOf">
+        <rdfs:subPropertyOf rdf:resource="https://www.ica.org/standards/RiC/ontology#isOrWasTypeOf"/>
+        <rdfs:domain rdf:resource="http://w3id.org/bodi#TechnicalDescriptionType"/>
+        <rdfs:range rdf:resource="http://w3id.org/bodi#TechnicalDescription"/>
+        <rdfs:comment>Connects a Technical Description Type to a Technical Description it defines.</rdfs:comment>
+        <rdfs:label>Is Technical Description Type Of</rdfs:label>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+    <rdfs:domain rdf:resource="http://w3id.org/bodi#TechnicalDescription"/>
+    <rdfs:range rdf:resource="http://w3id.org/bodi#TechnicalDescriptionType"/>
+    <rdfs:comment>Connects a Technical Description to a Technical Description Type that defines it.</rdfs:comment>
+    <rdfs:label>Has Technical Description Type</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:Class rdf:about="http://www.loc.gov/premis/rdf/v3/StorageMedium">
+    <rdfs:isDefinedBy rdf:resource="http://www.loc.gov/premis/rdf/v3/"/>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="http://www.loc.gov/premis/rdf/v3/version">
+    <rdfs:isDefinedBy rdf:resource="http://www.loc.gov/premis/rdf/v3/"/>
+  </owl:DatatypeProperty>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+  <owl:Class rdf:about="http://www.w3.org/ns/prov#Location">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://www.ica.org/standards/RiC/ontology#Extent">
+    <rdfs:subClassOf rdf:resource="https://www.ica.org/standards/RiC/ontology#Thing"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#atLocation">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+  </owl:ObjectProperty>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+  <owl:Class rdf:about="https://www.ica.org/standards/RiC/ontology#Group"/>
+  <owl:Class rdf:about="http://w3id.org/bodi#TechnicalMetadataType">
+    <rdfs:subClassOf rdf:resource="https://www.ica.org/standards/RiC/ontology#Type"/>
+    <rdfs:comment>The type, property, or category that defines what kind of technical metadata is being described. For example, in 'cp:revision = 1', 'cp:revision' represents the TechnicalMetadataType that categorizes the metadata as revision information. This classification enables systematic organization of different kind of metadata like version identifiers, format specifications, encoding parameters, and preservation characteristics.</rdfs:comment>
+    <rdfs:label>Technical Metadata Type</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://w3id.org/bodi#Software">
+    <rdfs:subClassOf rdf:resource="http://www.loc.gov/premis/rdf/v3/SoftwareAgent"/>
+    <rdfs:subClassOf rdf:resource="https://www.ica.org/standards/RiC/ontology#Mechanism"/>
+    <rdfs:comment>A computer program, application, or digital tool that performs specific functions. Software entities are characterized by their functionality, version information, and technical specifications.</rdfs:comment>
+    <rdfs:label>Software</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.loc.gov/premis/rdf/v3/StorageLocation">
+    <rdfs:isDefinedBy rdf:resource="http://www.loc.gov/premis/rdf/v3/"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://www.ica.org/standards/RiC/ontology#Mechanism">
+    <rdfs:subClassOf rdf:resource="https://www.ica.org/standards/RiC/ontology#Agent"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.loc.gov/premis/rdf/v3/SoftwareAgent">
+    <rdfs:isDefinedBy rdf:resource="http://www.loc.gov/premis/rdf/v3/"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://w3id.org/bodi#FileClusterPosition">
+    <rdfs:subClassOf rdf:resource="https://www.ica.org/standards/RiC/ontology#Thing"/>
+    <rdfs:comment>Represents the physical allocation of a digital file’s data on a storage medium. It captures the material trace of a digital document at the level of bit distribution across clusters or sectors of the device.</rdfs:comment>
+    <rdfs:label>File cluster position</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.w3.org/ns/prov#Entity">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://www.ica.org/standards/RiC/ontology#Concept">
+    <rdfs:subClassOf rdf:resource="https://www.ica.org/standards/RiC/ontology#Thing"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="https://www.ica.org/standards/RiC/ontology#isOrWasTypeOf">
+    <rdfs:subPropertyOf rdf:resource="https://www.ica.org/standards/RiC/ontology#isRelatedTo"/>
+  </owl:ObjectProperty>
+  <owl:Class rdf:about="https://www.ica.org/standards/RiC/ontology#Agent">
+    <rdfs:subClassOf rdf:resource="https://www.ica.org/standards/RiC/ontology#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.loc.gov/premis/rdf/v3/Fixity">
+    <rdfs:isDefinedBy rdf:resource="http://www.loc.gov/premis/rdf/v3/"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://www.ica.org/standards/RiC/ontology#Instantiation">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    <rdfs:subClassOf rdf:resource="https://www.ica.org/standards/RiC/ontology#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://w3id.org/bodi#TechnicalDescription">
+    <rdfs:subClassOf rdf:resource="https://www.ica.org/standards/RiC/ontology#Concept"/>
+    <rdfs:comment>Technical Description of the Instantiation generated by humans, by artificial intelligence (AI), or through a hybrid approach (AI-generated and human-revised).</rdfs:comment>
+    <rdfs:label>Technical Description</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://www.ica.org/standards/RiC/ontology#Thing"/>
+  <owl:Class rdf:about="http://w3id.org/bodi#TechnicalDescriptionType">
+    <rdfs:subClassOf rdf:resource="https://www.ica.org/standards/RiC/ontology#Type"/>
+    <rdfs:comment>The type of Technical Description, e.g. a description note on the file format.</rdfs:comment>
+    <rdfs:label>Technical Description Type</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://w3id.org/bodi#SoftwareComponent">
+    <rdfs:subClassOf rdf:resource="https://www.ica.org/standards/RiC/ontology#Mechanism"/>
+    <rdfs:comment>A modular, reusable part of a software system that provides specific functionality and can be combined with other components to create larger applications.</rdfs:comment>
+    <rdfs:label>Software component</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://w3id.org/bodi#SoftwareStack">
+    <rdfs:subClassOf rdf:resource="https://www.ica.org/standards/RiC/ontology#Agent"/>
+    <owl:disjointWith rdf:resource="https://www.ica.org/standards/RiC/ontology#Group"/>
+    <owl:disjointWith rdf:resource="https://www.ica.org/standards/RiC/ontology#Mechanism"/>
+    <owl:disjointWith rdf:resource="https://www.ica.org/standards/RiC/ontology#Person"/>
+    <owl:disjointWith rdf:resource="https://www.ica.org/standards/RiC/ontology#Position"/>
+    <rdfs:comment>A collection of mechanisms that performs an Activity together to provide a solution for a specific task.</rdfs:comment>
+    <rdfs:label>Software Stack</rdfs:label>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="https://www.ica.org/standards/RiC/ontology#isOrWasPartOf">
+    <rdfs:subPropertyOf rdf:resource="https://www.ica.org/standards/RiC/ontology#isRelatedTo"/>
+  </owl:ObjectProperty>
+  <owl:Class rdf:about="https://www.ica.org/standards/RiC/ontology#RecordResource">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    <rdfs:subClassOf rdf:resource="https://www.ica.org/standards/RiC/ontology#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://w3id.org/bodi#TechnicalMetadata">
+    <rdfs:subClassOf rdf:resource="https://www.ica.org/standards/RiC/ontology#Concept"/>
+    <rdfs:comment>The actual value or content of technical metadata associated with a digital resource. For example, in 'cp:revision = 1', the value '1' represents the TechnicalMetadata instance, while 'cp:revision' is the Technical Metadata Type. These values describe specific technical characteristics such as format parameters, creation settings, and other measurable attributes.</rdfs:comment>
+    <rdfs:label>Technical metadata</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://www.ica.org/standards/RiC/ontology#Activity">
+    <rdfs:subClassOf rdf:resource="https://www.ica.org/standards/RiC/ontology#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://www.ica.org/standards/RiC/ontology#Type">
+    <rdfs:subClassOf rdf:resource="https://www.ica.org/standards/RiC/ontology#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://w3id.org/bodi#Exception">
+    <rdfs:subClassOf rdf:resource="https://www.ica.org/standards/RiC/ontology#Concept"/>
+    <rdfs:comment>An error condition, unexpected event, or abnormal situation that occurs during the execution of digital preservation processes. Exceptions are important for system monitoring, quality control, and troubleshooting automated workflows.</rdfs:comment>
+    <rdfs:label>Exception</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://www.ica.org/standards/RiC/ontology#Position"/>
+  <owl:Class rdf:about="https://www.ica.org/standards/RiC/ontology#Person"/>
+</rdf:RDF>
