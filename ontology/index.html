@@ -525,10 +525,26 @@ td {
                 <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="Inverse of rdfs:domain. Defined in Ontology Documentation Profile">In Domain Of</a>
               </th>
               <td>
-                <span>
-                  <a href="#isFileClusterPositionOf">Is file cluster position of</a>
-                  <sup class="sup-op" title="OWL Object Property">op</sup>
-                </span>
+                <ul>
+                  <li>
+                    <span>
+                      <a href="#isFileClusterPositionOf">Is file cluster position of</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="#endSector">End sector</a>
+                      <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="#startSector">Start sector</a>
+                      <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
+                    </span>
+                  </li>
+                </ul>
               </td>
             </tr>
             <tr>
@@ -1886,12 +1902,12 @@ td {
               </th>
               <td>
                 <span>
-                  <a href="https://www.ica.org/standards/RiC/ontology#Activity">rico:Activity</a>
+                  <a href="https://www.ica.org/standards/RiC/ontology#Agent">rico:Agent</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
                 <span class="cardinality">or</span>
                 <span>
-                  <a href="https://www.ica.org/standards/RiC/ontology#Agent">rico:Agent</a>
+                  <a href="https://www.ica.org/standards/RiC/ontology#Activity">rico:Activity</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -3579,6 +3595,44 @@ td {
             </tr>
           </table>
         </div>
+        <div class="property entity" id="endSector">
+          <h3>End sector
+            <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://w3id.org/bodi#endSector</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>The number of the last sector of the storage medium occupied by a contiguous allocation of a file's data. A fragmented file has one File Cluster Position for each contiguous run of sectors.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#Fileclusterposition">File cluster position</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
+              </th>
+              <td>
+                <a href="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">xsd:nonNegativeInteger</a>
+              </td>
+            </tr>
+          </table>
+        </div>
         <div class="property entity" id="exceptionMessage">
           <h3>Exception message
             <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
@@ -3727,6 +3781,44 @@ td {
               </th>
               <td>
                 <a href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="startSector">
+          <h3>Start sector
+            <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://w3id.org/bodi#startSector</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>The number of the first sector of the storage medium occupied by a contiguous allocation of a file's data. A fragmented file has one File Cluster Position for each contiguous run of sectors.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#Fileclusterposition">File cluster position</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
+              </th>
+              <td>
+                <a href="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">xsd:nonNegativeInteger</a>
               </td>
             </tr>
           </table>
@@ -4179,6 +4271,9 @@ td {
               <a href="#confidenceScore">Confidence score</a>
             </li>
             <li>
+              <a href="#endSector">End sector</a>
+            </li>
+            <li>
               <a href="#exceptionMessage">Exception message</a>
             </li>
             <li>
@@ -4189,6 +4284,9 @@ td {
             </li>
             <li>
               <a href="#hierarchyDepth">Hierarchy depth</a>
+            </li>
+            <li>
+              <a href="#startSector">Start sector</a>
             </li>
             <li>
               <a href="#version">version</a>

@@ -354,6 +354,14 @@ bodi:confidenceScore rdf:type owl:DatatypeProperty ;
                      rdfs:label "Confidence score" .
 
 
+###  http://w3id.org/bodi#endSector
+bodi:endSector rdf:type owl:DatatypeProperty ;
+               rdfs:domain bodi:FileClusterPosition ;
+               rdfs:range xsd:nonNegativeInteger ;
+               rdfs:comment "The number of the last sector of the storage medium occupied by a contiguous allocation of a file's data. A fragmented file has one File Cluster Position for each contiguous run of sectors." ;
+               rdfs:label "End sector" .
+
+
 ###  http://w3id.org/bodi#exceptionMessage
 bodi:exceptionMessage rdf:type owl:DatatypeProperty ;
                       rdfs:domain bodi:Exception ;
@@ -384,6 +392,14 @@ bodi:hierarchyDepth rdf:type owl:DatatypeProperty ;
                     rdfs:range xsd:integer ;
                     rdfs:comment "Specifies the numerical depth level of a resource within a directory or organizational hierarchy, with level 0 representing the root." ;
                     rdfs:label "Hierarchy depth" .
+
+
+###  http://w3id.org/bodi#startSector
+bodi:startSector rdf:type owl:DatatypeProperty ;
+                 rdfs:domain bodi:FileClusterPosition ;
+                 rdfs:range xsd:nonNegativeInteger ;
+                 rdfs:comment "The number of the first sector of the storage medium occupied by a contiguous allocation of a file's data. A fragmented file has one File Cluster Position for each contiguous run of sectors." ;
+                 rdfs:label "Start sector" .
 
 
 ###  http://www.loc.gov/premis/rdf/v3/version
